@@ -28,5 +28,8 @@ public abstract class AbsColider
     public void ColidedWith(CharacterColider wallColider) { }
     public void ColidedWith(BulletColider bulletColider) { }
     public void ColidedWith(StaticColider bulletColider) { }
+    public void ColidedWith(KeyCollider keyColider) { }
+
+    public void ColidedWith(DoorCollider keyColider) { }
 
 }
