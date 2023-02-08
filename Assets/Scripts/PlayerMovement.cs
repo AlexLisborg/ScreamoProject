@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D _rigidBody;
 
+    private Animator _animator;
+
     private Vector2 _movement;
 
 
@@ -17,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
-
+        _animator = GetComponent<Animator>();
     }
 
     private Vector3 velocity = Vector3.zero;
@@ -27,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
     {
         _movement.x = Input.GetAxisRaw("Horizontal");
         _movement.y = Input.GetAxisRaw("Vertical");
+        _animator.SetFloat("Horizontal",_movement.x);
+        _animator.SetFloat("Vertical", _movement.y);
+        _animator.SetFloat("Speed", _movement.magnitude);
     }
     private void FixedUpdate()
     {
