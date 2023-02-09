@@ -22,6 +22,9 @@ public class KeyActivation : Activation
 
     public void UpdateActivation(IPlayer player, GameObject go)
     {
-        if(time.Add(duration). )
+        if(time.Add(duration).Date >= DateTime.Now)
+        {
+            Deactivate(player, go);
+        }
     }
 }
