@@ -14,8 +14,6 @@ public abstract class AbsColider
         this.colidingWith = colidingWith;
 
     }
-
-
  
 
     abstract public void Accept(AbsColider other);
@@ -23,13 +21,13 @@ public abstract class AbsColider
     //Add new method with argumnet of new subtype
     //These methodes are for when this oject colides with another spesifict oject
     //By default then a collsion will do nothing unless the method is overwritten
-    public void ColidedWith(CharacterColider wallColider) { }
-    public void ColidedWith(BulletColider bulletColider) { }
-    public void ColidedWith(StaticColider bulletColider) { }
-    public void ColidedWith(KeyCollider keyColider) { }
+    public virtual void ColidedWith(CharacterColider wallColider) { }
+    public virtual void ColidedWith(BulletColider bulletColider) { }
+    public virtual void ColidedWith(StaticColider bulletColider) { }
+    public virtual void ColidedWith(KeyCollider keyColider) { }
 
-    public void ColidedWith(DoorCollider keyColider) { }
+    public virtual void ColidedWith(DoorCollider doorColider) { }
 
-    public void ColidedWith(PlayerCollider keyColider) { }
+    public virtual void ColidedWith(PlayerCollider keyColider) { }
 
 }

@@ -13,8 +13,9 @@ public class PlayerCollider : AbsColider
         other.Accept(this);
     }
 
-    public new void ColidedWith(DoorCollider doorCollider)
+    override public void ColidedWith(DoorCollider doorCollider)
     {
+        
         if(Input.GetKeyDown(KeyCode.E)) {
             parent.transform.position = doorCollider.leadsTo.transform.position;
         }

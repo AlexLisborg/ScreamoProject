@@ -18,7 +18,8 @@ public class DoorCollider : AbsColider
 
     public override void Accept(AbsColider other)
     {
-        other.Accept(this);
+
+        other.ColidedWith(this);
     }
 
     

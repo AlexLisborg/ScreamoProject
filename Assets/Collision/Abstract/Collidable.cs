@@ -6,43 +6,47 @@ public abstract class Colidable : MonoBehaviour
 {
 
     
-    private AbsColider colider;
+    public AbsColider colider;
     private List<AbsColider> areColidingWith = new List<AbsColider>();
     // Start is called before the first frame update
-
-    private void Start()
+    private void Awake()
     {
+       
         colider = GetColiderInstance(gameObject, areColidingWith);
+        Debug.Log(gameObject.name);
+    }
+
+    private void Update()
+    {
+        foreach (var col in areColidingWith)
+        {
+            col.Accept(colider);
+        }
     }
 
     public abstract AbsColider GetColiderInstance(GameObject go, List<AbsColider> areColidingWith);
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter2D(Collision2D c)
     {
-        Debug.Log(gameObject.name);
-    }
-
-
-    public void OnCollisionStay(Collision c) {
-        Debug.Log(gameObject.name + " is colding with " + c.collider.name);
-        AbsColider other = c.gameObject.GetComponent<AbsColider>();
-        if(other != null)
+        //Debug.Log(gameObject.name + " is colding with " + c.collider.name);
+        Colidable other = c.gameObject.GetComponent<Colidable>(); ;
+        if (other != null)
         {
-            other.Accept(colider);
-
-            if (!areColidingWith.Contains(other))
-            {
-                areColidingWith.Add(other);
-            }
+          
+            other.colider.Accept(colider);
+            areColidingWith.Add(other.colider);
         }
     }
 
-    private void OnCollisionExit(Collision c)
+
+
+    public void OnCollisionExit2D(Collision2D c)
     {
-        AbsColider other = c.gameObject.GetComponent<AbsColider>();
+        //Debug.Log(gameObject.name + " stoped colding with " + c.collider.name);
+        Colidable other = c.gameObject.GetComponent<Colidable>();
         if (other != null)
         {
-            areColidingWith.Remove(other);
+            areColidingWith.Remove(other.colider);
         }
     }
 
