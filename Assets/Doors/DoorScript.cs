@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorScript : MonoBehaviour, DoorWaiter
+public class DoorScript : MonoBehaviour
 {
 
     [SerializeField]
@@ -10,6 +10,7 @@ public class DoorScript : MonoBehaviour, DoorWaiter
     [SerializeField]
     public DoorColidable colidable;
     private DoorCollider col;
+ 
 
     public void reciveDoor(DoorCollider doorCollider)
     {
