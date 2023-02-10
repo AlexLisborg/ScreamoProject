@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BulletColidable : Colidable
 {
-    public override AbsColider GetNewColiderInstance(GameObject go, List<AbsColider> areColidingWith)
+
+    public override AbsColider GetColiderInstance(GameObject go, List<AbsColider> areColidingWith)
     {
         return new BulletColider(go, areColidingWith);
     }

@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class DoorColidable : Colidable
 {
-    public override AbsColider GetNewColiderInstance(GameObject go, List<AbsColider> areColidingWith)
+    public DoorCollider col = null;
+    public override AbsColider GetColiderInstance(GameObject go, List<AbsColider> areColidingWith)
     {
-        return new DoorCollider(go, areColidingWith);
+        if(col == null) { 
+            col = new DoorCollider(go, areColidingWith); 
+        }
+        return col;
     }
+
+   
 }

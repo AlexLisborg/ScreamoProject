@@ -8,10 +8,11 @@ public class ItemScript : MonoBehaviour
     private Activation itemActivation;
     private bool activated = false;
     private IPlayer currentPlayer;
+    public Sprite Icon;
 
-    public void Reset(Activation itemActivation)
+    public void set(Activation itemActivation)
     {
-        itemActivation = itemActivation;
+        this.itemActivation = itemActivation;
     }
 
     private void Update()

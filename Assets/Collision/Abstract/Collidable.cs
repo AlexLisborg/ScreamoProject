@@ -12,13 +12,19 @@ public abstract class Colidable : MonoBehaviour
 
     private void Start()
     {
-        colider = GetNewColiderInstance(gameObject, areColidingWith);
+        colider = GetColiderInstance(gameObject, areColidingWith);
     }
 
-    public abstract AbsColider GetNewColiderInstance(GameObject go, List<AbsColider> areColidingWith);
+    public abstract AbsColider GetColiderInstance(GameObject go, List<AbsColider> areColidingWith);
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(gameObject.name);
+    }
 
 
     public void OnCollisionStay(Collision c) {
+        Debug.Log(gameObject.name + " is colding with " + c.collider.name);
         AbsColider other = c.gameObject.GetComponent<AbsColider>();
         if(other != null)
         {

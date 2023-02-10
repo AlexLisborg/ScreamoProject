@@ -5,20 +5,18 @@ using UnityEngine;
 
 public abstract class AbsColider 
 {
-    public readonly GameObject parent;
+    protected readonly GameObject parent;
     private List<AbsColider> colidingWith = new List<AbsColider>();
     
     public AbsColider(GameObject parent, List<AbsColider> colidingWith)
     {
         this.parent = parent;
         this.colidingWith = colidingWith;
+
     }
 
 
-    public bool IsColidingWIth(AbsColider colider)
-    {
-        return colidingWith.Contains(colider);
-    }
+ 
 
     abstract public void Accept(AbsColider other);
 
@@ -31,5 +29,7 @@ public abstract class AbsColider
     public void ColidedWith(KeyCollider keyColider) { }
 
     public void ColidedWith(DoorCollider keyColider) { }
+
+    public void ColidedWith(PlayerCollider keyColider) { }
 
 }

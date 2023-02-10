@@ -10,12 +10,14 @@ public class BulletColider : AbsColider
 
     public override void Accept(AbsColider other)
     {
+        
         other.ColidedWith(this);
     }
 
 
     public new void ColidedWith(CharacterColider wallColider)
     {
+       
         //Bullet dies
         throw new System.NotImplementedException();
     }
