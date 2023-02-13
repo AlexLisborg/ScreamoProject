@@ -4,16 +4,27 @@ using UnityEngine;
 
 public class PlayerCollider : AbsColider
 {
-    public PlayerCollider(GameObject parent, List<AbsColider> colidingWith) : base(parent, colidingWith)
+    public Container containerAvilable = null;
+    public PlayerCollider(GameObject parent) : base(parent)
     {
+        
     }
 
-    public override void Accept(AbsColider other)
+    public override void AcceptEnter(AbsColider other)
     {
-        other.Accept(this);
+        other.EnterCollision(this);
+    }
+    public override void AcceptStay(AbsColider other)
+    {
+        other.StayCollision(this);
     }
 
-    override public void ColidedWith(DoorCollider doorCollider)
+    public override void AcceptExit(AbsColider other)
+    {
+        other.ExitCollision(this);
+    }
+
+    override public void EnterCollision(DoorCollider doorCollider)
     {
         
         if(Input.GetKeyDown(KeyCode.E)) {
@@ -21,4 +32,24 @@ public class PlayerCollider : AbsColider
         }
 
     }
+
+    override public void EnterCollision(ContainerCollider containerCollider)
+    {
+        if (containerAvilable == null)
+        {
+            containerAvilable = containerCollider.container;
+        }
+    }
+
+    public override void ExitCollision(ContainerCollider containerCollider)
+    {
+        if(containerAvilable == containerCollider.container) {
+            containerAvilable = null;
+        }
+    
+    }
+
+
+
+
 }

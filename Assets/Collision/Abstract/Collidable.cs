@@ -7,24 +7,18 @@ public abstract class Colidable : MonoBehaviour
 
     
     public AbsColider colider;
-    private List<AbsColider> areColidingWith = new List<AbsColider>();
     // Start is called before the first frame update
     private void Awake()
     {
-       
-        colider = GetColiderInstance(gameObject, areColidingWith);
-        Debug.Log(gameObject.name);
+        colider = GetColiderInstance(gameObject);
     }
 
     private void Update()
     {
-        foreach (var col in areColidingWith)
-        {
-            col.Accept(colider);
-        }
+
     }
 
-    public abstract AbsColider GetColiderInstance(GameObject go, List<AbsColider> areColidingWith);
+    public abstract AbsColider GetColiderInstance(GameObject go);
 
     public void OnCollisionEnter2D(Collision2D c)
     {
@@ -32,13 +26,18 @@ public abstract class Colidable : MonoBehaviour
         Colidable other = c.gameObject.GetComponent<Colidable>(); ;
         if (other != null)
         {
-          
-            other.colider.Accept(colider);
-            areColidingWith.Add(other.colider);
+            other.colider.AcceptEnter(colider);
         }
     }
 
-
+    public void OnCollisionStay2D(Collision2D c)
+    {
+        Colidable other = c.gameObject.GetComponent<Colidable>(); ;
+        if (other != null)
+        {
+            other.colider.AcceptStay(colider);
+        }
+    }
 
     public void OnCollisionExit2D(Collision2D c)
     {
@@ -46,7 +45,7 @@ public abstract class Colidable : MonoBehaviour
         Colidable other = c.gameObject.GetComponent<Colidable>();
         if (other != null)
         {
-            areColidingWith.Remove(other.colider);
+            colider.AcceptExit(other.colider);
         }
     }
 

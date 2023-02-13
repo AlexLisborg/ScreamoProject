@@ -8,8 +8,8 @@ public class StaticColidable : Colidable
     private List<AbsColider> areColidingWith;
 
   
-    public override AbsColider GetColiderInstance(GameObject go, List<AbsColider> areColidingWith)
+    public override AbsColider GetColiderInstance(GameObject go)
     {
-        return new StaticColider(go, areColidingWith);
+        return new StaticColider(go);
     }
 }

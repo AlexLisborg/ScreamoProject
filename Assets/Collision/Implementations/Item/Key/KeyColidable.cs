@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class KeyColidable : Colidable
 {
-    public override AbsColider GetColiderInstance(GameObject go, List<AbsColider> areColidingWith)
+    public override AbsColider GetColiderInstance(GameObject go)
     {
-        return new KeyCollider(go, areColidingWith);
+        return new KeyCollider(go);
     }
 }

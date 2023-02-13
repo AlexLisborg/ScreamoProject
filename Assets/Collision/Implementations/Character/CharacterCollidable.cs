@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class NewBehaviourScript : Colidable
 {
-    public override AbsColider GetColiderInstance(GameObject go, List<AbsColider> areColidingWith)
+    public override AbsColider GetColiderInstance(GameObject go)
     {
-        return new CharacterColider(go, areColidingWith);
+        return new CharacterColider(go);
     }
 }

@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class ItemCollider : AbsColider
 {
-    public ItemCollider(GameObject parent, List<AbsColider> colidingWith) : base(parent, colidingWith)
+    public ItemCollider(GameObject parent) : base(parent)
     {
     }
 
-    public override void Accept(AbsColider other)
+    public override void AcceptEnter(AbsColider other)
     {
-        other.Accept(this);
+        other.AcceptEnter(this);
+    }
+    public override void AcceptStay(AbsColider other)
+    {
+        other.AcceptStay(this);
+    }
+
+    public override void AcceptExit(AbsColider other)
+    {
+        other.AcceptExit(this);
     }
 }

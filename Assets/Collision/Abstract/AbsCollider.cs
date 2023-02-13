@@ -1,33 +1,54 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Xml.Serialization;
 using UnityEngine;
 
 public abstract class AbsColider 
 {
     protected readonly GameObject parent;
-    private List<AbsColider> colidingWith = new List<AbsColider>();
     
-    public AbsColider(GameObject parent, List<AbsColider> colidingWith)
+    public AbsColider(GameObject parent)
     {
         this.parent = parent;
-        this.colidingWith = colidingWith;
-
     }
  
 
-    abstract public void Accept(AbsColider other);
+    abstract public void AcceptEnter(AbsColider other);
+
+    abstract public void AcceptStay(AbsColider other);
+
+    abstract public void AcceptExit(AbsColider other);
 
     //Add new method with argumnet of new subtype
     //These methodes are for when this oject colides with another spesifict oject
     //By default then a collsion will do nothing unless the method is overwritten
-    public virtual void ColidedWith(CharacterColider wallColider) { }
-    public virtual void ColidedWith(BulletColider bulletColider) { }
-    public virtual void ColidedWith(StaticColider bulletColider) { }
-    public virtual void ColidedWith(KeyCollider keyColider) { }
+    public virtual void EnterCollision(CharacterColider wallColider) { }
+    public virtual void StayCollision(CharacterColider wallColider) { }
+    public virtual void ExitCollision(CharacterColider wallColider) { }
 
-    public virtual void ColidedWith(DoorCollider doorColider) { }
+    public virtual void EnterCollision(BulletColider bulletColider) { }
+    public virtual void StayCollision(BulletColider bulletColider) { }
+    public virtual void ExitCollision(BulletColider bulletColider) { }
 
-    public virtual void ColidedWith(PlayerCollider keyColider) { }
+    public virtual void EnterCollision(StaticColider bulletColider) { }
+    public virtual void StayCollision(StaticColider bulletColider) { }
+    public virtual void ExitCollision(StaticColider bulletColider) { }
+
+
+    public virtual void EnterCollision(KeyCollider keyColider) { }
+    public virtual void StayCollision(KeyCollider keyColider) { }
+    public virtual void ExitCollision(KeyCollider keyColider) { }
+
+
+    public virtual void EnterCollision(DoorCollider doorColider) { }
+    public virtual void StayCollision(DoorCollider doorColider) { }
+    public virtual void ExitCollision(DoorCollider doorColider) { }
+
+
+    public virtual void EnterCollision(PlayerCollider keyColider) { }
+    public virtual void StayCollision(PlayerCollider keyColider) { }
+    public virtual void ExitCollision(PlayerCollider keyColider) { }
+
+    public virtual void EnterCollision(ContainerCollider containerCollider) { }
+    public virtual void StayCollision(ContainerCollider containerCollider) { }
+    public virtual void ExitCollision(ContainerCollider containerCollider) { }
+
 
 }

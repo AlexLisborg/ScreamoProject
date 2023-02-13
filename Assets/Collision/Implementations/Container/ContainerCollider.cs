@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StaticColider : AbsColider
+public class ContainerCollider : AbsColider
 {
-    public StaticColider(GameObject parent) : base(parent)
+
+    public Container container;
+    public ContainerCollider(GameObject parent) : base(parent)
     {
     }
 

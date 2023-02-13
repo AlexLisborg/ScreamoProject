@@ -8,19 +8,24 @@ public class DoorCollider : AbsColider
 
     public DoorScript leadsTo;
 
-    public void set(DoorScript leadsToDoor)
+    public DoorCollider(GameObject parent, DoorScript leadsToDoor) : base(parent)
     {
         leadsTo = leadsToDoor;
     }
-    public DoorCollider(GameObject parent, List<AbsColider> colidingWith) : base(parent, colidingWith)
-    {
-    }
 
-    public override void Accept(AbsColider other)
+    public override void AcceptEnter(AbsColider other)
     {
 
-        other.ColidedWith(this);
+        other.EnterCollision(this);
     }
 
-    
+    public override void AcceptStay(AbsColider other)
+    {
+        other.StayCollision(this);
+    }
+
+    public override void AcceptExit(AbsColider other)
+    {
+        other.ExitCollision(this);
+    }
 }

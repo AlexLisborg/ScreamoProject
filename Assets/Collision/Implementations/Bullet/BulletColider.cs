@@ -4,33 +4,27 @@ using UnityEngine;
 
 public class BulletColider : AbsColider
 {
-    public BulletColider(GameObject parent, List<AbsColider> colidingWith) : base(parent, colidingWith)
+    public BulletColider(GameObject parent) : base(parent)
     {
     }
 
-    public override void Accept(AbsColider other)
+    public override void AcceptEnter(AbsColider other)
     {
         
-        other.ColidedWith(this);
+        other.EnterCollision(this);
     }
-
-
-    public new void ColidedWith(CharacterColider wallColider)
+    public override void AcceptStay(AbsColider other)
     {
-       
-        //Bullet dies
-        throw new System.NotImplementedException();
+        other.AcceptStay(this);
     }
 
-    public new void ColidedWith(BulletColider bulletColider)
+    public override void AcceptExit(AbsColider other)
     {
-        //BOOOM
-        throw new System.NotImplementedException();
+        other.AcceptExit(this);
     }
 
-    public new void ColidedWith(StaticColider bulletColider)
-    {
-        //Bullet dies
-        throw new System.NotImplementedException();
-    }
+
+
+
+   
 }

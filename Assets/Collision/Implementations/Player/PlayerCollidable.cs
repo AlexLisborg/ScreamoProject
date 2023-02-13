@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerCollidable : Colidable
 {
-    public override AbsColider GetColiderInstance(GameObject go, List<AbsColider> areColidingWith)
+    public override AbsColider GetColiderInstance(GameObject go)
     {
-       return new PlayerCollider(go, areColidingWith);
+       return new PlayerCollider(go);
     }
 
  

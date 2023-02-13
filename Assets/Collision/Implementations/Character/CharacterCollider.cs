@@ -4,31 +4,21 @@ using UnityEngine;
 
 public class CharacterColider : AbsColider
 {
-    public CharacterColider(GameObject parent, List<AbsColider> colidingWith) : base(parent, colidingWith)
+    public CharacterColider(GameObject parent) : base(parent)
     {
     }
 
-    public override void Accept(AbsColider other)
+    public override void AcceptEnter(AbsColider other)
     {
-        other.ColidedWith(this);
+        other.EnterCollision(this);
+    }
+    public override void AcceptStay(AbsColider other)
+    {
+        other.StayCollision(this);
     }
 
-
-    public new void ColidedWith(CharacterColider characterColider)
+    public override void AcceptExit(AbsColider other)
     {
-        //idk- kiss?
-        throw new System.NotImplementedException();
-    }
-
-    public new void ColidedWith(BulletColider bulletColider)
-    {
-        //Take damage
-        throw new System.NotImplementedException();
-    }
-
-    public new void ColidedWith(StaticColider bulletColider)
-    {
-        //Do not go through lol- hit head?
-        throw new System.NotImplementedException();
+        other.ExitCollision(this);
     }
 }

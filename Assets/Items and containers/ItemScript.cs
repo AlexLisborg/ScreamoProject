@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Xml.Serialization;
 using UnityEngine;
 
-public class ItemScript : MonoBehaviour
+public abstract class ItemScript : MonoBehaviour
 {
     private Activation itemActivation;
     private bool activated = false;
     private IPlayer currentPlayer;
-    public Sprite Icon;
 
+
+    public abstract Sprite getIcon();
     public void set(Activation itemActivation)
     {
         this.itemActivation = itemActivation;
