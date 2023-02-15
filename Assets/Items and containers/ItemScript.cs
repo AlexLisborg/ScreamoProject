@@ -16,6 +16,12 @@ public abstract class ItemScript : MonoBehaviour
         this.itemActivation = itemActivation;
     }
 
+
+    private void Start()
+    {
+        gameObject.SetActive(false);
+    }
+
     private void Update()
     {
         if(activated)

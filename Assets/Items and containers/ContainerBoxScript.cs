@@ -16,13 +16,14 @@ public class ContainerBoxScript : MonoBehaviour
 
     public void set(int with, List<Sprite> itemIcons, Action<int> onItemClicked)
     {
+        gameObject.SetActive(true);
         this.with = with;
         this.itemIcons = itemIcons; 
         int hight = itemIcons.Count % with;
         gameObject.transform.localScale = new Vector3(with, hight, 1);
        
         for (int i = 1;i < hight; i++) {
-            for(int j = 1; j < with;j++)
+            for(int j = 1; j < with && i * hight + j < itemIcons.Count; j++)
             {
                 int index = i * hight + j;
                 GameObject itemIcon = Instantiate(iconBox, gameObject.transform);
@@ -38,7 +39,7 @@ public class ContainerBoxScript : MonoBehaviour
     
     void Start()
     {
-        
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame

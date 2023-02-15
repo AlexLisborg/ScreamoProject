@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
+    private void Awake()
+    {
+       
+    }
 
-  
- 
+
 
 
     void Start()

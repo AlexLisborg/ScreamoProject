@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PlayerCollidable : Colidable
 {
+    public PlayerCollider col = null;
     public override AbsColider GetColiderInstance(GameObject go)
     {
-       return new PlayerCollider(go);
+        if (col == null)
+            col = new PlayerCollider(go);
+
+        return col;
     }
 
  

@@ -8,7 +8,7 @@ using UnityEngine;
 public class Container : MonoBehaviour
 {
     public GameObject boxContainerRef;
-    private GameObject box;
+    public GameObject box;
     public int size = 2;
     private ItemScript[] items;
 
@@ -18,7 +18,7 @@ public class Container : MonoBehaviour
     }
 
 
-    public void addItem(ItemScript item)
+    public bool addItem(ItemScript item)
     {
 
         for (int i = 0; i < items.Length; i++)
@@ -26,10 +26,10 @@ public class Container : MonoBehaviour
             if (items[i] == null)
             {
                 items[i] = item;
+                return true;
             }
         }
-        
-        
+        return false;
     }
 
     public void moveItemToContainer(int index, Container nextContainer)
@@ -37,9 +37,13 @@ public class Container : MonoBehaviour
 
         if (items[index] != null)
         {
-            ItemScript tmp = items[index];
-            items[index] = null;
-            nextContainer.addItem(tmp);
+            
+            bool didRemove = nextContainer.addItem(items[index]);
+
+            if(didRemove)
+            {
+                items[index] = null;
+            }
         }
     }
 
@@ -51,8 +55,12 @@ public class Container : MonoBehaviour
         {
             tmp.Add(item.getIcon());
         }
-        box = Instantiate(boxContainerRef);
-        box.GetComponent<ContainerBoxScript>().set(8, tmp, (i) => onClickedItem.Invoke(items[i]));
+        // boxContainerRef.SetActive(true);
+        
+        GameObject b = Instantiate<GameObject>(boxContainerRef);
+        Debug.Log(b);
+        b.GetComponent<ContainerBoxScript>().set(8, tmp, (i) => onClickedItem.Invoke(items[i]));
+        box = b;
         
     }
     

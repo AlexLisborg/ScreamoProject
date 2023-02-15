@@ -2,59 +2,76 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class Inventory : Container
 {
-    public ContainerCollidable collidable;
-    public Container otherContainer;
-    private bool open = false;
+    public GameObject keyRef;
+    private bool isOpen = false;
     private bool otherOpen = false;
     // Start is called before the first frame update
 
-    void Start()
+    private void Start()
     {
-        otherContainer = collidable.col.container;
+        List<GameObject> list = new List<GameObject>();
+        list.Add(Instantiate(keyRef));
+        list.Add(Instantiate(keyRef));
+        list.Add(Instantiate(keyRef));
+
+
+        foreach (GameObject obj in list)
+        {
+            addItem(obj.GetComponent<ItemScript>());
+        }
     }
+ 
 
     // Update is called once per frame
     void Update()
     {
-        otherContainer = collidable.col.container;
+        Container otherContainer = GetComponent<PlayerCollidable>().col.containerAvilable;
+
         
-        if (Input.GetKey(KeyCode.I)) {
-            if (!open)
+        if (Input.GetKeyDown(KeyCode.I)) {
+            
+            if (!isOpen)
             {
+          
                 open((item) => { });
-                open = true;
+                isOpen = true;
             }
             else
             {
+        
                 close();
-                open = false;
+                isOpen = false;
             }
         }
         if(otherContainer != null)
         {
-            if (Input.GetKey(KeyCode.E))
+
+            
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                if (!otherOpen && !open)
+                if (!otherOpen && !isOpen)
                 {
                     otherContainer.open((item) => addItem(item));
                     open((item) => otherContainer.addItem(item));
-                    open = true;
+                    isOpen = true;
                     otherOpen = true;
                 }
-                else if (otherContainer && open)
+                else if (otherContainer && isOpen)
                 {
                     otherContainer.close();
                     close();
-                    open = false;
+                    isOpen = false;
                     otherOpen = false;
                 }
             }
         }
         else
         {
-            if (open)
+            if (isOpen)
                 close();
             if (otherOpen)
                 otherContainer.close();

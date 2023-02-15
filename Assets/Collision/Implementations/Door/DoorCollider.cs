@@ -6,7 +6,13 @@ using UnityEngine;
 public class DoorCollider : AbsColider
 {
 
-    public DoorScript leadsTo;
+    private DoorScript leadsTo;
+
+    public DoorScript getLeadsTo()
+    {
+        return leadsTo;
+    }
+
 
     public DoorCollider(GameObject parent, DoorScript leadsToDoor) : base(parent)
     {

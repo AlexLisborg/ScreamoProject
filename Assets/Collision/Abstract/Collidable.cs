@@ -6,7 +6,7 @@ public abstract class Colidable : MonoBehaviour
 {
 
     
-    public AbsColider colider;
+    private AbsColider colider;
     // Start is called before the first frame update
     private void Awake()
     {

@@ -24,11 +24,10 @@ public class PlayerCollider : AbsColider
         other.ExitCollision(this);
     }
 
-    override public void EnterCollision(DoorCollider doorCollider)
+    override public void StayCollision(DoorCollider doorCollider)
     {
-        
-        if(Input.GetKeyDown(KeyCode.E)) {
-            parent.transform.position = doorCollider.leadsTo.transform.position;
+        if(Input.GetKey(KeyCode.E)) {
+            parent.transform.position = doorCollider.getLeadsTo().transform.position;
         }
 
     }

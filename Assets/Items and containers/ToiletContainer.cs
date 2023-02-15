@@ -4,10 +4,20 @@ using UnityEngine;
 
 public class ToiletContainer : Container
 {
-    private void Awake()
+    public GameObject bandageRef;
+
+    private void Start()
     {
-        //addItem(new BandageScript());
-        //addItem(new BandageScript());
-        //addItem(new BandageScript());
+        List<GameObject> list = new List<GameObject>();
+        GameObject a = Instantiate(bandageRef);
+     
+        list.Add(Instantiate(bandageRef));
+        list.Add(Instantiate(bandageRef));
+
+
+        foreach (GameObject obj in list)
+        {
+            addItem(obj.GetComponent<ItemScript>());
+        }
     }
 }
