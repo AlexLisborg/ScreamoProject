@@ -37,6 +37,7 @@ public abstract class ItemScript : MonoBehaviour
         if (!activated)
         {
             activated = true;
+            gameObject.SetActive(true);
             currentPlayer = player;
             itemActivation.Activate(player, gameObject);
         }
@@ -49,6 +50,7 @@ public abstract class ItemScript : MonoBehaviour
             itemActivation.Deactivate(currentPlayer, gameObject);
             currentPlayer = null;
             activated = false;
+            gameObject.SetActive(false);
         }
             
     }

@@ -11,8 +11,10 @@ public class Inventory : MonoBehaviour
     public GameObject boxContainerPrefab;
     public int hight;
     public int with;
+    public PlayerScript player;
     private Container container;
     private ItemScript equipt;
+
 
     private void Awake()
     {
@@ -43,10 +45,12 @@ public class Inventory : MonoBehaviour
     {
         if(equipt == item)
         {
+            Debug.Log("was unequiped");
             equipt = null;
         }
         else
         {
+            Debug.Log("was equiped");
             equipt = item;
         }
     }
@@ -68,11 +72,14 @@ public class Inventory : MonoBehaviour
         {
             if (equipt.isActivated())
             {
+                Debug.Log("deactive");
+                
                 equipt.Deactivate();
             }
             else
             {
-                //equipt.Activate();
+                Debug.Log("active");
+                equipt.Activate(player);
             }
         }
 
