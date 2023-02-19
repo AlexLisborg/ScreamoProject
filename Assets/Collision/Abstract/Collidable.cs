@@ -8,15 +8,12 @@ public abstract class Colidable : MonoBehaviour
     
     private AbsColider colider;
     // Start is called before the first frame update
-    private void Awake()
+    public void Awake()
     {
         colider = GetColiderInstance(gameObject);
     }
 
-    private void Update()
-    {
 
-    }
 
     public abstract AbsColider GetColiderInstance(GameObject go);
 

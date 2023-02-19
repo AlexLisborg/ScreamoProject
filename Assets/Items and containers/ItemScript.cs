@@ -53,6 +53,11 @@ public abstract class ItemScript : MonoBehaviour
             
     }
 
+    public bool isActivated()
+    {
+        return activated;
+    }
+
     
 }
 

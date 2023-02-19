@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class PlayerCollider : AbsColider
 {
-    public Container containerAvilable = null;
+    private Container containerAvilable = null;
+
+    public Container GetContainerAvilabe()
+    {
+        return containerAvilable;
+    }
     public PlayerCollider(GameObject parent) : base(parent)
     {
         
@@ -36,13 +41,17 @@ public class PlayerCollider : AbsColider
     {
         if (containerAvilable == null)
         {
-            containerAvilable = containerCollider.container;
+            
+            containerAvilable = containerCollider.GetContainer();
         }
+
     }
 
     public override void ExitCollision(ContainerCollider containerCollider)
     {
-        if(containerAvilable == containerCollider.container) {
+        if(containerAvilable == containerCollider.GetContainer()) {
+            containerAvilable.close();
+            parent.GetComponent<Inventory>().GetInventory().close();
             containerAvilable = null;
         }
     

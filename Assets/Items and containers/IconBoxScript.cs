@@ -5,21 +5,22 @@ using UnityEngine;
 
 public class IconBoxScript : MonoBehaviour
 {
-    private Action<int> whenClikced;
-    private int id;
-    public void set(Action<int> whenClikced, int id)
+    [SerializeField] SpriteRenderer spriteRenderer;
+    private Action<GameObject> whenClikced;
+    public void set(Action<GameObject> whenClikced)
     {
         gameObject.SetActive(true);
         this.whenClikced = whenClikced;
-        this.id = id;
     }
     void OnMouseDown()
     {
-        whenClikced.Invoke(id);
+        whenClikced(gameObject);
     }
 
-    private void Start()
+ 
+
+    public void changeIcon(Sprite icon)
     {
-        gameObject.SetActive(false);
+        spriteRenderer.sprite = icon;
     }
 }

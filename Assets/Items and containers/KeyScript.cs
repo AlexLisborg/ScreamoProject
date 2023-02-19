@@ -7,13 +7,7 @@ public class KeyScript : ItemScript
 {
     public override Sprite getIcon()
     {
-        Texture2D t = new Texture2D(10, 10);
-        for (int x = 0; x < t.width; x++)
-        {
-            t.SetPixel(x, x, Color.red);
-        }
-
-        return Sprite.Create(t, new Rect(), new Vector2(1, 1));
+        return gameObject.GetComponent<SpriteRenderer>().sprite;
     }
 
     private void Awake()
