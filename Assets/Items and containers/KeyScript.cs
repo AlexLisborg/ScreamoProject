@@ -25,6 +25,7 @@ public class KeyScript : ItemScript
             Vector2 offsett = new Vector2(Mathf.Cos(player.getDir()), Mathf.Sin(player.getDir())) * player.getReach();
             go.transform.position = player.getPos() + offsett;
             time = DateTime.Now;
+           
         }
 
         public void Deactivate(IPlayer player, GameObject go)

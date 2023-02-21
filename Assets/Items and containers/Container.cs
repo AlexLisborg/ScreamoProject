@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -21,6 +22,10 @@ public class Container
         box.GetComponent<ContainerBoxScript>().set(with, hight);
     }
 
+    public bool contains(ItemScript item)
+    {
+        return this.items.Contains(item);
+    }
  
 
     public bool getIsOpen()
@@ -35,6 +40,7 @@ public class Container
 
        if(items.Count < size)
        {
+            item.setOnDestroy(() => destroyItem(item));
             items.Add(item);
             box.GetComponent<ContainerBoxScript>().addNewIcon(item.getIcon());
             return true;
@@ -61,6 +67,18 @@ public class Container
             return didAdd;
         }
         return false;
+    }
+
+    public bool destroyItem(ItemScript item)
+    {
+        int index = items.IndexOf(item);
+        bool didremove = items.Remove(item);
+        if (didremove)
+        {
+            box.GetComponent<ContainerBoxScript>().removeIcon(index);
+            
+        }
+        return didremove;
     }
 
     public void open(Action<ItemScript> onClickedItem, Func<Vector3> position)

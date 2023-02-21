@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
@@ -8,6 +9,8 @@ public abstract class ItemScript : MonoBehaviour
     private Activation itemActivation;
     private bool activated = false;
     private IPlayer currentPlayer;
+    private Action onDestroy;
+
 
 
     public abstract Sprite getIcon();
@@ -16,6 +19,16 @@ public abstract class ItemScript : MonoBehaviour
         this.itemActivation = itemActivation;
     }
 
+    public void setOnDestroy(Action onDestroy)
+    {
+        this.onDestroy = onDestroy; 
+    }
+
+    public void destroy()
+    {
+        onDestroy();
+        Destroy(gameObject);
+    }
 
     private void Start()
     {

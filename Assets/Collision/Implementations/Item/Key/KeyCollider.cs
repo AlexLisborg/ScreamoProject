@@ -10,6 +10,11 @@ public class KeyCollider : AbsColider
 
     }
 
+    public void destroyKey()
+    {
+        parent.GetComponent<KeyScript>().destroy();
+    }
+
     public override void AcceptEnter(AbsColider other)
     {
         other.EnterCollision(this); 

@@ -31,6 +31,8 @@ public class Inventory : MonoBehaviour
         container.addItem(Instantiate(bandgeRef).GetComponent<ItemScript>());
     }
 
+ 
+
     public int GetHeight()
     {
         return hight;
@@ -45,12 +47,10 @@ public class Inventory : MonoBehaviour
     {
         if(equipt == item)
         {
-            Debug.Log("was unequiped");
             equipt = null;
         }
         else
         {
-            Debug.Log("was equiped");
             equipt = item;
         }
     }
@@ -68,19 +68,24 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && equipt != null)
+        if (Input.GetKeyDown(KeyCode.Q) && equipt != null )
         {
-            if (equipt.isActivated())
+            if (container.contains(equipt))
             {
-                Debug.Log("deactive");
-                
-                equipt.Deactivate();
+                if (equipt.isActivated())
+                {
+                    equipt.Deactivate();
+                }
+                else
+                {
+                    equipt.Activate(player);
+                }
             }
             else
             {
-                Debug.Log("active");
-                equipt.Activate(player);
+                equipt = null;
             }
+            
         }
 
 

@@ -32,7 +32,7 @@ public class PlayerCollider : AbsColider
     override public void StayCollision(DoorCollider doorCollider)
     {
         if(Input.GetKey(KeyCode.E)) {
-            parent.transform.position = doorCollider.getLeadsTo().transform.position;
+            doorCollider.goThrough(parent);
         }
 
     }
