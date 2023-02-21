@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class BulletScript : ItemScript
 {
-    // Start is called before the first frame update
-    void Start()
+    public override Activation getActivation()
     {
-        
+        throw new System.NotImplementedException();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override Sprite getIcon()
     {
-        
+        throw new System.NotImplementedException();
+    }
+
+    public class BulletActivation : Activation
+    {
+        public void Activate(IPlayer player, GameObject go)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Deactivate(IPlayer player, GameObject go)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void UpdateActivation(IPlayer player, GameObject go)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public abstract class ItemScript : MonoBehaviour
 {
-    private Activation itemActivation;
+
     private bool activated = false;
     private IPlayer currentPlayer;
     private Action onDestroy;
@@ -14,10 +14,8 @@ public abstract class ItemScript : MonoBehaviour
 
 
     public abstract Sprite getIcon();
-    public void set(Activation itemActivation)
-    {
-        this.itemActivation = itemActivation;
-    }
+    public abstract Activation getActivation();
+   
 
     public void setOnDestroy(Action onDestroy)
     {
@@ -39,7 +37,7 @@ public abstract class ItemScript : MonoBehaviour
     {
         if(activated)
         {
-            itemActivation.UpdateActivation(currentPlayer, gameObject);
+            getActivation().UpdateActivation(currentPlayer, gameObject);
         }
     }
 
@@ -52,7 +50,7 @@ public abstract class ItemScript : MonoBehaviour
             activated = true;
             gameObject.SetActive(true);
             currentPlayer = player;
-            itemActivation.Activate(player, gameObject);
+            getActivation().Activate(player, gameObject);
         }
     }
 
@@ -60,7 +58,7 @@ public abstract class ItemScript : MonoBehaviour
     {
         if (activated)
         {
-            itemActivation.Deactivate(currentPlayer, gameObject);
+            getActivation().Deactivate(currentPlayer, gameObject);
             currentPlayer = null;
             activated = false;
             gameObject.SetActive(false);

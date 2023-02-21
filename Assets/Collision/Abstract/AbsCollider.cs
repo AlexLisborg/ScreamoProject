@@ -23,9 +23,6 @@ public abstract class AbsColider
     public virtual void StayCollision(CharacterColider wallColider) { }
     public virtual void ExitCollision(CharacterColider wallColider) { }
 
-    public virtual void EnterCollision(BulletColider bulletColider) { }
-    public virtual void StayCollision(BulletColider bulletColider) { }
-    public virtual void ExitCollision(BulletColider bulletColider) { }
 
     public virtual void EnterCollision(StaticColider bulletColider) { }
     public virtual void StayCollision(StaticColider bulletColider) { }

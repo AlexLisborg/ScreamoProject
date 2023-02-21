@@ -9,6 +9,14 @@ public class BandageScript : ItemScript
     [SerializeField] float healingAmount;
     [SerializeField] float duration;
     [SerializeField] Timer timer;
+    private BandageActivation ba;
+
+    
+    public override Activation getActivation()
+    {
+        return ba;
+    }
+
     public override Sprite getIcon()
     {
         return gameObject.GetComponent<SpriteRenderer>().sprite;
@@ -17,7 +25,7 @@ public class BandageScript : ItemScript
     // Start is called before the first frame update
     private void Awake()
     {
-        set(new BandageActivation(timer,destroy,healingAmount,duration));
+        ba = new BandageActivation(timer,destroy,healingAmount,duration);
     }
     public class BandageActivation : Activation
     {
