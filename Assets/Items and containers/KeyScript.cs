@@ -5,15 +5,17 @@ using UnityEngine;
 
 public class KeyScript : ItemScript
 {
+    public override Activation getActivation()
+    {
+        return new KeyActivation();
+    }
+
     public override Sprite getIcon()
     {
         return gameObject.GetComponent<SpriteRenderer>().sprite;
     }
 
-    private void Awake()
-    {
-        set(new KeyActivation());
-    }
+    
 
     public class KeyActivation : Activation
     {
