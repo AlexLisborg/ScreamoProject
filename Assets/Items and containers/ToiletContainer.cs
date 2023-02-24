@@ -18,7 +18,7 @@ public class ToiletContainer : Colidable
         return col;
     }
 
-
+        
 
     private new void Awake()
     {

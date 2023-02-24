@@ -5,14 +5,15 @@ using UnityEngine;
 public class PlayerCollider : AbsColider
 {
     private Container containerAvilable = null;
+    public IPlayer player { get; private set; }
 
     public Container GetContainerAvilabe()
     {
         return containerAvilable;
     }
-    public PlayerCollider(GameObject parent) : base(parent)
+    public PlayerCollider(GameObject parent, IPlayer player) : base(parent)
     {
-        
+        this.player = player;   
     }
 
     public override void AcceptEnter(AbsColider other)

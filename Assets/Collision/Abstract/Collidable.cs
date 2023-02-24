@@ -18,8 +18,7 @@ public abstract class Colidable : MonoBehaviour
     public abstract AbsColider GetColiderInstance(GameObject go);
 
 
- 
-    public void OnCollisionEnter2D(Collision2D c)
+    private void Enter(Collider2D c)
     {
         Colidable other = c.gameObject.GetComponent<Colidable>(); ;
         if (other != null)
@@ -28,8 +27,18 @@ public abstract class Colidable : MonoBehaviour
             colider.AnyEnterCollision(other.colider);
         }
     }
+    public void OnCollisionEnter2D(Collision2D c)
+    {
+        Enter(c.collider);
+    }
 
-    public void OnCollisionStay2D(Collision2D c)
+    private void OnTriggerEnter2D(Collider2D c)
+    {
+        Enter(c);
+    }
+
+
+    private void Stay(Collider2D c)
     {
         Colidable other = c.gameObject.GetComponent<Colidable>(); ;
         if (other != null)
@@ -38,8 +47,17 @@ public abstract class Colidable : MonoBehaviour
             colider.AnyStayCollision(other.colider);
         }
     }
+    public void OnCollisionStay2D(Collision2D c)
+    {
+        Stay(c.collider);
+    }
 
-    public void OnCollisionExit2D(Collision2D c)
+    private void OnTriggerStay2D(Collider2D c)
+    {
+        Stay(c);
+    }
+
+    private void Exit(Collider2D c)
     {
         //Debug.Log(gameObject.name + " stoped colding with " + c.collider.name);
         Colidable other = c.gameObject.GetComponent<Colidable>();
@@ -48,6 +66,15 @@ public abstract class Colidable : MonoBehaviour
             other.colider.AcceptExit(colider);
             colider.AnyExitCollision(other.colider);
         }
+    }
+
+    public void OnCollisionExit2D(Collision2D c)
+    {
+        Exit(c.collider);
+    }
+    private void OnTriggerExit2D(Collider2D c)
+    {
+        Exit(c);
     }
 
 
