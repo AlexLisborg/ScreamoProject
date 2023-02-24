@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
@@ -5,17 +6,27 @@ using UnityEngine;
 
 public abstract class ItemScript : MonoBehaviour
 {
-    private Activation itemActivation;
+
     private bool activated = false;
     private IPlayer currentPlayer;
+    private Action onDestroy;
+
 
 
     public abstract Sprite getIcon();
-    public void set(Activation itemActivation)
+    public abstract Activation getActivation();
+   
+
+    public void setOnDestroy(Action onDestroy)
     {
-        this.itemActivation = itemActivation;
+        this.onDestroy = onDestroy; 
     }
 
+    public void destroy()
+    {
+        onDestroy();
+        Destroy(gameObject);
+    }
 
     private void Start()
     {
@@ -26,7 +37,7 @@ public abstract class ItemScript : MonoBehaviour
     {
         if(activated)
         {
-            itemActivation.UpdateActivation(currentPlayer, gameObject);
+            getActivation().UpdateActivation(currentPlayer, gameObject);
         }
     }
 
@@ -39,7 +50,10 @@ public abstract class ItemScript : MonoBehaviour
             activated = true;
             gameObject.SetActive(true);
             currentPlayer = player;
-            itemActivation.Activate(player, gameObject);
+            Debug.Log(getActivation());
+            Debug.Log(player);
+            Debug.Log(gameObject);
+            getActivation().Activate(player, gameObject);
         }
     }
 
@@ -47,7 +61,7 @@ public abstract class ItemScript : MonoBehaviour
     {
         if (activated)
         {
-            itemActivation.Deactivate(currentPlayer, gameObject);
+            getActivation().Deactivate(currentPlayer, gameObject);
             currentPlayer = null;
             activated = false;
             gameObject.SetActive(false);

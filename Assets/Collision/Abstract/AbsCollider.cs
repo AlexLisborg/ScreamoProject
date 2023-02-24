@@ -16,6 +16,11 @@ public abstract class AbsColider
 
     abstract public void AcceptExit(AbsColider other);
 
+    public virtual void AnyEnterCollision(AbsColider other) { }
+    public virtual void AnyStayCollision(AbsColider other) { }
+
+    public virtual void AnyExitCollision(AbsColider other) { }
+
     //Add new method with argumnet of new subtype
     //These methodes are for when this oject colides with another spesifict oject
     //By default then a collsion will do nothing unless the method is overwritten
@@ -23,9 +28,6 @@ public abstract class AbsColider
     public virtual void StayCollision(CharacterColider wallColider) { }
     public virtual void ExitCollision(CharacterColider wallColider) { }
 
-    public virtual void EnterCollision(BulletColider bulletColider) { }
-    public virtual void StayCollision(BulletColider bulletColider) { }
-    public virtual void ExitCollision(BulletColider bulletColider) { }
 
     public virtual void EnterCollision(StaticColider bulletColider) { }
     public virtual void StayCollision(StaticColider bulletColider) { }

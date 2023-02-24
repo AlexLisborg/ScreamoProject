@@ -6,30 +6,46 @@ using UnityEngine;
 
 public class BandageScript : ItemScript
 {
+    [SerializeField] float healingAmount;
+    [SerializeField] float duration;
+    [SerializeField] Timer timer;
+    private BandageActivation ba;
+
     
+    public override Activation getActivation()
+    {
+        return ba;
+    }
+
     public override Sprite getIcon()
     {
-
-
-
         return gameObject.GetComponent<SpriteRenderer>().sprite;
     }
 
     // Start is called before the first frame update
     private void Awake()
     {
-        set(new BandageActivation());
+        ba = new BandageActivation(timer,destroy,healingAmount,duration);
     }
     public class BandageActivation : Activation
     {
-        DateTime time;
-        TimeSpan duration = new TimeSpan(0, 0, 2);
+        Timer timer;
+        Action selfDestruct;
+        float healingAmount;
+        float duration;
+        public BandageActivation(Timer timer, Action selfDestruct, float healingAmount, float duration) {
+            this.timer = timer;
+            this.selfDestruct = selfDestruct;
+            this.healingAmount = healingAmount;
+            this.duration = duration;
+        }
 
         public void Activate(IPlayer player, GameObject go)
         {
             Vector2 offsett = new Vector2(Mathf.Cos(player.getDir()), Mathf.Sin(player.getDir())) * player.getReach();
             go.transform.position = player.getPos() + offsett;
-            time = DateTime.Now;
+            timer.StartTimer(() => { player.ChangeHP(healingAmount); selfDestruct(); }, duration);
+           
         }
 
         public void Deactivate(IPlayer player, GameObject go)
@@ -39,11 +55,7 @@ public class BandageScript : ItemScript
 
         public void UpdateActivation(IPlayer player, GameObject go)
         {
-            if (time.Add(duration).Date >= DateTime.Now)
-            {
-                player.ChangeHP(50);
-                Deactivate(player, go);
-            }
+           
         }
     }
 

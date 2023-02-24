@@ -1,0 +1,2335 @@
+fileFormatVersion: 2
+guid: cd02041cd74967048809a28128a3567a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be95f0540c33de45b8df66eca79b104
+      internalID: 1050762345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a569d9905e4fc144e8c4672abcc4b7ad
+      internalID: 1146547210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1050d69691193445b7a267b1b4e02df
+      internalID: 859881578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9474fb7456c03e84c887efc185675005
+      internalID: -350825548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2689d990748fad4da5ae3324b109fbc
+      internalID: -908993838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018f0f113a2e26541bff9fc52482953b
+      internalID: -1197571092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2130e993c19e600499a8ca82af2c35a4
+      internalID: 411899585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3728b73ac8fb044831f4a017fb5115
+      internalID: -286119030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03c32e811019c147aad5f868581dd58
+      internalID: 295107316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1248b7d740546ab469272c326b054e93
+      internalID: -155499759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81cffd95e2e6a7e4abf28f0bd99f37cd
+      internalID: 386083273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e77f6b9a02803bb46a93ecf7072fef15
+      internalID: -1893869704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcccf59af6ad1414499c217e0e910fe1
+      internalID: 1191208818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 012092d69d0f2c842aab02a9d04ff0fb
+      internalID: -1399239706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d22d77a85afb84381502a587422d97
+      internalID: -1886481370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8be7e2d517072449b9f584d93c35739
+      internalID: 1509815251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8815df9dc72de439d9cb956233d5b4
+      internalID: 2125058997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2393deb437e041b4ebe9f194dd454184
+      internalID: -1044310910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab6d25e08ff14b4bb3dd36d764c6838
+      internalID: -887279687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae261e318323c74bafdd6e394c94dd6
+      internalID: 1648609108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93cc32cb6fbf89446b3dfb36c46b9f65
+      internalID: 1153672065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 561da65f3979ace48bc77367e47c348e
+      internalID: 956164036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc3ab26f706fd964aa5e48a7b4ab9dc3
+      internalID: -600135727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95764aa3500272d40a2c30f7c1a3e3ca
+      internalID: -99334852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 508c2bf26385f9643aaec5493c110338
+      internalID: 1246328139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4f156bb293baf489d02126ff09c8da
+      internalID: 1583416478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc6a6f1f21dc5945962f642e02f7d87
+      internalID: 1304994390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25009199d533c14b973c0b492e94788
+      internalID: -1558490372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2511ff9008569345a8d271f6a2cb984
+      internalID: -39517272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d60667ef5aed443a247301adc887cb
+      internalID: -506568602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a357512864fd6d4d85aca11065a35d1
+      internalID: -976007935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849c67539ad935742ba07621e1bdfb90
+      internalID: -1260812627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb769d1144cab647bc79d477e28e4ac
+      internalID: -477650338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32fc95775121d9b48bd688312fb8ecbf
+      internalID: -872136040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514baaa05b56fd142a22babb80f3bc3e
+      internalID: -194741258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 037f155abed238b41904e72c31651392
+      internalID: 2010231141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba4d1db3f3ac3ae4380d47c566421491
+      internalID: -1209474095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ea69982fe6e3542a8bb9edb22d9689
+      internalID: 1980574412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 258078c0e7c778844bb5d5558eae2a3d
+      internalID: 250088664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6bde19ed7a7b6a44830401305df8f74
+      internalID: 2057518757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c479bf869083fd4382aed1947851c99
+      internalID: -904097003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8860bd6332e30c44ba2a495ed0e23392
+      internalID: -1780761831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f9cb535e1610642908354f5f4f467e
+      internalID: 724042105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c10ecbed035f7d43acfa7b8653afa6a
+      internalID: -1570992795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7206513d1dae6447b32d5763c182071
+      internalID: 1254164103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5510c3cf251394795d2f49af16062b
+      internalID: 119126208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c44e8fd277ee0b49bdda1e0626df88c
+      internalID: -2146932563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2c70b7e30e7e4438b647ad450d4398
+      internalID: 2085184426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b490d87187a224e8af660c645ea5c9
+      internalID: 848874063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23a0c2ba62d41a4a8fc72663cd6ea4a
+      internalID: -703117447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728a23ca3f531434cb7d7344c1012466
+      internalID: -163780008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d161a813a1a7061469c936a6659520d8
+      internalID: -1214192245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a9601406800994a8d77d12cbf9620e
+      internalID: -575012245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149a9de8b0d68a446accbcf1a6a340a9
+      internalID: 1011251682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c81f56b67782646b8381ab88d3412b
+      internalID: 278922052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 931bc8ace8e3bf84eb6fcd3298aec8c6
+      internalID: 953018260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582b0c7218aa8f84dad28c22a35106fb
+      internalID: 1658452531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c671f0e020c394642969c71d5ae4451e
+      internalID: -263244863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af75b09e7c980624daa0b868c6def0a2
+      internalID: 87616064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e04e1f991880564b94c2d6307e62ba3
+      internalID: 861198999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64994c251f43c86479aec7fc43196067
+      internalID: 1740746528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031207ce9635e0d46911da912516e783
+      internalID: -1005875483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1506fb39a32eefe419752341dc74a402
+      internalID: 1269029295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7a2010247aa944bbbdeec912d9d5e1
+      internalID: -347407892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209ab312fe6b13340bacca1aa5d12bf0
+      internalID: 959569559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7884f56277e039e49b213512243ff9d8
+      internalID: 975795203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de460ee8fab1da4d992d1e02829ca7a
+      internalID: 696860010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47822923d4a120847bdfe83a5114a08f
+      internalID: -144068561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0644ebff8109643a43af48934a2307
+      internalID: 717354875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcbdf6026ddbece4382b8ca067712ed3
+      internalID: -241613832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6652db3bb332ec84299d1b507049674b
+      internalID: 727810464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3f08b9ebc11b143a4f446d7f671006
+      internalID: 1461811934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_72
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aec2fcc8a5a19e4394f22d486710585
+      internalID: -1555325167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_73
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aecfd2d93da56f841a5eab6132cde171
+      internalID: 1769182351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_74
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 537beb55a9345a64e96dbd7c0b508b3d
+      internalID: 645780173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_75
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d497608e7f4f1a24cb5319598e1e828c
+      internalID: -989140582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_76
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94552568db265c4b9c65cabcdc78a5a
+      internalID: 1084621337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_77
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b600b7d9869c349b4b78765e68e200
+      internalID: 2035806827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_78
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07244ba72ecacad4f92e51226a1c8365
+      internalID: -831834857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_79
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf848a0966d44549952279b3c81b9c8
+      internalID: -2003473156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20911c940db4c904b9509254d44a63dc
+      internalID: 102585800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_81
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2ede8b04ce3864992f2da9dc03a069
+      internalID: -228357961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_82
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99159e8deb0742c418b66da400b3fef8
+      internalID: -1678579290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_83
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e117f395c2508044f9034c0e8edf9b3d
+      internalID: 125327985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_84
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d36f6602c72654e8f53e4a65bbb68a
+      internalID: -1286023612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_85
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3065a5e9e6c5246b2a30af3f3aef20
+      internalID: -1256086131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_86
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a68ef4174fc5645900f97e3dd4948c
+      internalID: -1825782205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_87
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe8b339add9b9148801f23ff0df3451
+      internalID: 482225690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_88
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602b87f70fea63a42bc936e5760d5903
+      internalID: 21902947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_89
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e52b3dfe572bd8c4d9345eaaf702cf38
+      internalID: 1029981437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb0f5c9208b05642b509665947f6dca
+      internalID: 1756850492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_91
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 0
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c459fcf84c06742a26377de1d9c367
+      internalID: -1968426789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_92
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 0
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d75b27781ca2604aa8d4bd0f69cfedb
+      internalID: 913897121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_93
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7d64c590a3e234fb45e882f62b8187
+      internalID: -1186003709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_94
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 0
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bed42726a118f84793bde23721d15ce
+      internalID: -118645947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_95
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9b4fbf51d4c8a4f985bdc5f9d8f07f
+      internalID: -1528047545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_96
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac25903f8b022344810e97e2ed7ffcf
+      internalID: 1973568188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_97
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 0
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa46245abcdc6664082ffd32e615d55b
+      internalID: -1858239226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_98
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3368cbfef4e8514aa5a67bf2169c70b
+      internalID: 514660687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BodyWalk-Sheet_99
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 0
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23cf49be22a2054d896d49dd307ab13
+      internalID: -234358013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BodyWalk-Sheet_31: -1260812627
+      BodyWalk-Sheet_42: 724042105
+      BodyWalk-Sheet_81: -228357961
+      BodyWalk-Sheet_64: 959569559
+      BodyWalk-Sheet_73: 1769182351
+      BodyWalk-Sheet_52: -575012245
+      BodyWalk-Sheet_25: 1583416478
+      BodyWalk-Sheet_10: 386083273
+      BodyWalk-Sheet_85: -1256086131
+      BodyWalk-Sheet_7: -286119030
+      BodyWalk-Sheet_22: -600135727
+      BodyWalk-Sheet_29: -506568602
+      BodyWalk-Sheet_53: 1011251682
+      BodyWalk-Sheet_96: 1973568188
+      BodyWalk-Sheet_19: 1648609108
+      BodyWalk-Sheet_40: -904097003
+      BodyWalk-Sheet_72: -1555325167
+      BodyWalk-Sheet_62: 1269029295
+      BodyWalk-Sheet_89: 1029981437
+      BodyWalk-Sheet_70: 727810464
+      BodyWalk-Sheet_44: 1254164103
+      BodyWalk-Sheet_54: 278922052
+      BodyWalk-Sheet_27: -1558490372
+      BodyWalk-Sheet_71: 1461811934
+      BodyWalk-Sheet_95: -1528047545
+      BodyWalk-Sheet_39: 2057518757
+      BodyWalk-Sheet_58: 87616064
+      BodyWalk-Sheet_38: 250088664
+      BodyWalk-Sheet_60: 1740746528
+      BodyWalk-Sheet_83: 125327985
+      BodyWalk-Sheet_45: 119126208
+      BodyWalk-Sheet_43: -1570992795
+      BodyWalk-Sheet_37: 1980574412
+      BodyWalk-Sheet_46: -2146932563
+      BodyWalk-Sheet_59: 861198999
+      BodyWalk-Sheet_2: 859881578
+      BodyWalk-Sheet_36: -1209474095
+      BodyWalk-Sheet_80: 102585800
+      BodyWalk-Sheet_79: -2003473156
+      BodyWalk-Sheet_84: -1286023612
+      BodyWalk-Sheet_14: -1886481370
+      BodyWalk-Sheet_68: 717354875
+      BodyWalk-Sheet_41: -1780761831
+      BodyWalk-Sheet_9: -155499759
+      BodyWalk-Sheet_88: 21902947
+      BodyWalk-Sheet_47: 2085184426
+      BodyWalk-Sheet_49: -703117447
+      BodyWalk-Sheet_99: -234358013
+      BodyWalk-Sheet_15: 1509815251
+      BodyWalk-Sheet_74: 645780173
+      BodyWalk-Sheet_61: -1005875483
+      BodyWalk-Sheet_78: -831834857
+      BodyWalk-Sheet_94: -118645947
+      BodyWalk-Sheet_21: 956164036
+      BodyWalk-Sheet_1: 1146547210
+      BodyWalk-Sheet_65: 975795203
+      BodyWalk-Sheet_90: 1756850492
+      BodyWalk-Sheet_87: 482225690
+      BodyWalk-Sheet_24: 1246328139
+      BodyWalk-Sheet_56: 1658452531
+      BodyWalk-Sheet_8: 295107316
+      BodyWalk-Sheet_4: -908993838
+      BodyWalk-Sheet_30: -976007935
+      BodyWalk-Sheet_20: 1153672065
+      BodyWalk-Sheet_82: -1678579290
+      BodyWalk-Sheet_69: -241613832
+      BodyWalk-Sheet_17: -1044310910
+      BodyWalk-Sheet_12: 1191208818
+      BodyWalk-Sheet_76: 1084621337
+      BodyWalk-Sheet_92: 913897121
+      BodyWalk-Sheet_97: -1858239226
+      BodyWalk-Sheet_26: 1304994390
+      BodyWalk-Sheet_5: -1197571092
+      BodyWalk-Sheet_28: -39517272
+      BodyWalk-Sheet_55: 953018260
+      BodyWalk-Sheet_57: -263244863
+      BodyWalk-Sheet_11: -1893869704
+      BodyWalk-Sheet_66: 696860010
+      BodyWalk-Sheet_3: -350825548
+      BodyWalk-Sheet_35: 2010231141
+      BodyWalk-Sheet_16: 2125058997
+      BodyWalk-Sheet_77: 2035806827
+      BodyWalk-Sheet_23: -99334852
+      BodyWalk-Sheet_0: 1050762345
+      BodyWalk-Sheet_75: -989140582
+      BodyWalk-Sheet_93: -1186003709
+      BodyWalk-Sheet_91: -1968426789
+      BodyWalk-Sheet_51: -1214192245
+      BodyWalk-Sheet_6: 411899585
+      BodyWalk-Sheet_18: -887279687
+      BodyWalk-Sheet_33: -872136040
+      BodyWalk-Sheet_86: -1825782205
+      BodyWalk-Sheet_13: -1399239706
+      BodyWalk-Sheet_32: -477650338
+      BodyWalk-Sheet_34: -194741258
+      BodyWalk-Sheet_98: 514660687
+      BodyWalk-Sheet_63: -347407892
+      BodyWalk-Sheet_50: -163780008
+      BodyWalk-Sheet_48: 848874063
+      BodyWalk-Sheet_67: -144068561
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

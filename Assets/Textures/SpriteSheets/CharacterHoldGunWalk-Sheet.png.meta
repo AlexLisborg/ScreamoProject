@@ -1,0 +1,2599 @@
+fileFormatVersion: 2
+guid: 403f0987a91cbe94d8041274a0f50df6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 370
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9aa8242bc9d104094c0ed7c451fc1e
+      internalID: 449366382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 370
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc0b821d0365966468f2b16a58c2d1bd
+      internalID: 81734967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 370
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17ca94c98000a0439aebf8f34637860
+      internalID: 1396078990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 370
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3bac433babbb504da02802f7d9ab5b4
+      internalID: -1786254846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 370
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74956501e93f8f4199377dcdbffab1d
+      internalID: -1403399981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 370
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151324491c5b6ed4eb4a44a7445e52b0
+      internalID: -1711887954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 370
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1904120a753a9d4aaaad3e1de1733f9
+      internalID: -256112060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 370
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e546de49422bbf4f896dc829637a8d8
+      internalID: 1390791633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 370
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fa7f3d6b2b1d14d97393f00c1ca666
+      internalID: -1502540669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 370
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83df8eb2c9f7784d8397039422d7770
+      internalID: 2069278686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 370
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47572630a06058e49990f76c449be502
+      internalID: 2050174599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 678b4d2ebba124440b0947b5654a34d8
+      internalID: 1352147243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248e413cc94e5c34d82efa6009697bb1
+      internalID: -1359126345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc6378229b876614593c27397ed528ef
+      internalID: -1761058621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e97e61ce82cca24fb53063880b551d1
+      internalID: 2029962903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4c58dce03b46246a64d5cdf8d7f8f4
+      internalID: -620240325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee449693cc3dd646bd128abcd328144
+      internalID: -2027934764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6b97f508a2b7a4d823dc63cde6cb3f
+      internalID: 79280163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ab55acbd9f20f408c429b37548d773
+      internalID: 1327680654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fda565071189564bb8618b4900fc8fa
+      internalID: -1835746378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b012a839d42216d48b03926b44eb6a76
+      internalID: -162830786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 333
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4867a0843d4da90478602ef1f94b90f0
+      internalID: -1590488941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc5ba7f15c7dd7148931bff88d7fed0f
+      internalID: -1314409402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a913536236fe58a41bf92e26465956a2
+      internalID: -1991289800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5f787ce8c73db42bcf649bdbcb7741
+      internalID: 657047335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5dcd666081e464b8ca3da056ab9fe4
+      internalID: -414175586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03dd0406b43db0b499e7c44f75c58667
+      internalID: 76163577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6142d8f4336c864ca4f1b8432ecac6f
+      internalID: -1561734633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 074482e6d586cb0489f6bd9a663ce332
+      internalID: -1854985669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c1623ec60e6934d8a34a666322c805
+      internalID: -252858985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86304ec3fbbd49a42ac694443eab727a
+      internalID: -1788615946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeccc92f537ea6741b5bda5af75bdbeb
+      internalID: 1883103341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 296
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb0d01ba7fb5804c80335b4e8545878
+      internalID: -903776231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec9187cb57d631c46afc667dce9ccc6e
+      internalID: -1021716895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee60166b45ca6dc46a2583e30c80835c
+      internalID: -32423668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71285113ba3bdc84caf29aa8cd857ba4
+      internalID: 250877792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f5ad994cba2fd64dac773f2e084778f
+      internalID: -2053617037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a38670cdd0ba314cabef83dff96bfbd
+      internalID: -1977514983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 575385d3c5724d748a73c11550e75c13
+      internalID: -1735653016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04439dc8a836274582da6e3489edff3
+      internalID: 644603244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613677a314d4df2479327dfb66b202b9
+      internalID: -1806219118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f31c08a895b37448fea82788cf82af
+      internalID: -1752029440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0368253e9bfa374c8b655a4fc9d66cd
+      internalID: -928399278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 259
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2e880e59b1e434fa97dddd5777dc51
+      internalID: 1154175305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa00ee5796f97242a0a7c07e13e8dd4
+      internalID: -1466107194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a26100b17092547aa77dc98e9271bb
+      internalID: -1426156449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5cfc97e229daca4fa9ce7cba5fd02d3
+      internalID: 941486111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f11a94b65e2069428eecf9a8a6f2f14
+      internalID: 1049572183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62960bd4f23ec945a6914be606cbd42
+      internalID: 1444596821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc7db33b470d2f745b73ac44aab356df
+      internalID: -40874868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc551dd61bf139649b14b8e655203972
+      internalID: 949314498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044361a17241d564e8c5e2cd4fe1fec2
+      internalID: -206697787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7f662981f6046458e9e49f14fdca84
+      internalID: 526160692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d1649c2ecac44b4c863c0b023774f7d
+      internalID: -39131443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 222
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c6817051207bc4387e109c852f38b3
+      internalID: -870048092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a0fba4fbafb8b41953e90bacec2aba
+      internalID: -42500242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b3066922c4b3d40830598430c0c35f
+      internalID: -58642836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b356ac307870ba44b620a8ff37a9a0e
+      internalID: -1811486541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2185680759ca27b4dbe941d8e382cb95
+      internalID: 1637869000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c5363e6c9e16f499f22d7585dbee6d
+      internalID: 614172491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af641a3b67110b64e85b80e7667f41dd
+      internalID: 80967764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5927d5a7af92bb243b9499ea5a7e71bd
+      internalID: -180962935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49f775bce0a30e419762f4c1073059a
+      internalID: -1275981158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4709467c6b02a5b4a8e36cf589352e23
+      internalID: -1608399944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc928e7267665c42a23cca88ee8148f
+      internalID: 1972664437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 185
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f52af32ac4d2c4e8eb27d4dfb4b6ea
+      internalID: 162183437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d09ccb7d85f234baabc5f71b9d7e18
+      internalID: 1336533494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a73acdd4ed4de114c984013b4e419afb
+      internalID: -1998335740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c0f98e282f7f7478be528063a16106
+      internalID: -1355870998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a24dcb72602c1c449a1d308613811416
+      internalID: -1480232728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5bee19adf37e3746b1934a1d1b0d6b9
+      internalID: 1067382706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d8d4605f031004b8eaa441cb320557
+      internalID: -1427183492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_72
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb45fc9c0bdc1a41a87fa6e12ee1c2f
+      internalID: -1521868805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_73
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6ed4346dd45ada43a1f6c66c85a9753
+      internalID: 1812100976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_74
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d4dc14d147ddd4b8554e1603ea79ca
+      internalID: -2070124873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_75
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd2316363ba16e4f8a6eaad89a9cc14
+      internalID: 2117757727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_76
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 148
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99cb152d1cba2147b0d2068c1e793ba
+      internalID: -572865378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40deafc2bbb8de84d98e8a86b5dfb4c1
+      internalID: -585479267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_78
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671b3748a9f039b43aa4e9cee0728246
+      internalID: 854885317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_79
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4663b90ef110d7040b50bd8a385f7433
+      internalID: 108835248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_80
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682ea93745205644b8e9b3671fa8ab9b
+      internalID: -1540498444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_81
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ee555637bc2c24c8d51e1f90c7da46
+      internalID: 1827536800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_82
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f70c8bb3fcb43347a531d4a6e406f5e
+      internalID: 218612814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_83
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b199cf51126a86478cc32b364da8990
+      internalID: 532387916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_84
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb121a9382e236646a9754c25fac58f8
+      internalID: -242749019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_85
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c01af100e0f3049ab67ed5ff10511f
+      internalID: 1822865436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_86
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa6865b3965f134b850778f939eff5f
+      internalID: -1160473671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_87
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 111
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7115a1ddc597d9c4bad7e80eba552843
+      internalID: -241571701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2739034a7b4c5264b88e2d52cdce6c17
+      internalID: 343897078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_89
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddfe1ab8eaf4f44c831bee8fd83c3df
+      internalID: 2142400520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_90
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e72a88bbf9eacc41b02d6c369d1dac8
+      internalID: -498435336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_91
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 905b0078281a1cb4aba246c193ef0f08
+      internalID: 9094852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_92
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b52965cba42ea4596ad629c3cf80de
+      internalID: -1946198918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_93
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b635cd930b91fc74a85d27c3a027dd6c
+      internalID: -875794545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_94
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d9d654dfe6705648acd97daaac9a603
+      internalID: -2087966273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_95
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9efcd90305b394b973ef7f9aaa2505
+      internalID: 1449593482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_96
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4f978a52b2bca0449ab7a338bb33994
+      internalID: 882715244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_97
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e182b32da8346804ba0b8e9b238e0a20
+      internalID: -337935239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_98
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 74
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cc36a119f8a53a489499510ef9a5b6f
+      internalID: -1167233544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_99
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4775c349c41e0b418abf96a16f4d149
+      internalID: -1084923422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_100
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3025f5fde3f3142a3d7071c7f6c03f
+      internalID: -1641015522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_101
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74381d9986cf97947acbc237cf17454c
+      internalID: 1900839628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_102
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e145713a5357534ba53d66c8f34f999
+      internalID: -1747628549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_103
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ff6e2d6a1358c40b3f6842323a73d5
+      internalID: 1293571529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_104
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057557bb86b672845808dc09fcb91630
+      internalID: -140883274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_105
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b6ec829718d7548b70fc74daa8a641
+      internalID: -1041063594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_106
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39efea4ba3a38ac42b522ebf71ce2cb2
+      internalID: -1420925432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_107
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1587c9b0f59b54582424473b6f121b
+      internalID: 1052825946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_108
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f70078e5d9f3b64ea4c3a567f01a6b2
+      internalID: 1637641780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_109
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 37
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176d4332d6bea754ba81fffc2990685e
+      internalID: 837689965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dddebf65bb322f740b4cbfa75dc25fdb
+      internalID: -1636615561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharacterHoldGunWalk-Sheet_111
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 0
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e25de25e5bc30634ea85e5acb54568e8
+      internalID: -1562749362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      CharacterHoldGunWalk-Sheet_24: 657047335
+      CharacterHoldGunWalk-Sheet_45: -1426156449
+      CharacterHoldGunWalk-Sheet_71: -1427183492
+      CharacterHoldGunWalk-Sheet_109: 837689965
+      CharacterHoldGunWalk-Sheet_20: -162830786
+      CharacterHoldGunWalk-Sheet_11: 1352147243
+      CharacterHoldGunWalk-Sheet_84: -242749019
+      CharacterHoldGunWalk-Sheet_0: 449366382
+      CharacterHoldGunWalk-Sheet_40: -1806219118
+      CharacterHoldGunWalk-Sheet_79: 108835248
+      CharacterHoldGunWalk-Sheet_7: 1390791633
+      CharacterHoldGunWalk-Sheet_48: 1444596821
+      CharacterHoldGunWalk-Sheet_37: -1977514983
+      CharacterHoldGunWalk-Sheet_28: -1854985669
+      CharacterHoldGunWalk-Sheet_55: -42500242
+      CharacterHoldGunWalk-Sheet_63: -1608399944
+      CharacterHoldGunWalk-Sheet_91: 9094852
+      CharacterHoldGunWalk-Sheet_74: -2070124873
+      CharacterHoldGunWalk-Sheet_5: -1711887954
+      CharacterHoldGunWalk-Sheet_81: 1827536800
+      CharacterHoldGunWalk-Sheet_110: -1636615561
+      CharacterHoldGunWalk-Sheet_27: -1561734633
+      CharacterHoldGunWalk-Sheet_96: 882715244
+      CharacterHoldGunWalk-Sheet_78: 854885317
+      CharacterHoldGunWalk-Sheet_12: -1359126345
+      CharacterHoldGunWalk-Sheet_61: -180962935
+      CharacterHoldGunWalk-Sheet_69: -1480232728
+      CharacterHoldGunWalk-Sheet_36: -2053617037
+      CharacterHoldGunWalk-Sheet_54: -870048092
+      CharacterHoldGunWalk-Sheet_59: 614172491
+      CharacterHoldGunWalk-Sheet_38: -1735653016
+      CharacterHoldGunWalk-Sheet_15: -620240325
+      CharacterHoldGunWalk-Sheet_70: 1067382706
+      CharacterHoldGunWalk-Sheet_92: -1946198918
+      CharacterHoldGunWalk-Sheet_101: 1900839628
+      CharacterHoldGunWalk-Sheet_83: 532387916
+      CharacterHoldGunWalk-Sheet_67: -1998335740
+      CharacterHoldGunWalk-Sheet_89: 2142400520
+      CharacterHoldGunWalk-Sheet_60: 80967764
+      CharacterHoldGunWalk-Sheet_46: 941486111
+      CharacterHoldGunWalk-Sheet_31: 1883103341
+      CharacterHoldGunWalk-Sheet_53: -39131443
+      CharacterHoldGunWalk-Sheet_99: -1084923422
+      CharacterHoldGunWalk-Sheet_10: 2050174599
+      CharacterHoldGunWalk-Sheet_47: 1049572183
+      CharacterHoldGunWalk-Sheet_106: -1420925432
+      CharacterHoldGunWalk-Sheet_6: -256112060
+      CharacterHoldGunWalk-Sheet_34: -32423668
+      CharacterHoldGunWalk-Sheet_102: -1747628549
+      CharacterHoldGunWalk-Sheet_9: 2069278686
+      CharacterHoldGunWalk-Sheet_57: -1811486541
+      CharacterHoldGunWalk-Sheet_13: -1761058621
+      CharacterHoldGunWalk-Sheet_103: 1293571529
+      CharacterHoldGunWalk-Sheet_26: 76163577
+      CharacterHoldGunWalk-Sheet_25: -414175586
+      CharacterHoldGunWalk-Sheet_66: 1336533494
+      CharacterHoldGunWalk-Sheet_104: -140883274
+      CharacterHoldGunWalk-Sheet_39: 644603244
+      CharacterHoldGunWalk-Sheet_64: 1972664437
+      CharacterHoldGunWalk-Sheet_42: -928399278
+      CharacterHoldGunWalk-Sheet_76: -572865378
+      CharacterHoldGunWalk-Sheet_107: 1052825946
+      CharacterHoldGunWalk-Sheet_68: -1355870998
+      CharacterHoldGunWalk-Sheet_41: -1752029440
+      CharacterHoldGunWalk-Sheet_100: -1641015522
+      CharacterHoldGunWalk-Sheet_1: 81734967
+      CharacterHoldGunWalk-Sheet_85: 1822865436
+      CharacterHoldGunWalk-Sheet_73: 1812100976
+      CharacterHoldGunWalk-Sheet_35: 250877792
+      CharacterHoldGunWalk-Sheet_51: -206697787
+      CharacterHoldGunWalk-Sheet_105: -1041063594
+      CharacterHoldGunWalk-Sheet_93: -875794545
+      CharacterHoldGunWalk-Sheet_77: -585479267
+      CharacterHoldGunWalk-Sheet_90: -498435336
+      CharacterHoldGunWalk-Sheet_30: -1788615946
+      CharacterHoldGunWalk-Sheet_98: -1167233544
+      CharacterHoldGunWalk-Sheet_44: -1466107194
+      CharacterHoldGunWalk-Sheet_87: -241571701
+      CharacterHoldGunWalk-Sheet_82: 218612814
+      CharacterHoldGunWalk-Sheet_33: -1021716895
+      CharacterHoldGunWalk-Sheet_17: 79280163
+      CharacterHoldGunWalk-Sheet_97: -337935239
+      CharacterHoldGunWalk-Sheet_2: 1396078990
+      CharacterHoldGunWalk-Sheet_3: -1786254846
+      CharacterHoldGunWalk-Sheet_56: -58642836
+      CharacterHoldGunWalk-Sheet_75: 2117757727
+      CharacterHoldGunWalk-Sheet_94: -2087966273
+      CharacterHoldGunWalk-Sheet_52: 526160692
+      CharacterHoldGunWalk-Sheet_72: -1521868805
+      CharacterHoldGunWalk-Sheet_8: -1502540669
+      CharacterHoldGunWalk-Sheet_19: -1835746378
+      CharacterHoldGunWalk-Sheet_111: -1562749362
+      CharacterHoldGunWalk-Sheet_32: -903776231
+      CharacterHoldGunWalk-Sheet_95: 1449593482
+      CharacterHoldGunWalk-Sheet_14: 2029962903
+      CharacterHoldGunWalk-Sheet_16: -2027934764
+      CharacterHoldGunWalk-Sheet_86: -1160473671
+      CharacterHoldGunWalk-Sheet_22: -1314409402
+      CharacterHoldGunWalk-Sheet_58: 1637869000
+      CharacterHoldGunWalk-Sheet_62: -1275981158
+      CharacterHoldGunWalk-Sheet_21: -1590488941
+      CharacterHoldGunWalk-Sheet_88: 343897078
+      CharacterHoldGunWalk-Sheet_108: 1637641780
+      CharacterHoldGunWalk-Sheet_49: -40874868
+      CharacterHoldGunWalk-Sheet_80: -1540498444
+      CharacterHoldGunWalk-Sheet_23: -1991289800
+      CharacterHoldGunWalk-Sheet_4: -1403399981
+      CharacterHoldGunWalk-Sheet_50: 949314498
+      CharacterHoldGunWalk-Sheet_18: 1327680654
+      CharacterHoldGunWalk-Sheet_43: 1154175305
+      CharacterHoldGunWalk-Sheet_29: -252858985
+      CharacterHoldGunWalk-Sheet_65: 162183437
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

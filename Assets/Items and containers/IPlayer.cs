@@ -10,6 +10,10 @@ public interface IPlayer
     public Vector2 getPos();
     public float getDir();
 
-    public float getReach();    
+    public float getReach();  
+    
+    public void setHoldingPostil(bool holding);
+
+    public Vector2 getPlayerHandsPosition();
    
 }

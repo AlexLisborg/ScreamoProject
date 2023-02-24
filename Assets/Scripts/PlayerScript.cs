@@ -18,6 +18,11 @@ public class PlayerScript : MonoBehaviour, IPlayer
         return (float)Math.PI;
     }
 
+    public Vector2 getPlayerHandsPosition()
+    {
+        return getPos();
+    }
+
     public Vector2 getPos()
     {
         return transform.position + Vector3.zero;
@@ -26,6 +31,11 @@ public class PlayerScript : MonoBehaviour, IPlayer
     public float getReach()
     {
         return 1;
+    }
+
+    public void setHoldingPostil(bool holding)
+    {
+        
     }
 
     // Start is called before the first frame update
