@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : Colidable
+public class CharacterCollidable : Colidable
 {
     public override AbsColider GetColiderInstance(GameObject go)
     {

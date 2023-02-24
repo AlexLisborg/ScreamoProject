@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject boxContainerPrefab;
     [SerializeField] private GameObject pistolPrefab;
     [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject batonPrefab;
     [SerializeField] InputManagerScript inputManager;
     [SerializeField] private int hight;
     [SerializeField] private int with;
@@ -46,6 +47,7 @@ public class Inventory : MonoBehaviour
         pistol.GetComponent<PistolScript>().InputManager = inputManager;
         container.addItem(pistol.GetComponent<ItemScript>());
         container.addItem(Instantiate(bulletPrefab).GetComponent<ItemScript>());
+        container.addItem(Instantiate(batonPrefab).GetComponent<ItemScript>());
     }
 
  
