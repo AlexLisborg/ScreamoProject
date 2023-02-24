@@ -8,6 +8,20 @@ public class CharacterColider : AbsColider
     {
     }
 
+    public Vector3 getPos()
+    {
+        return parent.transform.position + Vector3.zero;
+    }
+
+    public void Addforce(Vector2 v, ForceMode2D fm)
+    {
+        parent.GetComponent<Rigidbody2D>().AddForce(v,fm);
+    }
+
+    public void enableMovemnt(bool yes)
+    {
+
+    }
     public void damage(float amount)
     {
 
