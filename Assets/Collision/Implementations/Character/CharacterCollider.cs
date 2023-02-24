@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CharacterColider : AbsColider
 {
-    public CharacterColider(GameObject parent) : base(parent)
+    private EnemyHealth enemyHealth;
+    public CharacterColider(GameObject parent, EnemyHealth enemyHealth ) : base(parent)
     {
+        this.enemyHealth= enemyHealth;
     }
 
     public Vector3 getPos()
@@ -22,9 +24,9 @@ public class CharacterColider : AbsColider
     {
 
     }
-    public void damage(float amount)
+    public void damage(int amount)
     {
-
+        enemyHealth.TakeDamage(amount);
     }
 
     public override void AcceptEnter(AbsColider other)

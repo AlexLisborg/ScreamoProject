@@ -37,7 +37,7 @@ public class Baton : ItemScript
 
         public void UpdateActivation(IPlayer player, GameObject go)
         {
-            Vector2 offsett = new Vector2(Mathf.Cos(player.getDir()), Mathf.Sin(player.getDir())) * player.getReach();
+            Vector2 offsett = player.getDir() * player.getReach();
             go.transform.position = player.getPos() + offsett;
         }
     }

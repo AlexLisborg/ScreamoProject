@@ -13,7 +13,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject pistolPrefab;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject batonPrefab;
-    [SerializeField] InputManagerScript inputManager;
+    //[SerializeField] InputManagerScript inputManager;
     [SerializeField] private int hight;
     [SerializeField] private int with;
     [SerializeField] private PlayerScript player;

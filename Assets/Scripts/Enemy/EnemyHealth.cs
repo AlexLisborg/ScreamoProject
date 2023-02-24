@@ -26,7 +26,7 @@ public class EnemyHealth : MonoBehaviour
     void Die()
     {
         // Spawn the loot prefab at the enemy's position
-        Instantiate(lootPrefab, transform.position, Quaternion.identity);
+        //Instantiate(lootPrefab, transform.position, Quaternion.identity);
 
         // Destroy the enemy game object
         Destroy(gameObject);

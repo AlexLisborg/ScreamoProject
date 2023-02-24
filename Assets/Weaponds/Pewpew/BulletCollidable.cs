@@ -22,11 +22,12 @@ public class BulletCollidable : Colidable
 
         public override void AnyEnterCollision(AbsColider other)
         {
-            Destroy(parent);
+            //Destroy(parent);
         }
 
         public override void EnterCollision(CharacterColider characterColider)
         {
+            Debug.Log("hit");
             characterColider.damage(100);
         }
 

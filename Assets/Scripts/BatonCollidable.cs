@@ -38,7 +38,6 @@ public class BatonCollidable : Colidable
 
         public override void EnterCollision(CharacterColider characterColider)
         {
-            Debug.Log("hit");
             MeleeHit(characterColider, baton.damage, baton.knockbackStrength, baton.staggerDuration);
         }
 

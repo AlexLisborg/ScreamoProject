@@ -48,13 +48,12 @@ public class PistolScript : ItemScript
             if(bullets.Count > 0)
             {
                 bullets[0].shoot(player);
-                bullets.RemoveAt(0);
+                //bullets.RemoveAt(0);
             }
             
         }
         public void Activate(IPlayer player, GameObject go)
         {
-            Debug.Log("here");
             player.setHoldingPostil(true);
             //inputActionDeactivate = im.addAction(1, KeyCode.Mouse0,KeyEvent.KeyDown, () => shoot(player));
 

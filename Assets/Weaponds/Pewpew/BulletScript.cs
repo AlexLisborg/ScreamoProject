@@ -20,7 +20,6 @@ public class BulletScript : InactiveItem
         gameObject.SetActive(true);
         _movement = player.getDir();
         hasBeenShot = true;
-        Debug.Log(player.getDir());
     }
 
     private void Update()
