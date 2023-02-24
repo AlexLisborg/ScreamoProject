@@ -80,7 +80,11 @@ public class InputManagerScript : MonoBehaviour
 
     private void executeAction(KeyCode keyCode, KeyEvent keyEvent)
     {
-        precedenceForKey[keyCode][keyEvent][0].action();
+        if(precedenceForKey[keyCode][keyEvent].Count > 0)
+        {
+            precedenceForKey[keyCode][keyEvent][0].action();
+        }
+           
     }
 
 

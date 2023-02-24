@@ -12,14 +12,14 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject boxContainerPrefab;
     [SerializeField] private GameObject pistolPrefab;
     [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] InputManagerScript inputManager;
+    //[SerializeField] InputManagerScript inputManager;
     [SerializeField] private int hight;
     [SerializeField] private int with;
     [SerializeField] private PlayerScript player;
   
     private Container container;
     private ItemScript equipt;
-    private Action removeLockMouese0 = null;
+    //private Action removeLockMouese0 = null;
 
 
     private void Awake()
@@ -40,10 +40,9 @@ public class Inventory : MonoBehaviour
         {
             bullts.Add(Instantiate(bulletPrefab).GetComponent<BulletScript>());
         }
-        Debug.Log(pistolPrefab);
         GameObject pistol = Instantiate(pistolPrefab);
         pistol.GetComponent<PistolScript>().setBullets(bullts);
-        pistol.GetComponent<PistolScript>().InputManager = inputManager;
+        pistol.GetComponent<PistolScript>().setCanShoot((() => !container.getIsOpen())) ;
         container.addItem(pistol.GetComponent<ItemScript>());
         container.addItem(Instantiate(bulletPrefab).GetComponent<ItemScript>());
     }
@@ -121,7 +120,7 @@ public class Inventory : MonoBehaviour
             if (!container.getIsOpen())
             {
 
-               removeLockMouese0 = inputManager.addAction(0, KeyCode.Mouse0, KeyEvent.KeyDown, () => { });
+               //removeLockMouese0 = inputManager.addAction(0, KeyCode.Mouse0, KeyEvent.KeyDown, () => { });
                 container.open((item) => toggleEquiped(item), () => transform.position);
             }
             else
@@ -130,13 +129,13 @@ public class Inventory : MonoBehaviour
                     if (otherContainer.getIsOpen())
                     {
                         container.close();
-                        removeLockMouese0();
+                        //removeLockMouese0();
                     }
                 }
                 else
                 {
                     container.close();
-                    removeLockMouese0();
+                    //removeLockMouese0();
                 }
             }
         }
@@ -149,14 +148,14 @@ public class Inventory : MonoBehaviour
                 {
 
                     otherContainer.open((item) => moveItem(otherContainer,container, item), () => transform.position);
-                    removeLockMouese0 = inputManager.addAction(0, KeyCode.Mouse0, KeyEvent.KeyDown, () => { });
+                    //removeLockMouese0 = inputManager.addAction(0, KeyCode.Mouse0, KeyEvent.KeyDown, () => { });
                     container.open((item) => moveItem(container, otherContainer, item), () => { return transform.position + new Vector3(with + 0.5f, 0, 0); }) ;
                 }
                 else if (otherContainer.getIsOpen() && container.getIsOpen())
                 {
                     otherContainer.close();
                     container.close();
-                    removeLockMouese0();
+                    //removeLockMouese0();
                 }
             }
             

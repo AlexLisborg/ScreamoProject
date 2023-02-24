@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletScript : InactiveItem
 {
     [SerializeField] float movementSpeed;
+    private Vector3 _movement;
     private bool hasBeenShot = false;
 
     public override Sprite getIcon()
@@ -17,16 +18,16 @@ public class BulletScript : InactiveItem
     {
         transform.position = player.getPlayerHandsPosition();
         gameObject.SetActive(true);
-        transform.eulerAngles = new Vector3(0,0,player.getDir());
+        _movement = player.getDir();
         hasBeenShot = true;
+        Debug.Log(player.getDir());
     }
 
     private void Update()
     {
         if (hasBeenShot)
-        {
-            float angle = transform.eulerAngles.z;
-            transform.position += new Vector3(0, Mathf.Sin(Mathf.Deg2Rad * angle), Mathf.Cos(Mathf.Deg2Rad * angle)) * Time.deltaTime * movementSpeed;
+        {  
+            transform.position += _movement * Time.deltaTime * movementSpeed;
         }
     }
 

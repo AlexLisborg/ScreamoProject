@@ -3056,6 +3056,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e70008aab4e74469728cbf035f604d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1042197646 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5801426643004559567, guid: 7114d23b88dc0444c8418c5d7550c976, type: 3}
+  m_PrefabInstance: {fileID: 1593822229}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042197641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e6977e45f47f148852ae9e716428f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1068348667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3075,6 +3086,10 @@ PrefabInstance:
       propertyPath: m_UsedByEffector
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1568252165901019249, guid: 0cdbedbfe7ff5b345a29b8e598c92e8f, type: 3}
+      propertyPath: leadsTo
+      value: 
+      objectReference: {fileID: 3825426503877979939}
     - target: {fileID: 6949103362488481048, guid: 0cdbedbfe7ff5b345a29b8e598c92e8f, type: 3}
       propertyPath: m_Name
       value: Door2
@@ -3130,19 +3145,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6949103362488481048, guid: 0cdbedbfe7ff5b345a29b8e598c92e8f, type: 3}
   m_PrefabInstance: {fileID: 1068348667}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1068348670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068348668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b61c5b080b1c9e458e32d54a6e221b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leadsTo: {fileID: 3825426503877979938}
 --- !u!50 &1068348674
 Rigidbody2D:
   serializedVersion: 4
@@ -3164,6 +3166,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1068348675 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -1568252165901019249, guid: 0cdbedbfe7ff5b345a29b8e598c92e8f, type: 3}
+  m_PrefabInstance: {fileID: 1068348667}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068348668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b61c5b080b1c9e458e32d54a6e221b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1205175079
 GameObject:
   m_ObjectHideFlags: 0
@@ -6512,6 +6525,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5801426643004559567, guid: 7114d23b88dc0444c8418c5d7550c976, type: 3}
+      propertyPath: HoldGun
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849783810923055870, guid: 7114d23b88dc0444c8418c5d7550c976, type: 3}
+      propertyPath: pm
+      value: 
+      objectReference: {fileID: 1042197646}
     - target: {fileID: 8166529469819491459, guid: 7114d23b88dc0444c8418c5d7550c976, type: 3}
       propertyPath: with
       value: 3
@@ -6999,6 +7020,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1568252165901019249, guid: 0cdbedbfe7ff5b345a29b8e598c92e8f, type: 3}
+      propertyPath: leadsTo
+      value: 
+      objectReference: {fileID: 1068348675}
     - target: {fileID: 6949103362488481048, guid: 0cdbedbfe7ff5b345a29b8e598c92e8f, type: 3}
       propertyPath: m_Name
       value: Door1
@@ -7049,21 +7074,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cdbedbfe7ff5b345a29b8e598c92e8f, type: 3}
---- !u!1 &3825426503877979936 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6949103362488481048, guid: 0cdbedbfe7ff5b345a29b8e598c92e8f, type: 3}
+--- !u!114 &3825426503877979939 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -1568252165901019249, guid: 0cdbedbfe7ff5b345a29b8e598c92e8f, type: 3}
   m_PrefabInstance: {fileID: 3825426503877979935}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3825426503877979938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3825426503877979936}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b61c5b080b1c9e458e32d54a6e221b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leadsTo: {fileID: 1068348670}

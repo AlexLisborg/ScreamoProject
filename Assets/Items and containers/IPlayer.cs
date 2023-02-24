@@ -8,7 +8,7 @@ public interface IPlayer
     public void ChangeHP(float change);
 
     public Vector2 getPos();
-    public float getDir();
+    public Vector3 getDir();
 
     public float getReach();  
     

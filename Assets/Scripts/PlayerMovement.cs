@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool HoldGun;
 
+    private Vector2 playerToMouse = Vector2.up;
+
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 mousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePos2D = new Vector2(mousePos.x,mousePos.y);
         Vector2 playerPos2D = new Vector2(transform.position.x,transform.position.y);
-        Vector2 playerToMouse = (mousePos2D - playerPos2D).normalized;
+        playerToMouse = (mousePos2D - playerPos2D).normalized;
 
         _movement.x = Input.GetAxisRaw("Horizontal");
         _movement.y = Input.GetAxisRaw("Vertical");
@@ -85,13 +87,23 @@ public class PlayerMovement : MonoBehaviour
     }
     private void animSetFloat(String s, float f)
     {
-        //LegsAnim.SetFloat(s, f);
-        //BodyAnim.SetFloat(s, f);
+        LegsAnim.SetFloat(s, f);
+        BodyAnim.SetFloat(s, f);
     }
 
     //Should return the position from which bullets should be instansiated when gun is fired.
     public Vector3 GetGunFirePosition()
     {
         throw new Exception("GetGunFirePosition() not implemented");
+    }
+
+    public void SetHoldGun(bool b)
+    {
+        HoldGun = b;
+    }
+
+    public Vector2 GetPlayerToMouse()
+    {
+        return playerToMouse;
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class DoorScript : Colidable
 {
     [SerializeField] DoorScript leadsTo;
-    private bool isOpen = false;
+    [SerializeField] private bool isOpen = true;
     public override AbsColider GetColiderInstance(GameObject go)
     {
         return new DoorCollider(go, leadsTo, (key) => { isOpen = true; key.destroyKey(); }, () => isOpen);

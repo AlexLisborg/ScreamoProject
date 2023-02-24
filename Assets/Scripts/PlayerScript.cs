@@ -1,11 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour, IPlayer
 {
     private float hp = 100;
+
+    [SerializeField] private PlayerMovement pm;
+
 
     public void ChangeHP(float change)
     {
@@ -13,9 +17,9 @@ public class PlayerScript : MonoBehaviour, IPlayer
         hp += change;
     }
 
-    public float getDir()
+    public Vector3 getDir()
     {
-        return (float)Math.PI;
+        return new Vector3(pm.GetPlayerToMouse().x,pm.GetPlayerToMouse().y,0);
     }
 
     public Vector2 getPlayerHandsPosition()
@@ -35,7 +39,7 @@ public class PlayerScript : MonoBehaviour, IPlayer
 
     public void setHoldingPostil(bool holding)
     {
-        
+        GetComponent<PlayerMovement>().SetHoldGun(holding);
     }
 
     // Start is called before the first frame update
