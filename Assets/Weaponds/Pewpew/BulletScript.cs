@@ -2,33 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletScript : ItemScript
+public class BulletScript : InactiveItem
 {
-    public override Activation getActivation()
-    {
-        throw new System.NotImplementedException();
-    }
+    [SerializeField] float movementSpeed;
+    private bool hasBeenShot = false;
 
     public override Sprite getIcon()
     {
-        throw new System.NotImplementedException();
+        return GetComponent<SpriteRenderer>().sprite;
     }
 
-    public class BulletActivation : Activation
+
+    public void shoot(IPlayer player)
     {
-        public void Activate(IPlayer player, GameObject go)
-        {
-            throw new System.NotImplementedException();
-        }
+        transform.position = player.getPlayerHandsPosition();
+        gameObject.SetActive(true);
+        transform.eulerAngles = new Vector3(0,0,player.getDir());
+        hasBeenShot = true;
+    }
 
-        public void Deactivate(IPlayer player, GameObject go)
+    private void Update()
+    {
+        if (hasBeenShot)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public void UpdateActivation(IPlayer player, GameObject go)
-        {
-            throw new System.NotImplementedException();
+            float angle = transform.eulerAngles.z;
+            transform.position += new Vector3(0, Mathf.Sin(Mathf.Deg2Rad * angle), Mathf.Cos(Mathf.Deg2Rad * angle)) * Time.deltaTime * movementSpeed;
         }
     }
+
+
+
+
 }

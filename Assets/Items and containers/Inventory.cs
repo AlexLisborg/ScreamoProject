@@ -1,19 +1,25 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
-
-
+using static InputManagerScript;
 
 public class Inventory : MonoBehaviour
 {
-    public GameObject keyRef;
-    public GameObject bandgeRef;
-    public GameObject boxContainerPrefab;
-    public int hight;
-    public int with;
-    public PlayerScript player;
+    [SerializeField] private GameObject keyRef;
+    [SerializeField] private GameObject bandgeRef;
+    [SerializeField] private GameObject boxContainerPrefab;
+    [SerializeField] private GameObject pistolPrefab;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] InputManagerScript inputManager;
+    [SerializeField] private int hight;
+    [SerializeField] private int with;
+    [SerializeField] private PlayerScript player;
+  
     private Container container;
     private ItemScript equipt;
+    private Action removeLockMouese0 = null;
 
 
     private void Awake()
@@ -29,6 +35,17 @@ public class Inventory : MonoBehaviour
             container.addItem(Instantiate(keyRef).GetComponent<ItemScript>());
         }
         container.addItem(Instantiate(bandgeRef).GetComponent<ItemScript>());
+        List<BulletScript> bullts = new List<BulletScript>();
+        for (int i = 0; i < 5; i++)
+        {
+            bullts.Add(Instantiate(bulletPrefab).GetComponent<BulletScript>());
+        }
+        Debug.Log(pistolPrefab);
+        GameObject pistol = Instantiate(pistolPrefab);
+        pistol.GetComponent<PistolScript>().setBullets(bullts);
+        pistol.GetComponent<PistolScript>().InputManager = inputManager;
+        container.addItem(pistol.GetComponent<ItemScript>());
+        container.addItem(Instantiate(bulletPrefab).GetComponent<ItemScript>());
     }
 
  
@@ -45,7 +62,9 @@ public class Inventory : MonoBehaviour
 
     private void toggleEquiped(ItemScript item)
     {
-        if(equipt == item)
+        if(equipt != null)
+            equipt.Deactivate();
+        if (equipt == item)
         {
             equipt = null;
         }
@@ -62,6 +81,11 @@ public class Inventory : MonoBehaviour
         {
             equipt = null;
         }
+    }
+
+    private void nothing()
+    {
+
     }
  
 
@@ -96,6 +120,8 @@ public class Inventory : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I)) {
             if (!container.getIsOpen())
             {
+
+               removeLockMouese0 = inputManager.addAction(0, KeyCode.Mouse0, KeyEvent.KeyDown, () => { });
                 container.open((item) => toggleEquiped(item), () => transform.position);
             }
             else
@@ -104,11 +130,13 @@ public class Inventory : MonoBehaviour
                     if (otherContainer.getIsOpen())
                     {
                         container.close();
+                        removeLockMouese0();
                     }
                 }
                 else
                 {
                     container.close();
+                    removeLockMouese0();
                 }
             }
         }
@@ -121,12 +149,14 @@ public class Inventory : MonoBehaviour
                 {
 
                     otherContainer.open((item) => moveItem(otherContainer,container, item), () => transform.position);
+                    removeLockMouese0 = inputManager.addAction(0, KeyCode.Mouse0, KeyEvent.KeyDown, () => { });
                     container.open((item) => moveItem(container, otherContainer, item), () => { return transform.position + new Vector3(with + 0.5f, 0, 0); }) ;
                 }
                 else if (otherContainer.getIsOpen() && container.getIsOpen())
                 {
                     otherContainer.close();
                     container.close();
+                    removeLockMouese0();
                 }
             }
             

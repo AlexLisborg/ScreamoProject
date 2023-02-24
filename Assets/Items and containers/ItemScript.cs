@@ -50,6 +50,9 @@ public abstract class ItemScript : MonoBehaviour
             activated = true;
             gameObject.SetActive(true);
             currentPlayer = player;
+            Debug.Log(getActivation());
+            Debug.Log(player);
+            Debug.Log(gameObject);
             getActivation().Activate(player, gameObject);
         }
     }

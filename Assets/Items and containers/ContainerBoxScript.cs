@@ -42,6 +42,7 @@ public class ContainerBoxScript : MonoBehaviour
     {
         gameObject.SetActive(true);
         this.pos = pos;
+
     }
     public void hide()
     {

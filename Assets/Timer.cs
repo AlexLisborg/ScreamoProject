@@ -19,7 +19,7 @@ public class Timer : MonoBehaviour
     }
     public void StartTimer(Action onDone)
     {
-        StartTimer(onDone, timeRemaining);
+        StartTimer(onDone, defaultTime);
     }
 
 

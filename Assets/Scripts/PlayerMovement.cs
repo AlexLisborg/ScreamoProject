@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+    
         _rigidBody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _camera = Camera.main;
@@ -84,8 +85,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private void animSetFloat(String s, float f)
     {
-        LegsAnim.SetFloat(s, f);
-        BodyAnim.SetFloat(s, f);
+        //LegsAnim.SetFloat(s, f);
+        //BodyAnim.SetFloat(s, f);
     }
 
     //Should return the position from which bullets should be instansiated when gun is fired.

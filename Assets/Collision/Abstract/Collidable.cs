@@ -18,22 +18,14 @@ public abstract class Colidable : MonoBehaviour
     public abstract AbsColider GetColiderInstance(GameObject go);
 
 
-    private void OnTriggerEnter(Collider c)
-    {
-        Debug.Log(gameObject.name + " is colding with " + c.GetComponent<Collider>().name);
-        Colidable other = c.gameObject.GetComponent<Colidable>(); ;
-        if (other != null)
-        {
-            other.colider.AcceptEnter(colider);
-        }
-    }
+ 
     public void OnCollisionEnter2D(Collision2D c)
     {
-        Debug.Log(gameObject.name + " is colding with " + c.collider.name);
         Colidable other = c.gameObject.GetComponent<Colidable>(); ;
         if (other != null)
         {
             other.colider.AcceptEnter(colider);
+            colider.AnyEnterCollision(other.colider);
         }
     }
 
@@ -43,6 +35,7 @@ public abstract class Colidable : MonoBehaviour
         if (other != null)
         {
             other.colider.AcceptStay(colider);
+            colider.AnyStayCollision(other.colider);
         }
     }
 
@@ -52,7 +45,8 @@ public abstract class Colidable : MonoBehaviour
         Colidable other = c.gameObject.GetComponent<Colidable>();
         if (other != null)
         {
-            colider.AcceptExit(other.colider);
+            other.colider.AcceptExit(colider);
+            colider.AnyExitCollision(other.colider);
         }
     }
 

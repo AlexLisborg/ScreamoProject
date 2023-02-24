@@ -8,6 +8,11 @@ public class CharacterColider : AbsColider
     {
     }
 
+    public void damage(float amount)
+    {
+
+    }
+
     public override void AcceptEnter(AbsColider other)
     {
         other.EnterCollision(this);
