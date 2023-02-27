@@ -38,20 +38,29 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 playerToMouse = Vector2.up;
 
+    private float _runTimer = 0f;
+
+    private bool _exhausted = false;
+
+    private float _runEnergy;
+
+    private float _runEnergyMax = 3;
+
 
     // Start is called before the first frame update
     void Start()
     {
-    
         _rigidBody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _camera = Camera.main;
         _moveSpeed = _defaultMovespeed;
+        _runEnergy = _runEnergyMax;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         Vector3 mousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePos2D = new Vector2(mousePos.x,mousePos.y);
         Vector2 playerPos2D = new Vector2(transform.position.x,transform.position.y);
@@ -61,23 +70,52 @@ public class PlayerMovement : MonoBehaviour
         _movement.y = Input.GetAxisRaw("Vertical");
 
         
+
+
         animSetFloat("MoveHorizontal", _movement.x);
         animSetFloat("MoveVertical", _movement.y);
         animSetFloat("Horizontal", playerToMouse.x);
         animSetFloat("Vertical", playerToMouse.y);
         animSetFloat("Speed", _movement.sqrMagnitude);
         BodyAnim.SetBool("HoldGun", HoldGun);
- 
-        if (!(playerToMouse.x > Mathf.Cos(Mathf.PI / 4f) && _movement.x > 0 ||
-            playerToMouse.x < Mathf.Cos(Mathf.PI * (3f / 4f)) && _movement.x < 0 ||
-            playerToMouse.y > Mathf.Sin(Mathf.PI / 4f) && _movement.y > 0 ||
-            playerToMouse.y < Mathf.Sin(Mathf.PI + Mathf.PI * (3f / 4f)) && _movement.y < 0))
+
+        if (!(playerToMouse.x > Mathf.Cos(Mathf.PI / 4f) && (_movement.x >= 0) ||
+            playerToMouse.x < Mathf.Cos(Mathf.PI * (3f / 4f)) && _movement.x <= 0 ||
+            playerToMouse.y > Mathf.Sin(Mathf.PI / 4f) && _movement.y >= 0 ||
+            playerToMouse.y < Mathf.Sin(Mathf.PI + Mathf.PI * (3f / 4f)) && _movement.y <= 0))
         {
-            _moveSpeed = _defaultMovespeed / 2f;
+            _moveSpeed = _defaultMovespeed / 1.5f;
         }
-        else _moveSpeed = _defaultMovespeed;
+        else {
 
-
+            if (_runTimer >= 1)
+            {
+                if (_runTimer <= 2)
+                {
+                    _runTimer += Time.deltaTime;
+                }
+                else
+                {
+                    _runTimer = 0;
+                }
+                
+            }
+            if (_runEnergy <= 0)
+            {
+                _runTimer = 1;
+            }
+            if (Input.GetKey(KeyCode.LeftControl) && _movement.sqrMagnitude > 0 && _runEnergy >= 0 && _runTimer == 0)
+            {
+                _moveSpeed = _defaultMovespeed * 1.5f;
+                _runEnergy -= Time.deltaTime;
+            }
+            else
+            {
+                if (_runEnergy <= _runEnergyMax) _runEnergy += (Time.deltaTime / 2f);
+                _moveSpeed = _defaultMovespeed;
+            }
+            
+        }
         _tester.transform.position = transform.position + new Vector3(playerToMouse.x,playerToMouse.y,0);
     }
 
