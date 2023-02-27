@@ -14,6 +14,7 @@ public class IconBoxScript : MonoBehaviour
     }
     void OnMouseDown()
     {
+        Debug.Log("clicked"); ;
         whenClikced(gameObject);
     }
 
