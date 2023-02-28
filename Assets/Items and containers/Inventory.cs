@@ -43,7 +43,6 @@ public class Inventory : MonoBehaviour
         }
         GameObject pistol = Instantiate(pistolPrefab);
         pistol.GetComponent<PistolScript>().setBullets(bullts);
-        pistol.GetComponent<PistolScript>().setCanShoot((() => !container.getIsOpen())) ;
         container.addItem(pistol.GetComponent<ItemScript>());
         container.addItem(Instantiate(bulletPrefab).GetComponent<ItemScript>());
         container.addItem(Instantiate(batonPrefab).GetComponent<ItemScript>());
@@ -63,15 +62,19 @@ public class Inventory : MonoBehaviour
 
     private void toggleEquiped(ItemScript item)
     {
-        if(equipt != null)
-            equipt.Deactivate();
+        Debug.Log("toggel");
+        if (equipt != null)
+            equipt.Unequipt();
         if (equipt == item)
         {
+            equipt.Unequipt();
             equipt = null;
+           
         }
         else
         {
             equipt = item;
+            equipt.Equipt(player);
         }
     }
 
@@ -81,6 +84,7 @@ public class Inventory : MonoBehaviour
         if(didMove && item == equipt)
         {
             equipt = null;
+            Debug.Log("move item");
         }
     }
 
@@ -93,7 +97,7 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && equipt != null )
+        if (Input.GetKeyDown(KeyCode.Mouse0) && equipt != null && !container.getIsOpen())
         {
             if (container.contains(equipt))
             {
@@ -103,7 +107,7 @@ public class Inventory : MonoBehaviour
                 }
                 else
                 {
-                    equipt.Activate(player);
+                    equipt.Activate();
                 }
             }
             else

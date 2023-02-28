@@ -13,9 +13,18 @@ public class Timer : MonoBehaviour
 
     public void StartTimer(Action onDone, float time)
     {
-        this.onDone= onDone;
-        going = true;
-        this.timeRemaining = time;
+        if (!going)
+        {
+            this.onDone = onDone;
+            going = true;
+            this.timeRemaining = time;
+        }
+    }
+
+    public void StopTimer()
+    {
+        going = false;
+        onDone = null;
     }
     public void StartTimer(Action onDone)
     {
@@ -33,7 +42,7 @@ public class Timer : MonoBehaviour
             else
             {
                 onDone();
-                Destroy(gameObject);
+                going = false;
             }
         }
     }

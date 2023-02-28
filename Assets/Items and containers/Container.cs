@@ -71,6 +71,7 @@ public class Container
 
     public bool destroyItem(ItemScript item)
     {
+        Debug.Log("destroy container");
         int index = items.IndexOf(item);
         bool didremove = items.Remove(item);
         if (didremove)

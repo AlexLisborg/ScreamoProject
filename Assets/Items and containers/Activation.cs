@@ -9,4 +9,8 @@ public interface Activation
     public void UpdateActivation(IPlayer player, GameObject go);
 
     public void Deactivate(IPlayer player, GameObject go);
+
+    public void Equipt(IPlayer player, GameObject go);
+
+    public void Unequipt(IPlayer player, GameObject go);
 }

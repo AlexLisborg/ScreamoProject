@@ -4,17 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using static InputManagerScript;
 
-public class PistolScript : ItemScript
+public class PistolScript : OneShotItem
 {
     //[SerializeField] public InputManagerScript InputManager { get; set; }
     private List<BulletScript> bullets = new List<BulletScript>();
 
-    private Func<bool> canShoot;
 
-    public void setCanShoot(Func<bool> canShoot)
-    {
-        this.canShoot = canShoot;
-    }
 
     public void setBullets(List<BulletScript> bullets)
     {
@@ -23,7 +18,7 @@ public class PistolScript : ItemScript
 
     public override Activation getActivation()
     {
-        return new PistolActivation(() => canShoot(), bullets);
+        return new PistolActivation(bullets);
     }
 
     public override Sprite getIcon()
@@ -36,46 +31,37 @@ public class PistolScript : ItemScript
         //private InputManagerScript im;
         private List<BulletScript> bullets;
         //private Action inputActionDeactivate = null;
-        private Func<bool> canShoot;
-        public PistolActivation(Func<bool> canShoot, List<BulletScript> bullets)
+        public PistolActivation( List<BulletScript> bullets)
         {
-            this.canShoot= canShoot;
             this.bullets = bullets; 
         }
 
-        private void shoot(IPlayer player)
+        public void Activate(IPlayer player, GameObject go)
         {
-            if(bullets.Count > 0)
+            if (bullets.Count > 0)
             {
                 bullets[0].shoot(player);
                 //bullets.RemoveAt(0);
             }
-            
-        }
-        public void Activate(IPlayer player, GameObject go)
-        {
-            player.setHoldingPostil(true);
-            //inputActionDeactivate = im.addAction(1, KeyCode.Mouse0,KeyEvent.KeyDown, () => shoot(player));
-
         }
 
         public void Deactivate(IPlayer player, GameObject go)
         {
-            player.setHoldingPostil(false);
-            //if (inputActionDeactivate != null)
-               // inputActionDeactivate();
         }
 
         public void UpdateActivation(IPlayer player, GameObject go)
         {
-            if (Input.GetKeyUp(KeyCode.Mouse0) && canShoot())
-            {
-                shoot(player);
-            }
             if (Input.GetKeyDown(KeyCode.R)) { }
-
         }
 
-        
+        public void Equipt(IPlayer player, GameObject go)
+        {
+            player.setHoldingPostil(true);
+        }
+
+        public void Unequipt(IPlayer player, GameObject go)
+        {
+            player.setHoldingPostil(false);
+        }
     }
 }

@@ -19,28 +19,32 @@ public class KeyScript : ItemScript
 
     public class KeyActivation : Activation
     {
-        DateTime time;
-        TimeSpan duration = new TimeSpan(0, 0, 2);
 
         public void Activate(IPlayer player, GameObject go)
         {
-            Vector2 offsett = player.getDir() * player.getReach();
-            go.transform.position = player.getPos() + offsett;
-            time = DateTime.Now;
-           
+
+            go.SetActive(true);
         }
 
         public void Deactivate(IPlayer player, GameObject go)
         {
-            go.transform.position = player.getPos();
+            go.SetActive(false);
+        }
+
+        public void Equipt(IPlayer player, GameObject go)
+        {
+
+        }
+
+        public void Unequipt(IPlayer player, GameObject go)
+        {
+
         }
 
         public void UpdateActivation(IPlayer player, GameObject go)
         {
-            if (time.Add(duration).Date >= DateTime.Now)
-            {
-                Deactivate(player, go);
-            }
+            Vector2 offsett = player.getDir() * player.getReach();
+            go.transform.position = player.getPos() + offsett;
         }
     }
 }

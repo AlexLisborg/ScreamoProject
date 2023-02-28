@@ -6,7 +6,7 @@ public abstract class InactiveItem : ItemScript
 {
     public override Activation getActivation()
     {
-        throw new System.NotImplementedException();
+        return new Inactive();
     }
 
     public class Inactive : Activation
@@ -18,11 +18,25 @@ public abstract class InactiveItem : ItemScript
 
         public void Deactivate(IPlayer player, GameObject go)
         {
+
+        }
+
+        public void Equipt(IPlayer player, GameObject go)
+        {
+
+        }
+
+        public void Unequipt(IPlayer player, GameObject go)
+        {
+
         }
 
         public void UpdateActivation(IPlayer player, GameObject go)
         {
+
         }
     }
+
+
 
 }

@@ -5,16 +5,17 @@ using UnityEngine;
 
 public class IconBoxScript : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] private GameObject Icon;
     private Action<GameObject> whenClikced;
     public void set(Action<GameObject> whenClikced)
     {
         gameObject.SetActive(true);
         this.whenClikced = whenClikced;
+
     }
     void OnMouseDown()
     {
-        Debug.Log("clicked"); ;
+        Debug.Log("clicked"); 
         whenClikced(gameObject);
     }
 
@@ -22,6 +23,6 @@ public class IconBoxScript : MonoBehaviour
 
     public void changeIcon(Sprite icon)
     {
-        spriteRenderer.sprite = icon;
+        Icon.GetComponent<SpriteRenderer>().sprite = icon;
     }
 }

@@ -86,3 +86,6 @@ TagManager:
   - name: Crosshair
     uniqueID: 1980945639
     locked: 0
+  - name: New Layer 16
+    uniqueID: 3058684097
+    locked: 0

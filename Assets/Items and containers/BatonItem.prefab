@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4301875359695389814}
   - component: {fileID: 2285700896538392706}
   - component: {fileID: 7803679089777095406}
+  - component: {fileID: 8850881316699317657}
   m_Layer: 0
   m_Name: BatonItem
   m_TagString: Untagged
@@ -100,9 +101,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24be011c646e82c458e876065ef33e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 30
+  damage: 40
   knockbackStrength: 1
   staggerDuration: 0.5
+  swingDurationSec: 0.5
+  timer: {fileID: 8850881316699317657}
 --- !u!114 &4301875359695389814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,7 +129,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -163,3 +166,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8850881316699317657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7396756794174630843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb0f857142d455e4da144900cb9d96a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultTime: 1

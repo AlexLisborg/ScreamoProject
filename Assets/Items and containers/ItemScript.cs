@@ -9,7 +9,7 @@ public abstract class ItemScript : MonoBehaviour
 
     private bool activated = false;
     public IPlayer currentPlayer { get; private set; }
-    private Action onDestroy;
+    private Action onDestroy = () => { };
 
 
 
@@ -24,6 +24,7 @@ public abstract class ItemScript : MonoBehaviour
 
     public void destroy()
     {
+        Debug.Log("Destroy item");
         onDestroy();
         Destroy(gameObject);
     }
@@ -39,18 +40,18 @@ public abstract class ItemScript : MonoBehaviour
         {
             getActivation().UpdateActivation(currentPlayer, gameObject);
         }
+
     }
 
 
 
-    public void Activate(IPlayer player)
+    public virtual void Activate()
     {
         if (!activated)
         {
+
             activated = true;
-            gameObject.SetActive(true);
-            currentPlayer = player;
-            getActivation().Activate(player, gameObject);
+            getActivation().Activate(currentPlayer, gameObject);
         }
     }
 
@@ -59,11 +60,23 @@ public abstract class ItemScript : MonoBehaviour
         if (activated)
         {
             getActivation().Deactivate(currentPlayer, gameObject);
-            currentPlayer = null;
             activated = false;
-            gameObject.SetActive(false);
         }
             
+    }
+
+    public void Equipt(IPlayer player)
+    {
+        currentPlayer = player;
+        getActivation().Equipt(player, gameObject);
+    }
+
+    public void Unequipt()
+    {
+        Deactivate();
+        getActivation().Unequipt(currentPlayer, gameObject);
+        currentPlayer = null;
+        gameObject.SetActive(false);
     }
 
     public bool isActivated()

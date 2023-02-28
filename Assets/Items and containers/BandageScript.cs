@@ -29,10 +29,12 @@ public class BandageScript : ItemScript
     }
     public class BandageActivation : Activation
     {
-        Timer timer;
-        Action selfDestruct;
-        float healingAmount;
-        float duration;
+        private Timer timer;
+        private Action selfDestruct;
+        private float healingAmount;
+        private float duration;
+        private bool isHealing = false;
+        private int activationCount = 0;
         public BandageActivation(Timer timer, Action selfDestruct, float healingAmount, float duration) {
             this.timer = timer;
             this.selfDestruct = selfDestruct;
@@ -42,20 +44,43 @@ public class BandageScript : ItemScript
 
         public void Activate(IPlayer player, GameObject go)
         {
-            Vector2 offsett =player.getDir() * player.getReach();
-            go.transform.position = player.getPos() + offsett;
-            timer.StartTimer(() => { player.ChangeHP(healingAmount); selfDestruct(); }, duration);
+            go.SetActive(true);
+            activationCount++;
+            timer.StartTimer(() => TryHeal(player, activationCount) , duration);
+            isHealing = true;
            
+        }
+
+        private void TryHeal(IPlayer player, int activationCount)
+        {
+            if (isHealing && this.activationCount == activationCount)
+            {
+                Debug.Log("used");
+                player.ChangeHP(healingAmount);
+                selfDestruct();
+            }
         }
 
         public void Deactivate(IPlayer player, GameObject go)
         {
             go.transform.position = player.getPos();
+            isHealing = false;
+            go.SetActive(false);
+        }
+
+        public void Equipt(IPlayer player, GameObject go)
+        {
+        }
+
+        public void Unequipt(IPlayer player, GameObject go)
+        {
+         
         }
 
         public void UpdateActivation(IPlayer player, GameObject go)
         {
-           
+            Vector2 offsett = player.getDir() * player.getReach();
+            go.transform.position = player.getPos() + offsett;
         }
     }
 
