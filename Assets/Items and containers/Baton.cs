@@ -11,6 +11,7 @@ public class Baton : ItemScript
     [SerializeField] public float staggerDuration;
     [SerializeField] public float swingDurationSec;
     [SerializeField] private Timer timer;
+    [SerializeField] private float swingAngel;
     private Batonactivation batonactivation;
 
 
@@ -26,34 +27,40 @@ public class Baton : ItemScript
     }
     private void Awake()
     {
-        batonactivation = new Batonactivation(swingDurationSec, timer, Deactivate); ;
+        batonactivation = new Batonactivation(swingDurationSec, timer, Deactivate,swingAngel); ;
     }
     public class Batonactivation : Activation
     {
         private float swingDurationSec;
         private Timer timer;
-        private bool swinging = false;
         private float rotChange = 0;
         private Action baseDeactivate;
-        public Batonactivation(float swingDurationSec, Timer timer, Action baseDeactivate)
+        private float startingRot = 0;
+        private int yLessThan0 = 0;
+        private float swingAngel;
+        public Batonactivation(float swingDurationSec, Timer timer, Action baseDeactivate, float swingAngel)
         {
             this.swingDurationSec = swingDurationSec;
             this.timer = timer; 
             this.baseDeactivate = baseDeactivate;
+            this.swingAngel = swingAngel;
         }
 
 
         public void Activate(IPlayer player, GameObject go)
         {
             go.SetActive(true);
-            swinging = true;
             timer.StartTimer( baseDeactivate, swingDurationSec);
-            
+            startingRot = (float)Math.Asin(player.getDir().x);
+            yLessThan0 = 1;
+            if (player.getDir().y < 0)
+            {
+                yLessThan0 = -1;
+            }
         }
 
         public void Deactivate(IPlayer player, GameObject go)
         {
-            swinging = false;
             rotChange = 0;
             timer.StopTimer();
             go.SetActive(false);
@@ -71,29 +78,25 @@ public class Baton : ItemScript
 
         public void UpdateActivation(IPlayer player, GameObject go)
         {
-            rotChange += 180 * Time.deltaTime / swingDurationSec;
-            Vector3 rotvecot = new Vector3(Mathf.Sin(Mathf.Deg2Rad * rotChange), Mathf.Cos(Mathf.Deg2Rad * rotChange),0);
+            
+            rotChange += yLessThan0 * swingAngel * Time.deltaTime / swingDurationSec;
 
-            Vector2 offsett = Vector3.Normalize(player.getDir() + rotvecot) * player.getReach();
+
+            float currentRot =  startingRot + Mathf.Deg2Rad * (rotChange - (swingAngel/2) * yLessThan0);
+            Vector3 rotvecot = new Vector3(Mathf.Sin(currentRot), Mathf.Cos(currentRot),0);
+            rotvecot.y = rotvecot.y * yLessThan0;
+            Vector2 offsett = Vector3.Normalize(rotvecot) * player.getReach();
             go.transform.position = player.getPos() + offsett;
 
 
-            Vector3 rot;
-
- 
-            
-            
-            if (player.getDir().x < 0)
+            Vector3 rot = new Vector3(0, 0, -yLessThan0 * currentRot);
+            if (yLessThan0 == -1)
             {
-                rot = new Vector3(0, 0, Vector3.Angle(player.getDir(), new Vector3(0, 1, 0)));
+                rot.z += 135;
             }
-            else
-            {
-                rot = new Vector3(0, 0, -Vector3.Angle(player.getDir(), new Vector3(0, 1, 0)));
-            }
+                
 
-
-            go.transform.eulerAngles = rot + new Vector3(0,0,45);
+            go.transform.eulerAngles = Mathf.Rad2Deg * rot + new Vector3(0,0,45);
         }
     }
 }

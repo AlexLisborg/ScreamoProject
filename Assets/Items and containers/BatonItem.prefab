@@ -104,8 +104,9 @@ MonoBehaviour:
   damage: 40
   knockbackStrength: 1
   staggerDuration: 0.5
-  swingDurationSec: 0.5
+  swingDurationSec: 0.3
   timer: {fileID: 8850881316699317657}
+  swingAngel: 110
 --- !u!114 &4301875359695389814
 MonoBehaviour:
   m_ObjectHideFlags: 0
