@@ -34,11 +34,11 @@ public class Baton : ItemScript
         private float swingDurationSec;
         private Timer timer;
         private float rotChange = 0;
-        private Action baseDeactivate;
+        private Action<IPlayer> baseDeactivate;
         private float startingRot = 0;
         private int yLessThan0 = 0;
         private float swingAngel;
-        public Batonactivation(float swingDurationSec, Timer timer, Action baseDeactivate, float swingAngel)
+        public Batonactivation(float swingDurationSec, Timer timer, Action<IPlayer> baseDeactivate, float swingAngel)
         {
             this.swingDurationSec = swingDurationSec;
             this.timer = timer; 
@@ -47,10 +47,10 @@ public class Baton : ItemScript
         }
 
 
-        public void Activate(IPlayer player, GameObject go)
+        public override void Activate(IPlayer player, GameObject go)
         {
             go.SetActive(true);
-            timer.StartTimer( baseDeactivate, swingDurationSec);
+            timer.StartTimer( () => baseDeactivate(player), swingDurationSec);
             startingRot = (float)Math.Asin(player.getDir().x);
             yLessThan0 = 1;
             if (player.getDir().y < 0)
@@ -59,24 +59,16 @@ public class Baton : ItemScript
             }
         }
 
-        public void Deactivate(IPlayer player, GameObject go)
+        public override void Deactivate(IPlayer player, GameObject go)
         {
             rotChange = 0;
             timer.StopTimer();
             go.SetActive(false);
         }
 
-        public void Equipt(IPlayer player, GameObject go)
-        {
 
-        }
 
-        public void Unequipt(IPlayer player, GameObject go)
-        {
-
-        }
-
-        public void UpdateActivation(IPlayer player, GameObject go)
+        public override void UpdateActivation(IPlayer player, GameObject go)
         {
             
             rotChange += yLessThan0 * swingAngel * Time.deltaTime / swingDurationSec;

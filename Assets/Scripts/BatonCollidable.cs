@@ -44,7 +44,7 @@ public class BatonCollidable : Colidable
         private void MeleeHit(CharacterColider target, int damage, float knockbackStrength, float staggerDuration)
         {
             target.damage(damage);
-            Vector3 playerPos = baton.currentPlayer.getPos();
+            Vector3 playerPos = target.getPos();
             Vector2 knockbackDirection = (target.getPos() - playerPos).normalized;
 
   
