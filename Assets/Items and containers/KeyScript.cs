@@ -20,28 +20,20 @@ public class KeyScript : ItemScript
     public class KeyActivation : Activation
     {
 
-        public void Activate(IPlayer player, GameObject go)
+        public override void Activate(IPlayer player, GameObject go)
         {
 
             go.SetActive(true);
         }
 
-        public void Deactivate(IPlayer player, GameObject go)
+        public override void Deactivate(IPlayer player, GameObject go)
         {
             go.SetActive(false);
         }
 
-        public void Equipt(IPlayer player, GameObject go)
-        {
+    
 
-        }
-
-        public void Unequipt(IPlayer player, GameObject go)
-        {
-
-        }
-
-        public void UpdateActivation(IPlayer player, GameObject go)
+        public override void UpdateActivation(IPlayer player, GameObject go)
         {
             Vector2 offsett = player.getDir() * player.getReach();
             go.transform.position = player.getPos() + offsett;
