@@ -56,12 +56,26 @@ public class PistolScript : OneShotItem
 
         public void Equipt(IPlayer player, GameObject go)
         {
+            Debug.Log("equipped");
             player.setHoldingPostil(true);
         }
 
         public void Unequipt(IPlayer player, GameObject go)
         {
             player.setHoldingPostil(false);
+        }
+    }
+
+    // Checks if audio script is null before playing audio
+    private void PlayAudio(PistolAudio.PistolEvent pistolEvent)
+    {
+        if (gameObject.GetComponent<PistolAudio>() != null)
+        {
+            gameObject.GetComponent<PistolAudio>().PlayAudio(pistolEvent);
+        }
+        else
+        {
+            Debug.Log("Scritp was null");
         }
     }
 }

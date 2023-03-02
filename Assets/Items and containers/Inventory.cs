@@ -83,6 +83,7 @@ public class Inventory : MonoBehaviour
         bool didMove = from.moveItemToContainer(item, to);
         if(didMove && item == equipt)
         {
+            PlayAudio(InventoryAudio.InventoryEvent.moveItem);
             equipt = null;
             Debug.Log("move item");
         }
@@ -115,6 +116,9 @@ public class Inventory : MonoBehaviour
                 equipt = null;
             }
             
+        } else if(equipt == null)
+        {
+            Debug.Log("Equipped is null");
         }
 
 
@@ -127,6 +131,9 @@ public class Inventory : MonoBehaviour
             {
 
                //removeLockMouese0 = inputManager.addAction(0, KeyCode.Mouse0, KeyEvent.KeyDown, () => { });
+                Debug.Log("1");
+                PlayAudio(InventoryAudio.InventoryEvent.openInventory);
+                //removeLockMouese0 = inputManager.addAction(0, KeyCode.Mouse0, KeyEvent.KeyDown, () => { });
                 container.open((item) => toggleEquiped(item), () => transform.position);
             }
             else
@@ -134,12 +141,16 @@ public class Inventory : MonoBehaviour
                 if(otherContainer != null) {
                     if (otherContainer.getIsOpen())
                     {
+                        Debug.Log("2");
+                        PlayAudio(InventoryAudio.InventoryEvent.closeInventory);
                         container.close();
                         //removeLockMouese0();
                     }
                 }
                 else
                 {
+                    Debug.Log("3");
+                    PlayAudio(InventoryAudio.InventoryEvent.closeInventory);
                     container.close();
                     //removeLockMouese0();
                 }
@@ -153,12 +164,16 @@ public class Inventory : MonoBehaviour
                 if (!otherContainer.getIsOpen())
                 {
 
+                    Debug.Log("4");
+                    PlayAudio(InventoryAudio.InventoryEvent.openContainer);
                     otherContainer.open((item) => moveItem(otherContainer,container, item), () => transform.position);
                     //removeLockMouese0 = inputManager.addAction(0, KeyCode.Mouse0, KeyEvent.KeyDown, () => { });
                     container.open((item) => moveItem(container, otherContainer, item), () => { return transform.position + new Vector3(with + 0.5f, 0, 0); }) ;
                 }
                 else if (otherContainer.getIsOpen() && container.getIsOpen())
                 {
+                    Debug.Log("5");
+                    PlayAudio(InventoryAudio.InventoryEvent.closeContainer);
                     otherContainer.close();
                     container.close();
                     //removeLockMouese0();
@@ -167,5 +182,18 @@ public class Inventory : MonoBehaviour
             
         }
        
+    }
+
+    // Checks if audio script is null before playing audio
+    private void PlayAudio(InventoryAudio.InventoryEvent invEvent)
+    {
+        if (gameObject.GetComponent<InventoryAudio>() != null)
+        {
+            gameObject.GetComponent<InventoryAudio>().PlayAudio(invEvent);
+        }
+        else
+        {
+            Debug.Log("Scritp was null");
+        }
     }
 }

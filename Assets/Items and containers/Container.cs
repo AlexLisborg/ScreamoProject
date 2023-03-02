@@ -40,6 +40,7 @@ public class Container
 
        if(items.Count < size)
        {
+            PlayAudio(InventoryAudio.InventoryEvent.addItem);
             item.setOnDestroy(() => destroyItem(item));
             items.Add(item);
             box.GetComponent<ContainerBoxScript>().addNewIcon(item.getIcon());
@@ -102,6 +103,16 @@ public class Container
         box.GetComponent<ContainerBoxScript>().hide();    
     }
 
-
-
+    // Checks if audio script is null before playing audio
+    private void PlayAudio(InventoryAudio.InventoryEvent invEvent)
+    {
+        if (box.GetComponent<InventoryAudio>() != null)
+        {
+            box.GetComponent<InventoryAudio>().PlayAudio(invEvent);
+        }
+        else
+        {
+            Debug.Log("Scritp was null");
+        }
+    }
 }
