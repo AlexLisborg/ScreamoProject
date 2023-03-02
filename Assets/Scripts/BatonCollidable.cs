@@ -8,57 +8,50 @@ public class BatonCollidable : Colidable
     [SerializeField]  private Baton baton;
     public override AbsColider GetColiderInstance(GameObject go)
     {
-        return new BatonCollider(go,StartCoroutine,baton);
+        return new BatonCollider(go,baton);
     }
 
     public class BatonCollider : AbsColider
     {
-        private Func<IEnumerator,Coroutine> startCoroutine;
         private Baton baton;
-        public BatonCollider(GameObject parent, Func<IEnumerator, Coroutine> startCoroutine, Baton baton) : base(parent)
+        public BatonCollider(GameObject parent, Baton baton) : base(parent)
         {
-            this.startCoroutine = startCoroutine;
             this.baton = baton; 
         }
 
         public override void AcceptEnter(AbsColider other)
         {
-            other.AcceptEnter(this);
+            other.EnterCollision(this);
         }
 
         public override void AcceptExit(AbsColider other)
         {
-            other.AcceptExit(this);
+            other.ExitCollision(this);
         }
 
         public override void AcceptStay(AbsColider other)
         {
-            other.AcceptStay(this);
+            other.StayCollision(this);
         }
 
         public override void EnterCollision(CharacterColider characterColider)
         {
-            MeleeHit(characterColider, baton.damage, baton.knockbackStrength, baton.staggerDuration);
+            Debug.Log("hit emeny");
+            MeleeHit(characterColider, baton.damage, baton.knockbackStrength, baton.staggerDuration );
         }
 
         private void MeleeHit(CharacterColider target, int damage, float knockbackStrength, float staggerDuration)
         {
             target.damage(damage);
-            Vector3 playerPos = target.getPos();
+            Vector3 playerPos = baton.currentPlayer.getPos();
             Vector2 knockbackDirection = (target.getPos() - playerPos).normalized;
 
   
             target.Addforce(knockbackDirection * knockbackStrength, ForceMode2D.Impulse);
 
-            startCoroutine(StaggerCoroutine(target, staggerDuration));
+            target.disableMovment(staggerDuration);
+            
         }
-        private IEnumerator StaggerCoroutine(CharacterColider target, float duration)
-        {
-            target.enableMovemnt(false);
 
-            yield return new WaitForSeconds(duration);
-
-            target.enableMovemnt(true);
-        }
     }
 }

@@ -29,6 +29,8 @@ public class Baton : ItemScript
     {
         batonactivation = new Batonactivation(swingDurationSec, timer, Deactivate,swingAngel); ;
     }
+
+
     public class Batonactivation : Activation
     {
         private float swingDurationSec;
@@ -45,6 +47,8 @@ public class Baton : ItemScript
             this.baseDeactivate = baseDeactivate;
             this.swingAngel = swingAngel;
         }
+
+
 
 
         public override void Activate(IPlayer player, GameObject go)

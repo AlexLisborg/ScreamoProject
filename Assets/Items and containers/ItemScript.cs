@@ -10,7 +10,7 @@ public abstract class ItemScript : MonoBehaviour
     private bool activated = false;
     private bool equipt = false;
     private Action onDestroy = () => { };
-    private IPlayer currentPlayer;
+    public IPlayer currentPlayer { get; private set;}
 
 
     public abstract Sprite getIcon();
