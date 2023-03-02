@@ -8,36 +8,37 @@ public class BatonCollidable : Colidable
     [SerializeField]  private Baton baton;
     public override AbsColider GetColiderInstance(GameObject go)
     {
-        return new BatonCollider(go,baton);
+        return new BatonCollider(go,StartCoroutine,baton);
     }
 
     public class BatonCollider : AbsColider
     {
+        private Func<IEnumerator,Coroutine> startCoroutine;
         private Baton baton;
-        public BatonCollider(GameObject parent, Baton baton) : base(parent)
+        public BatonCollider(GameObject parent, Func<IEnumerator, Coroutine> startCoroutine, Baton baton) : base(parent)
         {
+            this.startCoroutine = startCoroutine;
             this.baton = baton; 
         }
 
         public override void AcceptEnter(AbsColider other)
         {
-            other.EnterCollision(this);
+            other.AcceptEnter(this);
         }
 
         public override void AcceptExit(AbsColider other)
         {
-            other.ExitCollision(this);
+            other.AcceptExit(this);
         }
 
         public override void AcceptStay(AbsColider other)
         {
-            other.StayCollision(this);
+            other.AcceptStay(this);
         }
 
         public override void EnterCollision(CharacterColider characterColider)
         {
-            Debug.Log("hit emeny");
-            MeleeHit(characterColider, baton.damage, baton.knockbackStrength, baton.staggerDuration );
+            MeleeHit(characterColider, baton.damage, baton.knockbackStrength, baton.staggerDuration);
         }
 
         private void MeleeHit(CharacterColider target, int damage, float knockbackStrength, float staggerDuration)
@@ -49,9 +50,15 @@ public class BatonCollidable : Colidable
   
             target.Addforce(knockbackDirection * knockbackStrength, ForceMode2D.Impulse);
 
-            target.disableMovment(staggerDuration);
-            
+            startCoroutine(StaggerCoroutine(target, staggerDuration));
         }
+        private IEnumerator StaggerCoroutine(CharacterColider target, float duration)
+        {
+            target.enableMovemnt(false);
 
+            yield return new WaitForSeconds(duration);
+
+            target.enableMovemnt(true);
+        }
     }
 }

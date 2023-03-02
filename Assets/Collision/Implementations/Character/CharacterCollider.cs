@@ -5,15 +5,9 @@ using UnityEngine;
 public class CharacterColider : AbsColider
 {
     private EnemyHealth enemyHealth;
-    private Rigidbody2D body;
-    private EnemyMovement enemyMovement;
-    private Timer timer;
-    public CharacterColider(GameObject parent, EnemyHealth enemyHealth, Rigidbody2D body, EnemyMovement enemyMovement, Timer timer) : base(parent)
+    public CharacterColider(GameObject parent, EnemyHealth enemyHealth ) : base(parent)
     {
-        this.enemyHealth = enemyHealth;
-        this.body = body;
-        this.enemyMovement = enemyMovement;
-        this.timer = timer;
+        this.enemyHealth= enemyHealth;
     }
 
     public Vector3 getPos()
@@ -23,14 +17,12 @@ public class CharacterColider : AbsColider
 
     public void Addforce(Vector2 v, ForceMode2D fm)
     {
-        body.AddForce(v,fm);
+        parent.GetComponent<Rigidbody2D>().AddForce(v,fm);
     }
 
-    public void disableMovment(float durationSec)
+    public void enableMovemnt(bool yes)
     {
-        enemyMovement.enabled = false;
-        timer.StopTimer();
-        timer.StartTimer(() => { enemyMovement.enabled = true; }, durationSec);
+
     }
     public void damage(int amount)
     {

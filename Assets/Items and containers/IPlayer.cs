@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using UnityEngine;
  
 public interface IPlayer 
@@ -16,7 +15,5 @@ public interface IPlayer
     public void setHoldingPostil(bool holding);
 
     public Vector2 getPlayerHandsPosition();
-
-    public Inventory getInventory();
    
 }

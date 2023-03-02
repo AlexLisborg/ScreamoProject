@@ -9,7 +9,6 @@ public class PlayerScript : MonoBehaviour, IPlayer
     private float hp = 100;
 
     [SerializeField] private PlayerMovement pm;
-    [SerializeField] private Inventory inventory;
 
 
     public void ChangeHP(float change)
@@ -18,16 +17,9 @@ public class PlayerScript : MonoBehaviour, IPlayer
         hp += change;
     }
 
-   
-
     public Vector3 getDir()
     {
         return new Vector3(pm.GetPlayerToMouse().x,pm.GetPlayerToMouse().y,0);
-    }
-
-    public Inventory getInventory()
-    {
-        return GetComponent<Inventory>();   
     }
 
     public Vector2 getPlayerHandsPosition()
@@ -50,5 +42,15 @@ public class PlayerScript : MonoBehaviour, IPlayer
         GetComponent<PlayerMovement>().SetHoldGun(holding);
     }
 
- 
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }

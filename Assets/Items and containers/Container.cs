@@ -22,27 +22,6 @@ public class Container
         box.GetComponent<ContainerBoxScript>().set(with, hight);
     }
 
-    public List<ItemScript> getItems()
-    {
-        List<ItemScript> tmp = new List<ItemScript>();
-        foreach(ItemScript item in items) {
-            tmp.Add(item);
-        }
-        return tmp;
-    }
-
-    public bool removeItem(ItemScript item)
-    {
-        if (items.Contains(item))
-        {
-            int index = items.IndexOf(item);
-            box.GetComponent<ContainerBoxScript>().removeIcon(index);
-            items.Remove(item);
-            return true;
-        }
-        return false;
-    }
-
     public bool contains(ItemScript item)
     {
         return this.items.Contains(item);
@@ -75,14 +54,17 @@ public class Container
 
         if (items.Contains(item)) 
         {
-           
-            
+            int index = items.IndexOf(item);
+            items.Remove(item);
             bool didAdd = nextContainer.addItem(item);
-            if(didAdd)
+            if(!didAdd)
             {
-                removeItem(item);
+                items.Insert(index, item);
             }
-
+            else
+            {
+                box.GetComponent<ContainerBoxScript>().removeIcon(index);
+            }
             return didAdd;
         }
         return false;

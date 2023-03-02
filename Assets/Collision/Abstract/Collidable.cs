@@ -20,7 +20,6 @@ public abstract class Colidable : MonoBehaviour
 
     private void Enter(Collider2D c)
     {
-        
         Colidable other = c.gameObject.GetComponent<Colidable>(); ;
         if (other != null)
         {
@@ -60,7 +59,7 @@ public abstract class Colidable : MonoBehaviour
 
     private void Exit(Collider2D c)
     {
-       
+        //Debug.Log(gameObject.name + " stoped colding with " + c.collider.name);
         Colidable other = c.gameObject.GetComponent<Colidable>();
         if (other != null)
         {

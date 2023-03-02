@@ -12,7 +12,7 @@ public class Timer : MonoBehaviour
 
 
     public void StartTimer(Action onDone, float time)
-    {   
+    {
         if (!going)
         {
             this.onDone = onDone;

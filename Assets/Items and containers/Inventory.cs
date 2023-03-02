@@ -64,10 +64,10 @@ public class Inventory : MonoBehaviour
     {
         Debug.Log("toggel");
         if (equipt != null)
-            equipt.Unequipt(player);
+            equipt.Unequipt();
         if (equipt == item)
         {
-            equipt.Unequipt(player);
+            equipt.Unequipt();
             equipt = null;
            
         }
@@ -89,38 +89,26 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public List<ItemType> getAllItemsOf<ItemType>() where ItemType : ItemScript
+    private void nothing()
     {
-        
-        List<ItemScript> allItems = container.getItems();
-        List<ItemType> typedItem = new List<ItemType>();
-        foreach (ItemScript item in allItems)
-        {
-            if (item is ItemType)
-            {
-                typedItem.Add((ItemType)item);
-            }
-        }
-        return typedItem;
 
     }
-
+ 
 
     // Update is called once per frame
     void Update()
     {
-   
         if (Input.GetKeyDown(KeyCode.Mouse0) && equipt != null && !container.getIsOpen())
         {
             if (container.contains(equipt))
             {
                 if (equipt.isActivated())
                 {
-                    equipt.Deactivate(player);
+                    equipt.Deactivate();
                 }
                 else
                 {
-                    equipt.Activate(player);
+                    equipt.Activate();
                 }
             }
             else

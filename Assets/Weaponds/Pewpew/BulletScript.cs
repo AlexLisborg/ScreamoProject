@@ -2,16 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletScript : ItemScript
+public class BulletScript : InactiveItem
 {
     [SerializeField] float movementSpeed;
     private Vector3 _movement;
     private bool hasBeenShot = false;
-
-    public override Activation getActivation()
-    {
-        return new Activation();
-    }
 
     public override Sprite getIcon()
     {
@@ -22,16 +17,15 @@ public class BulletScript : ItemScript
     public void shoot(IPlayer player)
     {
         transform.position = player.getPlayerHandsPosition();
+        gameObject.SetActive(true);
         _movement = player.getDir();
         hasBeenShot = true;
-        gameObject.SetActive(true);
-
     }
 
-    public void Update()
+    private void Update()
     {
         if (hasBeenShot)
-        {
+        {  
             transform.position += _movement * Time.deltaTime * movementSpeed;
         }
     }

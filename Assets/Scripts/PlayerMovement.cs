@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 
@@ -9,6 +8,13 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Vector3 v1 = new Vector3(0, 0, 0);
+
+    //A list of the position of the tip of the gun for all aiming directions, used in GetGunFirePosition()
+    private Vector3[] _firePositions = new Vector3[] { 
+        new Vector3(-0.112f, -0.573f, 0), new Vector3(-0.468f, -0.37f, 0), new Vector3(0.478f, -0.325f, 0), //DD,DR,DL
+        new Vector3(-0.841f, -0.251f, 0), new Vector3(-0.915f, 0.279f, 0), new Vector3(-0.791f, 0.576f, 0), //LD,LL,LU
+        new Vector3(0.841f, -0.251f, 0), new Vector3(0.915f, 0.279f, 0), new Vector3(0.791f, 0.576f, 0), //RD,RR,RU
+        new Vector3(-0.418f, 0.571f, 0), new Vector3(0.418f, 0.571f, 0), new Vector3(0, 0.814f, 0)}; //UL,UR,UU
 
     public Animator LegsAnim;
 
@@ -20,9 +26,13 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D _rigidBody;
 
+    private Animator _animator;
+
     private Vector2 _movement;
 
     private Camera _camera;
+
+    public GameObject _tester;
 
     public bool HoldGun;
 
@@ -30,21 +40,21 @@ public class PlayerMovement : MonoBehaviour
 
     private float _runTimer = 0f;
 
+    private bool _exhausted = false;
+
     private float _runEnergy;
 
     private float _runEnergyMax = 3;
-
-    private Transform _firePosition;
 
 
     // Start is called before the first frame update
     void Start()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
         _camera = Camera.main;
         _moveSpeed = _defaultMovespeed;
         _runEnergy = _runEnergyMax;
-        _firePosition = transform.GetChild(1).GetChild(0).GetChild(0);
     }
 
     // Update is called once per frame
@@ -58,6 +68,9 @@ public class PlayerMovement : MonoBehaviour
 
         _movement.x = Input.GetAxisRaw("Horizontal");
         _movement.y = Input.GetAxisRaw("Vertical");
+
+        
+
 
         animSetFloat("MoveHorizontal", _movement.x);
         animSetFloat("MoveVertical", _movement.y);
@@ -103,6 +116,7 @@ public class PlayerMovement : MonoBehaviour
             }
             
         }
+        _tester.transform.position = transform.position + new Vector3(playerToMouse.x,playerToMouse.y,0);
     }
 
     private void FixedUpdate()
@@ -130,10 +144,4 @@ public class PlayerMovement : MonoBehaviour
     {
         return playerToMouse;
     }
-
-    public Vector3 GetCurrentFirePosition()
-    {
-        return _firePosition.position;
-    }
-
 }
