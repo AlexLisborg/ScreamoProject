@@ -5,9 +5,9 @@ using UnityEngine;
 public abstract class OneShotItem : ItemScript
 {
   
-    public override void Activate()
+    public override void Activate(IPlayer player)
     {
-        base.Activate();
-        Deactivate();
+        base.Activate(player);
+        Deactivate(player);
     }
 }

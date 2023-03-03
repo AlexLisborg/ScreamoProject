@@ -33,17 +33,17 @@ public class BulletCollidable : Colidable
 
         public override void AcceptEnter(AbsColider other)
         {
-            other.AcceptEnter(this);
+           
         }
 
         public override void AcceptExit(AbsColider other)
         {
-            other.AcceptExit(this);
+           
         }
 
         public override void AcceptStay(AbsColider other)
         {
-            other.AcceptStay(this); 
+            
         }
     }
 

@@ -8,9 +8,9 @@ public abstract class ItemScript : MonoBehaviour
 {
 
     private bool activated = false;
-    public IPlayer currentPlayer { get; private set; }
+    private bool equipt = false;
     private Action onDestroy = () => { };
-
+    public IPlayer currentPlayer { get; private set;}
 
 
     public abstract Sprite getIcon();
@@ -29,37 +29,41 @@ public abstract class ItemScript : MonoBehaviour
         Destroy(gameObject);
     }
 
+
     private void Start()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(false);    
     }
 
-    private void Update()
-    {
-        if(activated)
-        {
-            getActivation().UpdateActivation(currentPlayer, gameObject);
-        }
-
-    }
-
-
-
-    public virtual void Activate()
-    {
-        if (!activated)
-        {
-
-            activated = true;
-            getActivation().Activate(currentPlayer, gameObject);
-        }
-    }
-
-    public void Deactivate()
+    public void Update()
     {
         if (activated)
         {
-            getActivation().Deactivate(currentPlayer, gameObject);
+            getActivation().UpdateActivation(currentPlayer, gameObject);
+        }
+        if (equipt)
+        {
+            getActivation().UpdateEquiptment(currentPlayer, gameObject);
+        }
+
+    }
+
+
+
+    public virtual void Activate(IPlayer player)
+    {
+        if (!activated)
+        {
+            activated = true;
+            getActivation().Activate(player, gameObject);
+        }
+    }
+
+    public void Deactivate(IPlayer player)
+    {
+        if (activated)
+        {
+            getActivation().Deactivate(player, gameObject);
             activated = false;
         }
             
@@ -67,16 +71,20 @@ public abstract class ItemScript : MonoBehaviour
 
     public void Equipt(IPlayer player)
     {
+        Debug.Log(player);
         currentPlayer = player;
+        equipt = true;
         getActivation().Equipt(player, gameObject);
     }
 
-    public void Unequipt()
+    public void Unequipt(IPlayer player)
     {
-        Deactivate();
-        getActivation().Unequipt(currentPlayer, gameObject);
-        currentPlayer = null;
+        Debug.Log(player);
+        Deactivate(player);
+        getActivation().Unequipt(player, gameObject);
+        equipt = false;
         gameObject.SetActive(false);
+        currentPlayer = null;
     }
 
     public bool isActivated()
