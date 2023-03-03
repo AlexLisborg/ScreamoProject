@@ -53,6 +53,8 @@ public class Baton : ItemScript
 
         public override void Activate(IPlayer player, GameObject go)
         {
+
+            //Do animation
             go.SetActive(true);
             timer.StartTimer( () => baseDeactivate(player), swingDurationSec);
             startingRot = (float)Math.Asin(player.getDir().x);

@@ -118,7 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  lootPrefab: {fileID: 0}
+  lootPrefab: {fileID: 3086918703463740654, guid: e87272d5a216f354fb9b6498c93aeebd, type: 3}
 --- !u!50 &2752377976746117879
 Rigidbody2D:
   serializedVersion: 4

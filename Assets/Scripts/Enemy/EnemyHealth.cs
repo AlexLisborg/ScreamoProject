@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    [SerializeField] private List<GameObject> items;
     public int maxHealth = 100;
     public int currentHealth;
     public GameObject lootPrefab; // The prefab that will be spawned as loot when the enemy dies
@@ -26,8 +27,8 @@ public class EnemyHealth : MonoBehaviour
     void Die()
     {
         // Spawn the loot prefab at the enemy's position
-        //Instantiate(lootPrefab, transform.position, Quaternion.identity);
-
+        GameObject loot = Instantiate(lootPrefab, transform.position, Quaternion.identity);
+        loot.GetComponent<LootScript>().addItems(items);
         // Destroy the enemy game object
         Destroy(gameObject);
     }
