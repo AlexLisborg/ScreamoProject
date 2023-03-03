@@ -11,7 +11,14 @@ public class PlayerScript : MonoBehaviour, IPlayer
     [SerializeField] private PlayerMovement pm;
     [SerializeField] private Inventory inventory;
 
-
+    [Obsolete]
+    private void Update()
+    {
+        if(hp <= 0)
+        {
+            Application.LoadLevel(Application.loadedLevel);
+        }
+    }
     public void ChangeHP(float change)
     {
         Debug.Log("Chnaged hp " + change);

@@ -8,6 +8,7 @@ public class CharacterColider : AbsColider
     private Rigidbody2D body;
     private EnemyMovement enemyMovement;
     private Timer timer;
+    private bool canHitPlayer = true;
     public CharacterColider(GameObject parent, EnemyHealth enemyHealth, Rigidbody2D body, EnemyMovement enemyMovement, Timer timer) : base(parent)
     {
         this.enemyHealth = enemyHealth;
@@ -34,7 +35,20 @@ public class CharacterColider : AbsColider
     }
     public void damage(int amount)
     {
+     
         enemyHealth.TakeDamage(amount);
+    }
+
+
+    public override void StayCollision(PlayerCollider playerCollider)
+    {
+        if (canHitPlayer)
+        {
+            canHitPlayer = false;
+            playerCollider.player.ChangeHP(-20);
+            timer.StartTimer(() => { canHitPlayer = true; }, 1);
+        }
+        
     }
 
     public override void AcceptEnter(AbsColider other)

@@ -13,7 +13,7 @@ public class Timer : MonoBehaviour
 
     public int StartTimer(Action onDone, float time)
     {
-        Debug.Log("add " + nextFreeId + " with time " + time);
+        //Debug.Log("add " + nextFreeId + " with time " + time);
         timerStates.Add(nextFreeId, new Tuple<Action, float>(onDone, time));
         nextFreeId++;
 
@@ -43,7 +43,6 @@ public class Timer : MonoBehaviour
             else
             {
                 t.Item1();
-                Debug.Log("remove " + id);
             }
         }
         timerStates = timerNewStates;
