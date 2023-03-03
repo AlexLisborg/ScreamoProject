@@ -10,8 +10,9 @@ public class Baton : ItemScript
     [SerializeField] public float knockbackStrength;
     [SerializeField] public float staggerDuration;
     [SerializeField] public float swingDurationSec;
-    [SerializeField] private Timer timer;
     [SerializeField] private float swingAngel;
+    [SerializeField] private float coolDownTimeSec;
+    [SerializeField] private GameObject Timer;
     private Batonactivation batonactivation;
 
 
@@ -27,7 +28,7 @@ public class Baton : ItemScript
     }
     private void Awake()
     {
-        batonactivation = new Batonactivation(swingDurationSec, timer, Deactivate,swingAngel); ;
+        batonactivation = new Batonactivation(swingDurationSec, Instantiate(Timer).GetComponent<Timer>(), Deactivate,swingAngel, coolDownTimeSec); ;
     }
 
 
@@ -40,12 +41,16 @@ public class Baton : ItemScript
         private float startingRot = 0;
         private int yLessThan0 = 0;
         private float swingAngel;
-        public Batonactivation(float swingDurationSec, Timer timer, Action<IPlayer> baseDeactivate, float swingAngel)
+        private int timerId;
+        private float coolDownTimeSec;
+        private bool onCoolDown = false;
+        public Batonactivation(float swingDurationSec, Timer timer, Action<IPlayer> baseDeactivate, float swingAngel, float coolDownTimeSec)
         {
             this.swingDurationSec = swingDurationSec;
             this.timer = timer; 
             this.baseDeactivate = baseDeactivate;
             this.swingAngel = swingAngel;
+            this.coolDownTimeSec = coolDownTimeSec;
         }
 
 
@@ -53,22 +58,34 @@ public class Baton : ItemScript
 
         public override void Activate(IPlayer player, GameObject go)
         {
-
-            //Do animation
-            go.SetActive(true);
-            timer.StartTimer( () => baseDeactivate(player), swingDurationSec);
-            startingRot = (float)Math.Asin(player.getDir().x);
-            yLessThan0 = 1;
-            if (player.getDir().y < 0)
+            if (!onCoolDown)
             {
-                yLessThan0 = -1;
+                //Do animation
+                go.SetActive(true);
+                timerId = timer.StartTimer(() => baseDeactivate(player), swingDurationSec);
+                startingRot = (float)Math.Asin(player.getDir().x);
+                yLessThan0 = 1;
+                if (player.getDir().y < 0)
+                {
+                    yLessThan0 = -1;
+                }
+
+                onCoolDown = true;
+                timer.StartTimer(() => { onCoolDown = false; Debug.Log("Done"); }, coolDownTimeSec);
+            }
+            else
+            {
+                baseDeactivate(player);
             }
         }
 
         public override void Deactivate(IPlayer player, GameObject go)
         {
+           
             rotChange = 0;
-            timer.StopTimer();
+            if(!onCoolDown){
+                timer.StopTimer(timerId);
+            }
             go.SetActive(false);
         }
 

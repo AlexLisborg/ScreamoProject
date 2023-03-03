@@ -6219,11 +6219,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4345485047318256391, guid: e2031af07c807c947b3500391ee64eb1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.76
+      value: -9.62
       objectReference: {fileID: 0}
     - target: {fileID: 4345485047318256391, guid: e2031af07c807c947b3500391ee64eb1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.43
+      value: 15.91
       objectReference: {fileID: 0}
     - target: {fileID: 4345485047318256391, guid: e2031af07c807c947b3500391ee64eb1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6257,6 +6257,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4345485047318256440, guid: e2031af07c807c947b3500391ee64eb1, type: 3}
+      propertyPath: items.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345485047318256440, guid: e2031af07c807c947b3500391ee64eb1, type: 3}
+      propertyPath: items.Array.data[0]
+      value: 
+      objectReference: {fileID: 5808340980367400417, guid: 75d9adfd1a227434cbd3ceb6c18c9a7a, type: 3}
     - target: {fileID: 4345485047318256445, guid: e2031af07c807c947b3500391ee64eb1, type: 3}
       propertyPath: m_Name
       value: Guard (2)

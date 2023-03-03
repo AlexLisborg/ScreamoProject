@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 7803679089777095406}
   - component: {fileID: 8850881316699317657}
   - component: {fileID: 681583916535692959}
-  - component: {fileID: 4937289162793062693}
   m_Layer: 0
   m_Name: BatonItem
   m_TagString: Untagged
@@ -107,8 +106,9 @@ MonoBehaviour:
   knockbackStrength: 0.3
   staggerDuration: 0.3
   swingDurationSec: 0.15
-  timer: {fileID: 8850881316699317657}
   swingAngel: 90
+  coolDownTimeSec: 1
+  Timer: {fileID: 4252545262525590394, guid: 7446290dd5b290f44b0535c1bcb70af1, type: 3}
 --- !u!114 &4301875359695389814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,19 +185,6 @@ PolygonCollider2D:
       - {x: -0.31, y: -0.14}
       - {x: -0.14, y: -0.31}
       - {x: 0.3, y: 0.18}
---- !u!114 &4937289162793062693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7396756794174630843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb0f857142d455e4da144900cb9d96a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultTime: 1
 --- !u!1 &8800809503216684558
 GameObject:
   m_ObjectHideFlags: 0

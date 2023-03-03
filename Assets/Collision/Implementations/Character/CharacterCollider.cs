@@ -30,7 +30,6 @@ public class CharacterColider : AbsColider
     public void disableMovment(float durationSec)
     {
         enemyMovement.enabled = false;
-        timer.StopTimer();
         timer.StartTimer(() => { enemyMovement.enabled = true; }, durationSec);
     }
     public void damage(int amount)

@@ -62,7 +62,6 @@ public class Inventory : MonoBehaviour
 
     private void toggleEquiped(ItemScript item)
     {
-        Debug.Log("toggel");
         if (equipt != null)
             equipt.Unequipt(player);
         if (equipt == item)

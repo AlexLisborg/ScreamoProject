@@ -1,49 +1,53 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Timer : MonoBehaviour
 {
     [SerializeField] float defaultTime = 1.0f;
-    private float timeRemaining;
-    private Action onDone;
-    private bool going;
+    private Dictionary<int, Tuple<Action, float>> timerStates = new Dictionary<int, Tuple<Action, float>>();
+    private int nextFreeId = 0;
 
+    public int StartTimer(Action onDone, float time)
+    {
+        Debug.Log("add " + nextFreeId + " with time " + time);
+        timerStates.Add(nextFreeId, new Tuple<Action, float>(onDone, time));
+        nextFreeId++;
 
-    public void StartTimer(Action onDone, float time)
-    {   
-        if (!going)
-        {
-            this.onDone = onDone;
-            going = true;
-            this.timeRemaining = time;
-        }
+        return nextFreeId - 1;
     }
 
-    public void StopTimer()
+    public void StopTimer(int id)
     {
-        going = false;
-        onDone = null;
+        timerStates.Remove(id);
     }
-    public void StartTimer(Action onDone)
+    public int StartTimer(Action onDone)
     {
-        StartTimer(onDone, defaultTime);
+        return StartTimer(onDone, defaultTime);
     }
 
 
     void Update()
     {
-        if (going){
-            if (timeRemaining > 0)
+        Dictionary<int, Tuple<Action,float>> timerNewStates =  new Dictionary<int, Tuple<Action, float>>();
+        foreach (int id  in timerStates.Keys.ToList())
+        {
+            Tuple<Action,float> t = timerStates[id];
+            if (t.Item2 > 0)
             {
-                timeRemaining -= Time.deltaTime;
+                timerNewStates[id] = new Tuple<Action, float>(t.Item1, t.Item2 - Time.deltaTime);
             }
             else
             {
-                onDone();
-                going = false;
+                t.Item1();
+                Debug.Log("remove " + id);
             }
         }
+        timerStates = timerNewStates;
     }
+
+  
 }
