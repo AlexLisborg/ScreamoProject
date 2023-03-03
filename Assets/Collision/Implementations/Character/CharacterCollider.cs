@@ -16,6 +16,7 @@ public class CharacterColider : AbsColider
         this.timer = timer;
     }
 
+
     public Vector3 getPos()
     {
         return parent.transform.position + Vector3.zero;
