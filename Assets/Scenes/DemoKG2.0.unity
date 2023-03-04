@@ -6051,6 +6051,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1106517748260637589, guid: 7114d23b88dc0444c8418c5d7550c976, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 4252545262525590394, guid: 7446290dd5b290f44b0535c1bcb70af1, type: 3}
     - target: {fileID: 5801426643004559564, guid: 7114d23b88dc0444c8418c5d7550c976, type: 3}
       propertyPath: m_Name
       value: Player

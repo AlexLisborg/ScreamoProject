@@ -10,23 +10,26 @@ public class DoorCollider : AbsColider
     private DoorScript leadsTo;
     private Action<KeyCollider> callOnOpen;
     private Func<bool> isOpen;
+    private Vector2 spawnOffset;
+
+
+    public DoorCollider(GameObject parent, DoorScript leadsToDoor, Action<KeyCollider> callOnOpen, Func<bool> isOpen, Vector2 spawnOffset) : base(parent)
+    {
+        leadsTo = leadsToDoor;
+        this.callOnOpen = callOnOpen;
+        this.isOpen = isOpen;   
+        this.spawnOffset = spawnOffset;
+    }
 
     public void goThrough(GameObject go)
     {
         if (isOpen())
         {
             leadsTo.openDoor();
-            go.transform.position = leadsTo.transform.position + Vector3.zero;
+            go.transform.position = leadsTo.spawnPosition();
+            Debug.Log(leadsTo.spawnPosition());
         }
-            
-    }
 
-
-    public DoorCollider(GameObject parent, DoorScript leadsToDoor, Action<KeyCollider> callOnOpen, Func<bool> isOpen) : base(parent)
-    {
-        leadsTo = leadsToDoor;
-        this.callOnOpen = callOnOpen;
-        this.isOpen = isOpen;   
     }
 
     public override void AcceptEnter(AbsColider other)

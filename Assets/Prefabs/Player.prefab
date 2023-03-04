@@ -420,6 +420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 7849783810923055870}
+  timer: {fileID: 4252545262525590394, guid: 7446290dd5b290f44b0535c1bcb70af1, type: 3}
+  timeBetweenGoingThroughDoors: 0.65
 --- !u!114 &7849783810923055870
 MonoBehaviour:
   m_ObjectHideFlags: 0

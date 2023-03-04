@@ -6,14 +6,19 @@ public class PlayerCollider : AbsColider
 {
     private Container containerAvilable = null;
     public IPlayer player { get; private set; }
+    private Timer timer;
+    private bool canGoThroughDoor = true;
+    private float timeBetweenGoingThroughDoors;
 
     public Container GetContainerAvilabe()
     {
         return containerAvilable;
     }
-    public PlayerCollider(GameObject parent, IPlayer player) : base(parent)
+    public PlayerCollider(GameObject parent, IPlayer player, Timer timer, float timeBetweenGoingThroughDoors) : base(parent)
     {
-        this.player = player;   
+        this.player = player;
+        this.timer = timer;
+        this.timeBetweenGoingThroughDoors = timeBetweenGoingThroughDoors;   
     }
 
     public override void AcceptEnter(AbsColider other)
@@ -32,7 +37,9 @@ public class PlayerCollider : AbsColider
 
     override public void StayCollision(DoorCollider doorCollider)
     {
-        if(Input.GetKey(KeyCode.E)) {
+        if(Input.GetKey(KeyCode.E) && canGoThroughDoor) {
+            canGoThroughDoor = false;
+            timer.StartTimer(() => { canGoThroughDoor = true; }, timeBetweenGoingThroughDoors);
             doorCollider.goThrough(parent);
         }
 

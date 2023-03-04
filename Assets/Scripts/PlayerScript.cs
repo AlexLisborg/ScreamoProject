@@ -49,7 +49,7 @@ public class PlayerScript : MonoBehaviour, IPlayer
 
     public float getReach()
     {
-        return 1.5f;
+        return 1f;
     }
 
     public void setHoldingPostil(bool holding)
