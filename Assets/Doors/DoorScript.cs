@@ -7,7 +7,12 @@ public class DoorScript : Colidable
 {
     [SerializeField] DoorScript leadsTo;
     [SerializeField] private bool isOpen = true;
+<<<<<<< Updated upstream
     [SerializeField] private Transform spawnOffset;
+=======
+    public GameObject player;
+
+>>>>>>> Stashed changes
     public override AbsColider GetColiderInstance(GameObject go)
     {
         return new DoorCollider(go, leadsTo, (key) => { isOpen = true; key.destroyKey(); }, () => isOpen, spawnOffset.position);
@@ -15,6 +20,7 @@ public class DoorScript : Colidable
 
     public void openDoor()
     {
+        GameObject.Find("Player").GetComponent<InventoryAudio>().PlayAudio(InventoryAudio.InventoryEvent.unlockDoor);
         isOpen = true;
     }
 

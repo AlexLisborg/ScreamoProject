@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 100
+  shootSound: {fileID: 0}
 --- !u!114 &3495091438042616869
 MonoBehaviour:
   m_ObjectHideFlags: 0

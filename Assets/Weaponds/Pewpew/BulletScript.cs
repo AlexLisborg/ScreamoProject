@@ -35,8 +35,4 @@ public class BulletScript : ItemScript
             transform.position += _movement * Time.deltaTime * movementSpeed;
         }
     }
-
-
-
-
 }

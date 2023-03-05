@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using static BatonAudio;
 
 public class BatonCollidable : Colidable
 {
@@ -42,6 +43,7 @@ public class BatonCollidable : Colidable
 
         private void MeleeHit(CharacterColider target, int damage, float knockbackStrength, float staggerDuration)
         {
+            GameObject.Find("BatonItem(Clone)").GetComponent<BatonAudio>().PlayAudio(BatonEvent.hit);
             target.damage(damage);
             Vector3 playerPos = baton.currentPlayer.getPos();
             Vector2 knockbackDirection = (target.getPos() - playerPos).normalized;

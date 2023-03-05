@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.UIElements;
 using UnityEngine;
+using static BatonAudio;
 
 public class Baton : ItemScript
 {
@@ -58,7 +59,50 @@ public class Baton : ItemScript
 
         public override void Activate(IPlayer player, GameObject go)
         {
+<<<<<<< Updated upstream
             if (!onCoolDown)
+=======
+            go.SetActive(true);
+            GameObject.Find("BatonItem(Clone)").GetComponent<BatonAudio>().PlayAudio(BatonEvent.swing);
+            swinging = true;
+            timer.StartTimer( baseDeactivate, swingDurationSec);
+            
+        }
+
+        public void Deactivate(IPlayer player, GameObject go)
+        {
+            swinging = false;
+            rotChange = 0;
+            timer.StopTimer();
+            go.SetActive(false);
+        }
+
+        public void Equipt(IPlayer player, GameObject go)
+        {
+
+        }
+
+        public void Unequipt(IPlayer player, GameObject go)
+        {
+
+        }
+
+        public void UpdateActivation(IPlayer player, GameObject go)
+        {
+            rotChange += 180 * Time.deltaTime / swingDurationSec;
+            Vector3 rotvecot = new Vector3(Mathf.Sin(Mathf.Deg2Rad * rotChange), Mathf.Cos(Mathf.Deg2Rad * rotChange),0);
+
+            Vector2 offsett = Vector3.Normalize(player.getDir() + rotvecot) * player.getReach();
+            go.transform.position = player.getPos() + offsett;
+
+
+            Vector3 rot;
+
+ 
+            
+            
+            if (player.getDir().x < 0)
+>>>>>>> Stashed changes
             {
                 //Do animation
                 go.SetActive(true);

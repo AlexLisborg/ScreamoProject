@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static InputManagerScript;
+using static PistolAudio;
 
 public class PistolScript : OneShotItem
 {
@@ -10,8 +11,7 @@ public class PistolScript : OneShotItem
     [SerializeField] private Timer timer;
     [SerializeField] private float reloadTimeSec;
     private List<BulletScript> bullets = new List<BulletScript>();
-
-
+    public AudioSource source;
 
     public void setBullets(List<BulletScript> bullets)
     {
@@ -21,7 +21,11 @@ public class PistolScript : OneShotItem
 
     public override Activation getActivation()
     {
+<<<<<<< Updated upstream
         return new PistolActivation(bullets, Instantiate, timer, reloadTimeSec);
+=======
+        return new PistolActivation(bullets, source);
+>>>>>>> Stashed changes
     }
 
     public override Sprite getIcon()
@@ -33,7 +37,9 @@ public class PistolScript : OneShotItem
     {
         //private InputManagerScript im;
         private List<BulletScript> bullets;
+        private AudioSource source;
         //private Action inputActionDeactivate = null;
+<<<<<<< Updated upstream
         private bool isreloading = false;
         private Timer timer;
         private float reloadTimeSec;
@@ -42,6 +48,16 @@ public class PistolScript : OneShotItem
             this.bullets = bullets;
             this.timer = timer;
             this.reloadTimeSec = reloadTimeSec;
+=======
+        public PistolActivation( List<BulletScript> bullets, AudioSource source)
+        {
+            this.bullets = bullets; 
+            this.source = source;
+            if (source == null)
+            {
+                Debug.Log("Source is null1");
+            }
+>>>>>>> Stashed changes
         }
 
 
@@ -50,10 +66,16 @@ public class PistolScript : OneShotItem
         {
             if (bullets.Count > 0)
             {
+                source.Play();
+                GameObject.Find("Pistol(Clone)").GetComponent<PistolAudio>().PlayAudio(PistolEvent.shoot);
                 bullets[0].shoot(player);
                 
                 bullets.RemoveAt(0);
                 Debug.Log(bullets.Count + " bullets left");
+            }
+            else
+            {
+                GameObject.Find("Pistol(Clone)").GetComponent<PistolAudio>().PlayAudio(PistolEvent.outOfAmmo);
             }
         }
 

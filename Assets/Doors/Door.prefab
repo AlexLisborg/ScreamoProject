@@ -225,7 +225,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leadsTo: {fileID: 0}
   isOpen: 1
+<<<<<<< Updated upstream
   spawnOffset: {fileID: 7567143139594257325}
+=======
+  player: {fileID: 5801426643004559564, guid: 7114d23b88dc0444c8418c5d7550c976, type: 3}
+>>>>>>> Stashed changes
 --- !u!50 &7189234981721385332
 Rigidbody2D:
   serializedVersion: 4
