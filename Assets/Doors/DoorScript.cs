@@ -15,6 +15,7 @@ public class DoorScript : Colidable
 
     public void openDoor()
     {
+        GameObject.Find("Player").GetComponent<InventoryAudio>().PlayAudio(InventoryAudio.InventoryEvent.unlockDoor);
         isOpen = true;
     }
 

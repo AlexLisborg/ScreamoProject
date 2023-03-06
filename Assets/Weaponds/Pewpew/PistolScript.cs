@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static InputManagerScript;
+using static PistolAudio;
 
 public class PistolScript : OneShotItem
 {
@@ -10,7 +11,6 @@ public class PistolScript : OneShotItem
     [SerializeField] private Timer timer;
     [SerializeField] private float reloadTimeSec;
     private List<BulletScript> bullets = new List<BulletScript>();
-
 
 
     public void setBullets(List<BulletScript> bullets)
@@ -50,10 +50,15 @@ public class PistolScript : OneShotItem
         {
             if (bullets.Count > 0)
             {
+                GameObject.Find("Pistol(Clone)").GetComponent<PistolAudio>().PlayAudio(PistolEvent.shoot);
                 bullets[0].shoot(player);
                 
                 bullets.RemoveAt(0);
                 Debug.Log(bullets.Count + " bullets left");
+            }
+            else
+            {
+                GameObject.Find("Pistol(Clone)").GetComponent<PistolAudio>().PlayAudio(PistolEvent.outOfAmmo);
             }
         }
 

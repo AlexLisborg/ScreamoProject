@@ -37,6 +37,7 @@ public class BatonCollidable : Colidable
         public override void EnterCollision(CharacterColider characterColider)
         {
             Debug.Log("hit emeny");
+            GameObject.Find("BatonItem(Clone)").GetComponent<BatonAudio>().PlayAudio(BatonAudio.BatonEvent.hit);
             MeleeHit(characterColider, baton.damage, baton.knockbackStrength, baton.staggerDuration );
         }
 

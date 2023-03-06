@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Xml.Serialization;
 using UnityEngine;
 using static InputManagerScript;
+using static InventoryAudio;
 
 public class Inventory : MonoBehaviour
 {
@@ -72,6 +73,14 @@ public class Inventory : MonoBehaviour
         }
         else
         {
+            if (item.GetType() == typeof(PistolScript))
+            {
+                PlayAudio(InventoryEvent.equipPistol);
+            }
+            else if (item.GetType() == typeof(Baton))
+            {
+                PlayAudio(InventoryEvent.equipBaton);
+            }
             equipt = item;
             equipt.Equipt(player);
         }
@@ -80,7 +89,18 @@ public class Inventory : MonoBehaviour
     private void moveItem(Container from, Container to, ItemScript item)
     {
         bool didMove = from.moveItemToContainer(item, to);
-        if(didMove && item == equipt)
+        if (didMove)
+        {
+            if (item.GetType() == typeof(KeyScript))
+            {
+                PlayAudio(InventoryEvent.addKey);
+            }
+            else
+            {
+                PlayAudio(InventoryEvent.addItem);
+            }
+        }
+            if(didMove && item == equipt)
         {
             equipt = null;
             Debug.Log("move item");
@@ -136,8 +156,8 @@ public class Inventory : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I)) {
             if (!container.getIsOpen())
             {
-
-               //removeLockMouese0 = inputManager.addAction(0, KeyCode.Mouse0, KeyEvent.KeyDown, () => { });
+                PlayAudio(InventoryEvent.openInventory);
+                //removeLockMouese0 = inputManager.addAction(0, KeyCode.Mouse0, KeyEvent.KeyDown, () => { });
                 container.open((item) => toggleEquiped(item), () => transform.position);
             }
             else
@@ -145,12 +165,14 @@ public class Inventory : MonoBehaviour
                 if(otherContainer != null) {
                     if (otherContainer.getIsOpen())
                     {
+                        PlayAudio(InventoryEvent.closeInventory);
                         container.close();
                         //removeLockMouese0();
                     }
                 }
                 else
                 {
+                    PlayAudio(InventoryEvent.closeInventory);
                     container.close();
                     //removeLockMouese0();
                 }
@@ -163,13 +185,14 @@ public class Inventory : MonoBehaviour
             {
                 if (!otherContainer.getIsOpen())
                 {
-
+                    PlayAudio(InventoryEvent.openContainer);
                     otherContainer.open((item) => moveItem(otherContainer,container, item), () => transform.position);
                     //removeLockMouese0 = inputManager.addAction(0, KeyCode.Mouse0, KeyEvent.KeyDown, () => { });
                     container.open((item) => moveItem(container, otherContainer, item), () => { return transform.position + new Vector3(with + 0.5f, 0, 0); }) ;
                 }
                 else if (otherContainer.getIsOpen() && container.getIsOpen())
                 {
+                    PlayAudio(InventoryEvent.closeContainer);
                     otherContainer.close();
                     container.close();
                     //removeLockMouese0();
@@ -178,5 +201,18 @@ public class Inventory : MonoBehaviour
             
         }
        
+    }
+
+    // Checks if audio script is null before playing audio
+    private void PlayAudio(InventoryEvent invEvent)
+    {
+        if (gameObject.GetComponent<InventoryAudio>() != null)
+        {
+            gameObject.GetComponent<InventoryAudio>().PlayAudio(invEvent);
+        }
+        else
+        {
+            Debug.Log("Script was null");
+        }
     }
 }

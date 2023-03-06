@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.UIElements;
 using UnityEngine;
+using static BatonAudio;
 
 public class Baton : ItemScript
 {
@@ -61,7 +62,10 @@ public class Baton : ItemScript
             if (!onCoolDown)
             {
                 //Do animation
+
+                
                 go.SetActive(true);
+                GameObject.Find("BatonItem(Clone)").GetComponent<BatonAudio>().PlayAudio(BatonEvent.swing);
                 timerId = timer.StartTimer(() => baseDeactivate(player), swingDurationSec);
                 startingRot = (float)Math.Asin(player.getDir().x);
                 yLessThan0 = 1;
