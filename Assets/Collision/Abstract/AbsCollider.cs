@@ -56,5 +56,9 @@ public abstract class AbsColider
     public virtual void StayCollision(BatonCollidable.BatonCollider baton) { }
     public virtual void ExitCollision(BatonCollidable.BatonCollider baton) { }
 
+    public virtual void EnterCollision(WallCollidable.WallCollider wall) { }
+    public virtual void StayCollision(WallCollidable.WallCollider wall) { }
+    public virtual void ExitCollision(WallCollidable.WallCollider wall) { }
+
 
 }

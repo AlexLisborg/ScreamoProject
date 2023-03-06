@@ -20,7 +20,7 @@ public abstract class Colidable : MonoBehaviour
 
     private void Enter(Collider2D c)
     {
-        
+        //Debug.Log(gameObject.name + " collided with " + c.name);
         Colidable other = c.gameObject.GetComponent<Colidable>(); ;
         if (other != null)
         {

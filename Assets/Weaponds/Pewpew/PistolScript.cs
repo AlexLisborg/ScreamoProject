@@ -54,7 +54,6 @@ public class PistolScript : OneShotItem
                 bullets[0].shoot(player);
                 
                 bullets.RemoveAt(0);
-                Debug.Log(bullets.Count + " bullets left");
             }
             else
             {

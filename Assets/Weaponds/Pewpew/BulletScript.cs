@@ -1,5 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+
+
 using UnityEngine;
 
 public class BulletScript : ItemScript
@@ -24,6 +24,13 @@ public class BulletScript : ItemScript
         transform.position = player.getPlayerHandsPosition();
         _movement = player.getDir();
         hasBeenShot = true;
+        Vector3 dir = player.getDir().normalized;
+        float n = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
+        if (n < 0) n += 360;
+
+        transform.eulerAngles = new Vector3(0,0, n);
+        Debug.Log(n);
+        
         gameObject.SetActive(true);
 
     }

@@ -8354,6 +8354,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1540407486}
     m_Modifications:
     - target: {fileID: -1568252165901019249, guid: 0cdbedbfe7ff5b345a29b8e598c92e8f, type: 3}
+      propertyPath: isOpen
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1568252165901019249, guid: 0cdbedbfe7ff5b345a29b8e598c92e8f, type: 3}
       propertyPath: leadsTo
       value: 
       objectReference: {fileID: 487763741}
@@ -8586,15 +8590,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4345485047318256391, guid: e2031af07c807c947b3500391ee64eb1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4345485047318256391, guid: e2031af07c807c947b3500391ee64eb1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4345485047318256391, guid: e2031af07c807c947b3500391ee64eb1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4345485047318256391, guid: e2031af07c807c947b3500391ee64eb1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14416,6 +14420,7 @@ GameObject:
   - component: {fileID: 1530688294}
   - component: {fileID: 1530688293}
   - component: {fileID: 1530688292}
+  - component: {fileID: 1530688295}
   m_Layer: 0
   m_Name: LevelContainer
   m_TagString: Untagged
@@ -18526,7 +18531,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1530688288}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -18553,6 +18558,18 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
+--- !u!114 &1530688295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530688288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4d34264501bae34aa0ffefd444bb373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1537745205
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -18,11 +18,22 @@ public class BulletCollidable : Colidable
             this.Destroy = Destroy;
         }
 
-        
 
-        public override void AnyEnterCollision(AbsColider other)
+
+        public override void EnterCollision(DoorCollider doorColider)
         {
-            //Destroy(parent);
+            Destroy(parent);
+        }
+
+        public override void ExitCollision(CharacterColider wallColider)
+        {
+            Destroy(parent);
+        }
+
+        public override void EnterCollision(WallCollidable.WallCollider wall)
+        {
+            
+            Destroy(parent);
         }
 
         public override void EnterCollision(CharacterColider characterColider)
