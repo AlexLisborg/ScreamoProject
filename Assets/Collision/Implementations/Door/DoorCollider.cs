@@ -50,7 +50,7 @@ public class DoorCollider : AbsColider
 
     public override void EnterCollision(KeyCollider keyColider)
     {
-
-        callOnOpen(keyColider);
+        if(!isOpen())
+            callOnOpen(keyColider);
     }
 }
