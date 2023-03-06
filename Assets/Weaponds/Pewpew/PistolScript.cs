@@ -70,9 +70,10 @@ public class PistolScript : OneShotItem
                     
                 isreloading = true;
                 timer.StartTimer(() => {
-                    List<BulletScript> bulletsInInventory = player.getInventory().getAllItemsOf<BulletScript>();
+                List<BulletScript> bulletsInInventory = player.getInventory().getAllItemsOf<BulletScript>();
                     if (bulletsInInventory.Count > 0)
                     {
+                        GameObject.Find("Pistol(Clone)").GetComponent<PistolAudio>().PlayAudio(PistolEvent.reload);
                         BulletScript bullet = bulletsInInventory[0];
                         player.getInventory().GetInventory().removeItem(bullet);
                         bullets.Add(bullet);

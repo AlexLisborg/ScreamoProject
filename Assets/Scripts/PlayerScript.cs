@@ -35,6 +35,7 @@ public class PlayerScript : MonoBehaviour, IPlayer
     }
     public void ChangeHP(float change)
     {
+        gameObject.GetComponent<PlayerAudio>().PlayAudio(PlayerAudio.PlayerEvent.hit);
         Debug.Log("Chnaged hp " + change);
         hp += change;
     }

@@ -128,10 +128,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: -4225923540162110967}
-  shoot: {fileID: 0}
+  shoot: {fileID: 8300000, guid: 0ebaedc19c366e54c9396e09f81fbd45, type: 3}
   outOfAmmo: {fileID: 8300000, guid: dba35cb65bcda42479d56d1afdc02ad2, type: 3}
   hit: {fileID: 0}
-  reload: {fileID: 0}
+  reload: {fileID: 8300000, guid: b6bba64357a8ba045b2402692aeed476, type: 3}
   swapTo: {fileID: 0}
 --- !u!82 &-4225923540162110967
 AudioSource:
@@ -144,7 +144,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

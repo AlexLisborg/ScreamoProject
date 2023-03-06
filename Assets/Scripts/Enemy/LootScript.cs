@@ -22,6 +22,7 @@ public class LootScript : Colidable
     private new void Awake()
     {
         base.Awake();
+        gameObject.GetComponent<AudioSource>().Play();
         container = new Container(3, 3, boxContainerPrefab, Instantiate);
     }
     public void addItems(List<GameObject> Items)

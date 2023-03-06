@@ -9,9 +9,11 @@ public class EnemyMovement : MonoBehaviour
     public float speed = 3f;
     private Func<Vector2> target;
     private Animator _anim;
+    private EnemySound _audioScript;
 
     private void Start()
     {
+        _audioScript = gameObject.GetComponent<EnemySound>();
         _anim = GetComponent<Animator>();
     }
     private void Update()
@@ -32,6 +34,9 @@ public class EnemyMovement : MonoBehaviour
 
     public void setTarget(Func<Vector2> target)
     {
+        if (!_audioScript.hasBeenSeen){
+            _audioScript.noticeSoundSource.Play();
+        }
         this.target = target;
     }
 

@@ -10,11 +10,9 @@ public class Audio : MonoBehaviour
 
     protected void PlayAudio(AudioClip audioClip)
     {
-        Debug.Log("Checking if audio clip is null");
+
         if (audioClip != null)
         {
-            Debug.Log("Change source to:");
-            Debug.Log(source.clip.name);
             source.clip = audioClip;
             source.Play();
         }
@@ -27,7 +25,6 @@ public class Audio : MonoBehaviour
     protected void PlayRandomAudio(List<AudioClip> audioClips)
     {
         var i = Random.Range(0, audioClips.Count - 1);
-        Debug.Log("RANDOM SOUND"); 
         Debug.Log(i);
         if (audioClips[i] != null)
         {
@@ -43,7 +40,6 @@ public class Audio : MonoBehaviour
     protected void StopAudio()
     {
         source.Stop();
-        Debug.Log("Audio stopped");
     }
 
     public void ChangeVolumeTo(int v)
@@ -64,28 +60,37 @@ public class Audio : MonoBehaviour
         yield break;
     }
 
-    protected AudioClip GetUniqueRandomSound(AudioClip[] sounds, AudioClip[] usedSounds)
+    protected AudioClip GetUniqueRandomSound(List<AudioClip> sounds, AudioClip[] usedSounds)
     {
         if (sounds != null)
         {
             List<AudioClip> availableSounds = new();
             if (usedSounds != null)
             {
-                foreach (AudioClip usedSound in usedSounds)
+                Debug.Log("Used sounds not null");
+                foreach (AudioClip clip in sounds)
                 {
-                    if (!sounds.Contains(usedSound))
+                    if (!usedSounds.Contains(clip))
                     {
-                        availableSounds.Add(usedSound);
+                        Debug.Log("Added sound to list");
+                        availableSounds.Add(clip);
                     }
                 }
             } else
             {
+                Debug.Log("To ELSE");
                 availableSounds.AddRange(sounds);
             }
-            var randInd = Random.Range(0, availableSounds.Count);
+            var randInd = Random.Range(0, availableSounds.Count-1);
+            Debug.Log(sounds.Count + " | " +  randInd);
             var sound = availableSounds[randInd];
+            if(sound == null)
+            {
+                Debug.Log("Sound is null");
+            }
             return sound;
         }
+        Debug.Log("returned null");
         return null;
     }
 }
