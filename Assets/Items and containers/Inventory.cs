@@ -32,11 +32,10 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
       
-        for(int i = 0; i < 2; i++)
-        {
-            container.addItem(Instantiate(keyRef).GetComponent<ItemScript>());
-        }
-        container.addItem(Instantiate(bandgeRef).GetComponent<ItemScript>());
+     
+        container.addItem(Instantiate(keyRef).GetComponent<ItemScript>());
+       
+        //container.addItem(Instantiate(bandgeRef).GetComponent<ItemScript>());
         List<BulletScript> bullts = new List<BulletScript>();
         for (int i = 0; i < 5; i++)
         {
@@ -44,8 +43,8 @@ public class Inventory : MonoBehaviour
         }
         GameObject pistol = Instantiate(pistolPrefab);
         pistol.GetComponent<PistolScript>().setBullets(bullts);
-        container.addItem(pistol.GetComponent<ItemScript>());
-        container.addItem(Instantiate(bulletPrefab).GetComponent<ItemScript>());
+        //container.addItem(pistol.GetComponent<ItemScript>());
+        //container.addItem(Instantiate(bulletPrefab).GetComponent<ItemScript>());
         //container.addItem(Instantiate(batonPrefab).GetComponent<ItemScript>());
     }
 

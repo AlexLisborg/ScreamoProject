@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator BodyAnim;
 
-    private float _defaultMovespeed = 2f;
+    private float _defaultMovespeed = 3f;
 
     private float _moveSpeed;
 
@@ -95,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.LeftShift) && _movement.sqrMagnitude > 0 && _runEnergy >= 0 && _runTimer == 0)
             {
-                _moveSpeed = _defaultMovespeed * 1.5f;
+                _moveSpeed = _defaultMovespeed * 2f;
                 _runEnergy -= Time.deltaTime;
             }
             else

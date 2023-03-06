@@ -29,7 +29,8 @@ public class ContainerPlaceable : Colidable
     {
         foreach (GameObject obj in Items)
         {
-            container.addItem(obj.GetComponent<ItemScript>());
+            GameObject insatceGo = Instantiate(obj);
+            container.addItem(insatceGo.GetComponent<ItemScript>());
            
         }
         
