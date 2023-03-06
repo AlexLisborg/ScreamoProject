@@ -98,12 +98,7 @@ public class PlayerMovement : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.LeftShift) && _movement.sqrMagnitude > 0 && _runEnergy >= 0 && _runTimer == 0)
             {
-<<<<<<< Updated upstream
                 _moveSpeed = _defaultMovespeed * 2f;
-=======
-                
-                _moveSpeed = _defaultMovespeed * 1.5f;
->>>>>>> Stashed changes
                 _runEnergy -= Time.deltaTime;
             }
             else
