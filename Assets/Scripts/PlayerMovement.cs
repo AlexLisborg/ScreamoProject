@@ -59,6 +59,8 @@ public class PlayerMovement : MonoBehaviour
         _movement.x = Input.GetAxisRaw("Horizontal");
         _movement.y = Input.GetAxisRaw("Vertical");
 
+        _movement = _movement.normalized;
+
         animSetFloat("MoveHorizontal", _movement.x);
         animSetFloat("MoveVertical", _movement.y);
         animSetFloat("Horizontal", playerToMouse.x);
@@ -91,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 _runTimer = 1;
             }
-            if (Input.GetKey(KeyCode.LeftControl) && _movement.sqrMagnitude > 0 && _runEnergy >= 0 && _runTimer == 0)
+            if (Input.GetKey(KeyCode.LeftShift) && _movement.sqrMagnitude > 0 && _runEnergy >= 0 && _runTimer == 0)
             {
                 _moveSpeed = _defaultMovespeed * 1.5f;
                 _runEnergy -= Time.deltaTime;

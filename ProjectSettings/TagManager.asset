@@ -53,6 +53,12 @@ TagManager:
   - name: Ground
     uniqueID: 471861507
     locked: 0
+  - name: Walls
+    uniqueID: 3496646631
+    locked: 0
+  - name: WallsFront
+    uniqueID: 1889957223
+    locked: 0
   - name: Objects#1
     uniqueID: 3852065
     locked: 0
@@ -68,14 +74,14 @@ TagManager:
   - name: Objects#5
     uniqueID: 1246908493
     locked: 0
-  - name: Walls
-    uniqueID: 3496646631
-    locked: 0
-  - name: WallsFront
-    uniqueID: 1889957223
+  - name: Enemy
+    uniqueID: 4236452085
     locked: 0
   - name: Player
     uniqueID: 4004184941
+    locked: 0
+  - name: Lights
+    uniqueID: 704561447
     locked: 0
   - name: Levelcontainer
     uniqueID: 339545971
