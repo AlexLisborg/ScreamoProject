@@ -3,10 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class KeyScript : ItemScript
 {
+    private KeyActivation keyActivation;
     public override Activation getActivation()
     {
+        if(keyActivation == null)
+        {
+            keyActivation = new KeyActivation();
+        }
         return new KeyActivation();
     }
 

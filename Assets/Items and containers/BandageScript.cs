@@ -14,6 +14,10 @@ public class BandageScript : ItemScript
     
     public override Activation getActivation()
     {
+        if (ba == null)
+        {
+            ba = new BandageActivation(timer, destroy, healingAmount, duration);
+        }
         return ba;
     }
 
@@ -22,11 +26,6 @@ public class BandageScript : ItemScript
         return gameObject.GetComponent<SpriteRenderer>().sprite;
     }
 
-    // Start is called before the first frame update
-    private void Awake()
-    {
-        ba = new BandageActivation(timer,destroy,healingAmount,duration);
-    }
     public class BandageActivation : Activation
     {
         private Timer timer;

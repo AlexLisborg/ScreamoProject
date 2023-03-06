@@ -50,7 +50,7 @@ public class PistolScript : OneShotItem
         {
             if (bullets.Count > 0)
             {
-                GameObject.Find("Pistol(Clone)").GetComponent<PistolAudio>().PlayAudio(PistolEvent.shoot);
+                go.GetComponent<PistolAudio>().PlayAudio(PistolEvent.shoot);
                 bullets[0].shoot(player);
                 
                 bullets.RemoveAt(0);
@@ -58,7 +58,7 @@ public class PistolScript : OneShotItem
             }
             else
             {
-                GameObject.Find("Pistol(Clone)").GetComponent<PistolAudio>().PlayAudio(PistolEvent.outOfAmmo);
+                go.GetComponent<PistolAudio>().PlayAudio(PistolEvent.outOfAmmo);
             }
         }
 

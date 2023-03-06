@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 
-public class LootScript : Colidable
+public class ContainerPlaceable : Colidable
 {
-    private ContainerCollider col;
+    public List<GameObject> Items;
     public GameObject boxContainerPrefab;
     private Container container;
+    private ContainerCollider col;
+
     public override AbsColider GetColiderInstance(GameObject go)
     {
         if (col == null)
@@ -24,17 +25,13 @@ public class LootScript : Colidable
         base.Awake();
         container = new Container(3, 3, boxContainerPrefab, Instantiate);
     }
-    public void addItems(List<GameObject> Items)
+    private void Start()
     {
         foreach (GameObject obj in Items)
         {
-            GameObject instaGo = Instantiate(obj);
-            ItemScript item = instaGo.GetComponent<ItemScript>();
-            if(item != null)
-            {
-                container.addItem(item);
-            }
-            
+            container.addItem(obj.GetComponent<ItemScript>());
+           
         }
+        
     }
 }

@@ -25,12 +25,13 @@ public class Baton : ItemScript
 
     public override Activation getActivation()
     {
+        if ( batonactivation == null )
+        {
+            batonactivation = new Batonactivation(swingDurationSec, Instantiate(Timer).GetComponent<Timer>(), Deactivate, swingAngel, coolDownTimeSec);
+        }
         return batonactivation;
     }
-    private void Awake()
-    {
-        batonactivation = new Batonactivation(swingDurationSec, Instantiate(Timer).GetComponent<Timer>(), Deactivate,swingAngel, coolDownTimeSec); ;
-    }
+
 
 
     public class Batonactivation : Activation
@@ -65,7 +66,7 @@ public class Baton : ItemScript
 
                 
                 go.SetActive(true);
-                GameObject.Find("BatonItem(Clone)").GetComponent<BatonAudio>().PlayAudio(BatonEvent.swing);
+                go.GetComponent<BatonAudio>().PlayAudio(BatonEvent.swing);
                 timerId = timer.StartTimer(() => baseDeactivate(player), swingDurationSec);
                 startingRot = (float)Math.Asin(player.getDir().x);
                 yLessThan0 = 1;

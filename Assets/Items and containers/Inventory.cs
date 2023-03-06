@@ -46,7 +46,7 @@ public class Inventory : MonoBehaviour
         pistol.GetComponent<PistolScript>().setBullets(bullts);
         container.addItem(pistol.GetComponent<ItemScript>());
         container.addItem(Instantiate(bulletPrefab).GetComponent<ItemScript>());
-        container.addItem(Instantiate(batonPrefab).GetComponent<ItemScript>());
+        //container.addItem(Instantiate(batonPrefab).GetComponent<ItemScript>());
     }
 
  
@@ -63,6 +63,7 @@ public class Inventory : MonoBehaviour
 
     private void toggleEquiped(ItemScript item)
     {
+        Debug.Log("toggel " + item.name + " "+ player.name);
         if (equipt != null)
             equipt.Unequipt(player);
         if (equipt == item)
@@ -88,6 +89,7 @@ public class Inventory : MonoBehaviour
 
     private void moveItem(Container from, Container to, ItemScript item)
     {
+        
         bool didMove = from.moveItemToContainer(item, to);
         if (didMove)
         {
@@ -186,9 +188,12 @@ public class Inventory : MonoBehaviour
                 if (!otherContainer.getIsOpen())
                 {
                     PlayAudio(InventoryEvent.openContainer);
-                    otherContainer.open((item) => moveItem(otherContainer,container, item), () => transform.position);
+                    otherContainer.open((item) => { moveItem(otherContainer, container, item); 
+                        Debug.Log("move to inventory " + item.name);
+                        Debug.Log("last item" + container.getItems()[container.getItems().Count - 1].name);
+                    }, () => transform.position);
                     //removeLockMouese0 = inputManager.addAction(0, KeyCode.Mouse0, KeyEvent.KeyDown, () => { });
-                    container.open((item) => moveItem(container, otherContainer, item), () => { return transform.position + new Vector3(with + 0.5f, 0, 0); }) ;
+                    container.open((item) => { moveItem(container, otherContainer, item); }, () => { return transform.position + new Vector3(with + 0.5f, 0, 0); }) ;
                 }
                 else if (otherContainer.getIsOpen() && container.getIsOpen())
                 {

@@ -58,7 +58,6 @@ public class Container
 
     public bool addItem(ItemScript item)
     {
-
        if(items.Count < size)
        {
             item.setOnDestroy(() => destroyItem(item));
@@ -74,7 +73,7 @@ public class Container
 
         if (items.Contains(item)) 
         {
-           
+            
             
             bool didAdd = nextContainer.addItem(item);
             if(didAdd)

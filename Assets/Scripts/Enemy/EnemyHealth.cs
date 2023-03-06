@@ -12,6 +12,10 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
     }
 
     public void TakeDamage(int damageAmount)

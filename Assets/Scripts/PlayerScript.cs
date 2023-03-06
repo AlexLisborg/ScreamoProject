@@ -8,16 +8,30 @@ public class PlayerScript : MonoBehaviour, IPlayer
 {
     private float hp = 100;
 
+    [SerializeField] private GameObject HPIndicator;
+    [SerializeField] private Color zeroHealthColor;
     [SerializeField] private PlayerMovement pm;
     [SerializeField] private Inventory inventory;
-
+    [SerializeField] private GameObject _deathMouth;
+    private SpriteRenderer sr;
+    private void Start()
+    {
+        sr = HPIndicator.GetComponent<SpriteRenderer>();
+    }
+    float deathTimer = 0;
     [Obsolete]
     private void Update()
     {
         if(hp <= 0)
         {
-            Application.LoadLevel(Application.loadedLevel);
+            deathTimer += Time.deltaTime;
+            _deathMouth.SetActive(true);
+            if (deathTimer >= 3)
+            {
+                Application.LoadLevel(Application.loadedLevel);
+            }
         }
+        sr.color = Color.Lerp(Color.clear,zeroHealthColor, 1 - (hp / 100f));
     }
     public void ChangeHP(float change)
     {

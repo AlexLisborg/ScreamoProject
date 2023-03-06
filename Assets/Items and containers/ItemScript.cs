@@ -71,6 +71,8 @@ public abstract class ItemScript : MonoBehaviour
 
     public void Equipt(IPlayer player)
     {
+        Debug.Log(player);
+        Debug.Log(getActivation());
         currentPlayer = player;
         equipt = true;
         getActivation().Equipt(player, gameObject);
@@ -78,7 +80,6 @@ public abstract class ItemScript : MonoBehaviour
 
     public void Unequipt(IPlayer player)
     {
-        Debug.Log(player);
         Deactivate(player);
         getActivation().Unequipt(player, gameObject);
         equipt = false;
