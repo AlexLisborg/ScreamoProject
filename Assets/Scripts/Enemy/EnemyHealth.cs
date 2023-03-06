@@ -11,6 +11,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Start()
     {
+        GetComponent<SpriteRenderer>().enabled = false;
         currentHealth = maxHealth;
         if (currentHealth <= 0)
         {
@@ -28,6 +29,13 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        
+    }
+
+   
+ 
     void Die()
     {
         // Spawn the loot prefab at the enemy's position

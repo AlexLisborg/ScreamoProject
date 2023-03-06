@@ -60,5 +60,10 @@ public abstract class AbsColider
     public virtual void StayCollision(WallCollidable.WallCollider wall) { }
     public virtual void ExitCollision(WallCollidable.WallCollider wall) { }
 
+    public virtual void EnterCollision(FovCollidable.FovCollider fovElement) { }
+    public virtual void StayCollision(FovCollidable.FovCollider fovElement) { }
+    public virtual void ExitCollision(FovCollidable.FovCollider fovElement) { }
+
+
 
 }

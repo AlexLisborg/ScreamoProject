@@ -7,14 +7,16 @@ public class CharacterColider : AbsColider
     private EnemyHealth enemyHealth;
     private Rigidbody2D body;
     private EnemyMovement enemyMovement;
+    private SpriteRenderer spriteRenderer;
     private Timer timer;
     private bool canHitPlayer = true;
-    public CharacterColider(GameObject parent, EnemyHealth enemyHealth, Rigidbody2D body, EnemyMovement enemyMovement, Timer timer) : base(parent)
+    public CharacterColider(GameObject parent, EnemyHealth enemyHealth, Rigidbody2D body, EnemyMovement enemyMovement, Timer timer, SpriteRenderer spriteRenderer) : base(parent)
     {
         this.enemyHealth = enemyHealth;
         this.body = body;
         this.enemyMovement = enemyMovement;
         this.timer = timer;
+        this.spriteRenderer = spriteRenderer;
     }
 
 
@@ -50,6 +52,26 @@ public class CharacterColider : AbsColider
         }
         
     }
+    private List<FovCollidable.FovCollider> fovs = new List<FovCollidable.FovCollider> ();
+
+    
+    public override void EnterCollision(FovCollidable.FovCollider fovElement)
+    {
+        spriteRenderer.enabled = true;
+        fovs.Add(fovElement);
+    }
+
+    public override void ExitCollision(FovCollidable.FovCollider fovElement)
+    {
+        fovs.Remove(fovElement);
+        if(fovs.Count == 0 ) {
+            spriteRenderer.enabled = false;
+        }
+    }
+    
+    
+
+
 
     public override void AcceptEnter(AbsColider other)
     {

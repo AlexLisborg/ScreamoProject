@@ -371,6 +371,7 @@ MonoBehaviour:
   rb: {fileID: 2752377976746117879}
   enemyMovement: {fileID: 4345485047318256441}
   timer: {fileID: 7708055912070591738}
+  spriteRenderer: {fileID: 4345485047318256390}
 --- !u!50 &7154284786645447481
 Rigidbody2D:
   serializedVersion: 4
