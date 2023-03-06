@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using static PlayerAudio;
 
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -19,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     private float _moveSpeed;
 
     private Rigidbody2D _rigidBody;
+
+    private PlayerAudio.PlayerEvent _currentMoveType;
 
     private Vector2 _movement;
 
@@ -40,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _currentMoveType = PlayerEvent.notMoving;
         _rigidBody = GetComponent<Rigidbody2D>();
         _camera = Camera.main;
         _moveSpeed = _defaultMovespeed;
@@ -58,7 +62,6 @@ public class PlayerMovement : MonoBehaviour
 
         _movement.x = Input.GetAxisRaw("Horizontal");
         _movement.y = Input.GetAxisRaw("Vertical");
-
         _movement = _movement.normalized;
 
         animSetFloat("MoveHorizontal", _movement.x);
@@ -95,7 +98,12 @@ public class PlayerMovement : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.LeftShift) && _movement.sqrMagnitude > 0 && _runEnergy >= 0 && _runTimer == 0)
             {
+<<<<<<< Updated upstream
                 _moveSpeed = _defaultMovespeed * 2f;
+=======
+                
+                _moveSpeed = _defaultMovespeed * 1.5f;
+>>>>>>> Stashed changes
                 _runEnergy -= Time.deltaTime;
             }
             else
@@ -103,13 +111,13 @@ public class PlayerMovement : MonoBehaviour
                 if (_runEnergy <= _runEnergyMax) _runEnergy += (Time.deltaTime / 2f);
                 _moveSpeed = _defaultMovespeed;
             }
-            
         }
     }
 
     private void FixedUpdate()
     {
         _rigidBody.MovePosition(_rigidBody.position + _movement * _moveSpeed * Time.fixedDeltaTime);
+        UpdateMovementAudio();
     }
     private void animSetFloat(String s, float f)
     {
@@ -138,4 +146,49 @@ public class PlayerMovement : MonoBehaviour
         return _firePosition.position;
     }
 
+    private void UpdateMovementAudio(PlayerEvent newMovement)
+    {
+        if (newMovement != _currentMoveType)
+        {
+            _currentMoveType = newMovement;
+            gameObject.GetComponent<PlayerAudio>().source.Stop();
+            if (newMovement != PlayerEvent.notMoving)
+            {
+                PlayAudio(newMovement);
+            }
+        }
+    }
+
+    private void UpdateMovementAudio()
+    {
+        if(_movement.x == 0 && _movement.y == 0)
+        {
+            UpdateMovementAudio(PlayerEvent.notMoving);
+        }
+        else if (_moveSpeed > 2.1f)
+        {
+            UpdateMovementAudio(PlayerEvent.running);
+        }
+        else if (_moveSpeed < 2.1f && _moveSpeed > 1.9f)
+        {
+            UpdateMovementAudio(PlayerEvent.walking);
+        }
+        else
+        {
+            UpdateMovementAudio(PlayerEvent.walkingBackwards);
+        }
+    }
+
+    // Checks if audio script is null before playing audio
+    private void PlayAudio(PlayerEvent playerEvent)
+    {
+        if (gameObject.GetComponent<PlayerAudio>() != null)
+        {
+            gameObject.GetComponent<PlayerAudio>().PlayAudio(playerEvent);
+        }
+        else
+        {
+            Debug.Log("Script was null");
+        }
+    }
 }
