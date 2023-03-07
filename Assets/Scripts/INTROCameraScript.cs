@@ -8,13 +8,18 @@ public class INTROCameraScript : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.y >= -3)
-        {
-            transform.position += Vector3.down * 0.0004f;
-        }
+       
         if (Input.GetKeyDown(KeyCode.E))
         {
             SceneManager.LoadScene("GAME");
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (transform.position.y >= -3)
+        {
+            transform.position += Vector3.down * 0.0013f;
         }
     }
 }
